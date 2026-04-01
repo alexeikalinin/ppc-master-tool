@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Bellatores — PPC-анализ | Astrum Entertainment</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --dark: #15171A;
+  --green: #00B08A;
+  --yellow: #F5FF8A;
+  --white: #FFFFFF;
+  --card: #1D2023;
+  --card2: #22272B;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Manrope',sans-serif; background:#0a0b0d; color:var(--white); }
+
+/* ── SLIDE BASE ── */
+.slide {
+  width:1280px; height:720px;
+  position:relative; overflow:hidden;
+  background:var(--dark);
+  margin:16px auto;
+}
+
+/* Header */
+.hdr {
+  position:absolute; top:22px; left:56px; right:56px;
+  display:flex; justify-content:space-between;
+  font-size:12px; font-weight:500; color:rgba(255,255,255,.32); letter-spacing:.02em;
+}
+.hdr-left { display:flex; gap:20px; }
+
+/* Footer logo icon */
+.logo-icon {
+  position:absolute; bottom:22px; right:56px;
+  width:34px; height:34px; opacity:.65;
+}
+
+/* Gradient overlays */
+.grad-br { /* bottom-right green burst */
+  position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(ellipse at 105% 105%, rgba(0,176,138,.45) 0%, transparent 55%);
+}
+.grad-bl {
+  position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(ellipse at -5% 105%, rgba(0,176,138,.45) 0%, transparent 55%);
+}
+.grad-tr {
+  position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(ellipse at 105% -5%, rgba(0,176,138,.35) 0%, transparent 55%);
+}
+.grad-full {
+  position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(ellipse at 90% 90%, rgba(0,176,138,.5) 0%, transparent 60%),
+             radial-gradient(ellipse at 10% 10%, rgba(0,176,138,.15) 0%, transparent 50%);
+}
+
+/* ── SLIDE 1: COVER ── */
+.s1 .grad {
+  position:absolute; inset:0;
+  background:radial-gradient(ellipse at 80% 55%, rgba(0,176,138,.38) 0%, transparent 60%);
+}
+.s1 .main {
+  position:absolute; top:50%; left:64px; transform:translateY(-50%);
+}
+.s1 .game-title {
+  font-size:92px; font-weight:800; line-height:.9;
+  color:var(--white); letter-spacing:-.03em;
+}
+.s1 .game-title span { color:var(--yellow); }
+.s1 .tagline {
+  margin-top:18px; font-size:20px; font-weight:500;
+  color:rgba(255,255,255,.65); line-height:1.4;
+}
+.s1 .tag {
+  display:inline-block; margin-top:28px;
+  background:rgba(0,176,138,.15); border:1px solid rgba(0,176,138,.4);
+  color:#00D4A8; padding:5px 14px; border-radius:4px;
+  font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+}
+.s1 .astrum-brand {
+  position:absolute; bottom:36px; left:64px;
+  display:flex; align-items:center; gap:10px;
+}
+.s1 .astrum-brand span {
+  font-size:14px; font-weight:700; line-height:1.25; color:rgba(255,255,255,.8);
+}
+
+/* ── SLIDE 2: TOC ── */
+.s2 .inner { position:absolute; top:72px; left:64px; right:64px; }
+.s2 .stitle { font-size:44px; font-weight:800; color:var(--white); margin-bottom:4px; }
+.s2 .stitle span { color:var(--yellow); }
+.s2 .ssub { font-size:15px; color:rgba(255,255,255,.4); margin-bottom:36px; }
+.toc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px 40px; }
+.toc-item .num { font-size:34px; font-weight:800; color:var(--yellow); line-height:1; margin-bottom:5px; }
+.toc-item .name { font-size:15px; font-weight:700; color:var(--yellow); margin-bottom:3px; }
+.toc-item .desc { font-size:12px; color:rgba(255,255,255,.5); line-height:1.4; }
+
+/* ── SECTION DIVIDER ── */
+.sdiv .num {
+  position:absolute; top:80px; left:64px;
+  font-size:17px; font-weight:700; color:var(--yellow); letter-spacing:.04em;
+}
+.sdiv .title {
+  position:absolute; top:50%; left:64px; transform:translateY(-50%);
+  font-size:80px; font-weight:800; color:var(--yellow);
+  line-height:.92; letter-spacing:-.02em;
+}
+
+/* ── CONTENT SLIDES ── */
+.inner { position:absolute; top:68px; left:64px; right:64px; bottom:60px; }
+.stitle { font-size:40px; font-weight:800; color:var(--white); line-height:1.05; margin-bottom:4px; }
+.stitle span { color:var(--yellow); }
+.ssub { font-size:14px; color:rgba(255,255,255,.42); margin-bottom:26px; font-weight:500; }
+
+/* Cards */
+.grid { display:grid; gap:14px; }
+.g2 { grid-template-columns:repeat(2,1fr); }
+.g3 { grid-template-columns:repeat(3,1fr); }
+.g4 { grid-template-columns:repeat(4,1fr); }
+.card {
+  background:var(--card); border-radius:10px;
+  padding:18px 20px; border:1px solid rgba(255,255,255,.06);
+}
+.card.green-border { border-color:rgba(0,176,138,.3); background:rgba(0,176,138,.07); }
+.card.yellow-border { border-color:rgba(245,255,138,.25); background:rgba(245,255,138,.04); }
+.card .cnum { font-size:32px; font-weight:800; color:var(--yellow); line-height:1; margin-bottom:6px; }
+.card .ctitle { font-size:14px; font-weight:700; color:var(--yellow); margin-bottom:5px; line-height:1.3; }
+.card .ctext { font-size:12px; color:rgba(255,255,255,.6); line-height:1.5; }
+.card .cbig { font-size:26px; font-weight:800; color:var(--white); line-height:1; margin-bottom:4px; }
+
+/* List */
+.list { display:flex; flex-direction:column; gap:8px; }
+.li {
+  display:flex; align-items:flex-start; gap:10px;
+  font-size:13px; color:rgba(255,255,255,.72); line-height:1.45;
+}
+.li .dot {
+  width:5px; height:5px; border-radius:50%;
+  background:var(--green); margin-top:5px; flex-shrink:0;
+}
+.li .dot.y { background:var(--yellow); }
+
+/* 2-col */
+.twocol { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+
+/* Table */
+.tbl { width:100%; border-collapse:collapse; }
+.tbl th {
+  text-align:left; padding:8px 12px;
+  font-size:11px; font-weight:700; color:rgba(255,255,255,.3);
+  text-transform:uppercase; letter-spacing:.05em;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.tbl td {
+  padding:8px 12px; font-size:12.5px;
+  color:rgba(255,255,255,.7);
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.tbl tr:last-child td { border-bottom:none; }
+.tbl tr.hl td { color:var(--yellow); background:rgba(245,255,138,.03); }
+.badge {
+  display:inline-block; padding:2px 9px; border-radius:3px;
+  font-size:11px; font-weight:700;
+}
+.bg { background:rgba(0,176,138,.2); color:#00D4A8; }
+.by { background:rgba(245,255,138,.15); color:var(--yellow); }
+.br { background:rgba(239,84,44,.15); color:#EF542C; }
+.bw { background:rgba(255,255,255,.08); color:rgba(255,255,255,.5); }
+
+/* Budget bars */
+.bbar { margin-bottom:14px; }
+.bbar-top { display:flex; justify-content:space-between; font-size:13px; margin-bottom:5px; }
+.bbar-top .bn { font-weight:600; color:rgba(255,255,255,.75); }
+.bbar-top .bv { font-weight:800; color:var(--yellow); }
+.bbar-bg { height:7px; background:rgba(255,255,255,.07); border-radius:4px; overflow:hidden; }
+.bbar-fill { height:100%; border-radius:4px;
+  background:linear-gradient(90deg,var(--green),rgba(0,176,138,.4)); }
+
+/* Stats row */
+.stats { display:flex; gap:14px; margin-bottom:22px; }
+.stat { flex:1; background:var(--card); border-radius:8px; padding:14px 16px; border:1px solid rgba(255,255,255,.06); }
+.stat .sv { font-size:26px; font-weight:800; color:var(--yellow); line-height:1; }
+.stat .sl { font-size:11px; color:rgba(255,255,255,.4); margin-top:4px; font-weight:500; }
+
+/* Final */
+.sfinal .grad {
+  position:absolute; inset:0;
+  background:radial-gradient(ellipse at 15% 85%, rgba(0,176,138,.45) 0%, transparent 55%),
+             radial-gradient(ellipse at 85% 15%, rgba(0,176,138,.2) 0%, transparent 50%);
+}
+.sfinal .cnt {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  text-align:center; width:800px;
+}
+.sfinal .ft { font-size:60px; font-weight:800; color:var(--white); line-height:1.05; margin-bottom:14px; }
+.sfinal .ft span { color:var(--yellow); }
+.sfinal .fd { font-size:18px; color:rgba(255,255,255,.55); margin-bottom:36px; line-height:1.5; }
+.btn { display:inline-block; background:var(--yellow); color:var(--dark);
+  padding:13px 34px; border-radius:6px; font-size:14px; font-weight:700; }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 1 — COVER
+════════════════════════════════════════════ -->
+<div class="slide s1">
+  <div class="grad"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>01</span>
+  </div>
+  <div class="main">
+    <div class="game-title">Bella<span>tores</span></div>
+    <div class="tagline">PPC-анализ рынка России и СНГ<br>Стратегия продвижения 2026</div>
+    <div class="tag">Pre-launch · F2P · PC MMORPG</div>
+  </div>
+  <div class="astrum-brand">
+    <!-- Astrum logo SVG -->
+    <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/>
+      <path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/>
+      <path d="M12 20H26" stroke="white" stroke-width="1.5"/>
+    </svg>
+    <span>Astrum<br>Entertainment</span>
+  </div>
+  <!-- footer icon -->
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/>
+    <path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/>
+    <path d="M12 20H26" stroke="white" stroke-width="1.5"/>
+  </svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 2 — TABLE OF CONTENTS
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="grad-br"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>02</span>
+  </div>
+  <div class="s2">
+    <div class="inner" style="top:64px">
+      <div class="stitle">Содержание <span>анализа</span></div>
+      <div class="ssub">Bellatores · PPC-стратегия для России и СНГ</div>
+      <div class="toc-grid">
+        <div class="toc-item">
+          <div class="num">01</div>
+          <div class="name">Об игре</div>
+          <div class="desc">Механики, USP, статус проекта и инвестиции</div>
+        </div>
+        <div class="toc-item">
+          <div class="num">02</div>
+          <div class="name">Рынок и конкуренты</div>
+          <div class="desc">Albion, ArcheAge, BDO, Lost Ark — сравнение и окна возможностей</div>
+        </div>
+        <div class="toc-item">
+          <div class="num">03</div>
+          <div class="name">Целевая аудитория</div>
+          <div class="desc">4 сегмента, поведение, ценность для бизнеса</div>
+        </div>
+        <div class="toc-item">
+          <div class="num">04</div>
+          <div class="name">PPC-стратегия</div>
+          <div class="desc">Платформы, ставки, семантические кластеры</div>
+        </div>
+        <div class="toc-item">
+          <div class="num">05</div>
+          <div class="name">Медиаплан</div>
+          <div class="desc">Бюджеты по фазам, прогноз регистраций и CPR</div>
+        </div>
+        <div class="toc-item">
+          <div class="num">06</div>
+          <div class="name">Выводы</div>
+          <div class="desc">Ключевые рекомендации и следующие шаги</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 3 — SECTION DIVIDER: О ИГРЕ
+════════════════════════════════════════════ -->
+<div class="slide sdiv">
+  <div class="grad-full"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>03</span>
+  </div>
+  <div class="num">01</div>
+  <div class="title">Об<br>игре</div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 4 — КЛЮЧЕВЫЕ ОСОБЕННОСТИ (USP)
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="grad-br"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>04</span>
+  </div>
+  <div class="inner">
+    <div class="stitle">Ключевые <span>преимущества</span></div>
+    <div class="ssub">Что делает Bellatores уникальным на рынке MMORPG</div>
+    <div class="grid g3">
+      <div class="card green-border">
+        <div class="ctitle">Unreal Engine 5</div>
+        <div class="ctext">Визуальный бенчмарк для MMORPG-сегмента. Средневековая фантастика XV века без экранов загрузки.</div>
+      </div>
+      <div class="card green-border">
+        <div class="ctitle">Classless + Levelless</div>
+        <div class="ctext">Никаких классов и уровней — навыки прокачиваются через использование. Полная свобода в построении персонажа.</div>
+      </div>
+      <div class="card green-border">
+        <div class="ctitle">Sandbox-экономика</div>
+        <div class="ctext">Всё снаряжение создаётся игроками или торгуется. Ноль авто-лута — player-driven economy в чистом виде.</div>
+      </div>
+      <div class="card">
+        <div class="ctitle">RvR — 5 Великих Домов</div>
+        <div class="ctext">Постоянный выбор фракции. Осады замков, территориальные войны, политическая дипломатия между домами.</div>
+      </div>
+      <div class="card">
+        <div class="ctitle">12+ профессий</div>
+        <div class="ctext">Кулинария, кузнечное дело, скотоводство, торговля. Альтернативный путь развития без PvP.</div>
+      </div>
+      <div class="card">
+        <div class="ctitle">Команда разработки</div>
+        <div class="ctext">NYOU Inc. (Корея, 2017). Ветераны Blizzard, NCsoft, XL Games. Инвестиции $50M+, Epic MegaGrant.</div>
+      </div>
+    </div>
+  </div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 5 — СТАТУС ПРОЕКТА
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="grad-tr"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>05</span>
+  </div>
+  <div class="inner">
+    <div class="stitle">Статус <span>проекта</span></div>
+    <div class="ssub">Текущее положение на рынке и ключевые даты</div>
+    <div class="stats">
+      <div class="stat">
+        <div class="sv">$50M+</div>
+        <div class="sl">Общие инвестиции + Epic MegaGrant</div>
+      </div>
+      <div class="stat">
+        <div class="sv">ЗБТ Q1–Q2</div>
+        <div class="sl">Россия и СНГ, 2026</div>
+      </div>
+      <div class="stat">
+        <div class="sv">F2P</div>
+        <div class="sl">Бизнес-модель (подтверждено)</div>
+      </div>
+      <div class="stat">
+        <div class="sv">7.25/10</div>
+        <div class="sl">Оценка GOHA по итогам корейского ЦБТ</div>
+      </div>
+    </div>
+    <div class="twocol">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--yellow);margin-bottom:12px;">ПЛАТФОРМЫ</div>
+        <div class="list">
+          <div class="li"><div class="dot"></div>Steam (глобально)</div>
+          <div class="li"><div class="dot"></div>VK Play (Россия и СНГ — приоритет)</div>
+          <div class="li"><div class="dot"></div>playbellatores.ru — регистрация на ЗБТ открыта</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--yellow);margin-bottom:12px;">ОТЗЫВЫ ПРЕССЫ (корейский ЦБТ)</div>
+        <div class="list">
+          <div class="li"><div class="dot y"></div>«Потенциал есть, кости заложены» — Igromania</div>
+          <div class="li"><div class="dot y"></div>«Амбициозный масштаб» — Massively Overpowered</div>
+          <div class="li"><div class="dot"></div>Замечания: медленный боёвка, FPS-просадки в городах</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 6 — SECTION DIVIDER: РЫНОК
+════════════════════════════════════════════ -->
+<div class="slide sdiv">
+  <div class="grad-full"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>06</span>
+  </div>
+  <div class="num">02</div>
+  <div class="title">Рынок<br>и конкуренты</div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 7 — КОНКУРЕНТНАЯ ТАБЛИЦА
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="grad-br"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>07</span>
+  </div>
+  <div class="inner">
+    <div class="stitle">Конкурентная <span>среда</span></div>
+    <div class="ssub">Прямые и косвенные конкуренты на рынке РФ/СНГ</div>
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Игра</th>
+          <th>Модель</th>
+          <th>Графика</th>
+          <th>Sandbox-экономика</th>
+          <th>RvR/PvP</th>
+          <th>Доступность РФ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hl">
+          <td><strong>Bellatores</strong></td>
+          <td><span class="badge bg">F2P</span></td>
+          <td><span class="badge by">UE5 ★★★★★</span></td>
+          <td><span class="badge bg">Полная</span></td>
+          <td><span class="badge by">5 домов + осады</span></td>
+          <td><span class="badge by">VK Play / Steam</span></td>
+        </tr>
+        <tr>
+          <td>Albion Online</td>
+          <td><span class="badge bw">F2P+Prem</span></td>
+          <td><span class="badge bw">Изометрия ★★☆</span></td>
+          <td><span class="badge bg">Полная</span></td>
+          <td><span class="badge bg">Гильдии</span></td>
+          <td><span class="badge bg">Да</span></td>
+        </tr>
+        <tr>
+          <td>ArcheAge</td>
+          <td><span class="badge bw">F2P (P2W)</span></td>
+          <td><span class="badge bw">Устарела ★★★☆</span></td>
+          <td><span class="badge bg">Развитая</span></td>
+          <td><span class="badge bg">Морские войны</span></td>
+          <td><span class="badge bg">Нативный RU</span></td>
+        </tr>
+        <tr>
+          <td>Black Desert Online</td>
+          <td><span class="badge bw">B2P+Shop</span></td>
+          <td><span class="badge by">★★★★★</span></td>
+          <td><span class="badge bw">Слабая</span></td>
+          <td><span class="badge bg">Лучший боёвка</span></td>
+          <td><span class="badge bg">RU клиент</span></td>
+        </tr>
+        <tr>
+          <td>Lost Ark</td>
+          <td><span class="badge bg">F2P</span></td>
+          <td><span class="badge bw">Изометрия ★★★☆</span></td>
+          <td><span class="badge bw">Нет</span></td>
+          <td><span class="badge bw">Рейды</span></td>
+          <td><span class="badge bg">VK Play RU</span></td>
+        </tr>
+        <tr>
+          <td>New World: Aeternum</td>
+          <td><span class="badge br">B2P (заблок.)</span></td>
+          <td><span class="badge by">★★★★☆</span></td>
+          <td><span class="badge bg">Крафт</span></td>
+          <td><span class="badge bg">Территории</span></td>
+          <td><span class="badge br">Недоступен в РФ</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 8 — КОНКУРЕНТНЫЕ ПРЕИМУЩЕСТВА
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="grad-bl"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>08</span>
+  </div>
+  <div class="inner">
+    <div class="stitle">Окна <span>возможностей</span></div>
+    <div class="ssub">Незакрытые ниши на рынке РФ/СНГ, которые занимает Bellatores</div>
+    <div class="grid g2" style="gap:16px">
+      <div class="card yellow-border">
+        <div class="ctitle">Нет F2P средневекового RvR MMORPG с UE5</div>
+        <div class="ctext">Ни один конкурент не сочетает AAA-графику, бесплатную модель и территориальные войны одновременно.</div>
+      </div>
+      <div class="card yellow-border">
+        <div class="ctitle">ArcheAge стареет — аудитория ищет преемника</div>
+        <div class="ctext">Огромная лояльная база игроков (ArcheAge был #1 sandbox MMORPG в РФ) готова к переходу на новое поколение.</div>
+      </div>
+      <div class="card yellow-border">
+        <div class="ctitle">BDO: лучший боёвка, но слабая экономика</div>
+        <div class="ctext">Игроки BDO, ориентированные на крафт и торговлю, найдут в Bellatores то, чего не хватает в BDO.</div>
+      </div>
+      <div class="card yellow-border">
+        <div class="ctitle">Нет 5-фракционной политической MMORPG</div>
+        <div class="ctext">С эпохи Lineage 2 в РФ не было игры с глубокой политической механикой между фракциями. Bellatores заполняет пустоту.</div>
+      </div>
+    </div>
+  </div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 9 — SECTION DIVIDER: АУДИТОРИЯ
+════════════════════════════════════════════ -->
+<div class="slide sdiv">
+  <div class="grad-full"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>09</span>
+  </div>
+  <div class="num">03</div>
+  <div class="title">Целевая<br>аудитория</div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 10 — СЕГМЕНТЫ АУДИТОРИИ
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="grad-tr"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>10</span>
+  </div>
+  <div class="inner">
+    <div class="stitle">4 сегмента <span>целевой аудитории</span></div>
+    <div class="ssub">Мужчины 18–42, PC, 10–30 ч/неделю · донат-готовность 500–3000 ₽/мес</div>
+    <div class="grid g4">
+      <div class="card">
+        <div class="cnum">20%</div>
+        <div class="ctitle">Hardcore PvP / Лидеры гильдий</div>
+        <div class="ctext">Возраст 22–35. Организаторы, приводят гильдии. Высокий донат. Следят за корейскими стримами и MMORPG-медиа.</div>
+      </div>
+      <div class="card">
+        <div class="cnum">25%</div>
+        <div class="ctitle">Крафтеры / Экономика</div>
+        <div class="ctext">Возраст 25–40. Любят профессии, торговлю, строительство домов. Стабильный донат на косметику и QoL.</div>
+      </div>
+      <div class="card">
+        <div class="cnum">35%</div>
+        <div class="ctitle">MMORPG-фанаты / Исследователи</div>
+        <div class="ctext">Возраст 18–30. Играют в каждую новую MMORPG. Следят за стримерами. Средний донат, высокий объём.</div>
+      </div>
+      <div class="card">
+        <div class="cnum">20%</div>
+        <div class="ctitle">Лапсед-игроки</div>
+        <div class="ctext">Возраст 28–42. Играли в ArcheAge / Lineage 2 в 2010-х. Ищут возвращение. Высокий донат + доход.</div>
+      </div>
+    </div>
+    <div style="margin-top:18px;padding:14px 20px;background:rgba(0,176,138,.08);border-radius:8px;border:1px solid rgba(0,176,138,.25);">
+      <div style="font-size:12px;color:var(--green);font-weight:700;margin-bottom:6px;">КЛЮЧЕВОЕ СООБЩЕНИЕ ПО СЕГМЕНТАМ</div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+        <div style="font-size:11.5px;color:rgba(255,255,255,.6)">«5 домов, осады, политика» → PvP-аудитория</div>
+        <div style="font-size:11.5px;color:rgba(255,255,255,.6)">«12+ профессий, zero drop» → Крафтеры</div>
+        <div style="font-size:11.5px;color:rgba(255,255,255,.6)">«UE5, open world, classless» → Исследователи</div>
+        <div style="font-size:11.5px;color:rgba(255,255,255,.6)">«Помнишь ArcheAge? Bellatores — лучше» → Лапсед</div>
+      </div>
+    </div>
+  </div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 11 — SECTION DIVIDER: PPC
+════════════════════════════════════════════ -->
+<div class="slide sdiv">
+  <div class="grad-full"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>11</span>
+  </div>
+  <div class="num">04</div>
+  <div class="title">PPC-<br>стратегия</div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 12 — ПЛАТФОРМЫ И СТАВКИ
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="grad-br"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>12</span>
+  </div>
+  <div class="inner">
+    <div class="stitle">Рекламные <span>платформы</span></div>
+    <div class="ssub">Google Ads недоступен в РФ — фокус на Яндекс, VK, Telegram</div>
+    <div class="grid g3" style="margin-bottom:18px">
+      <div class="card green-border">
+        <div class="ctitle">Яндекс Директ</div>
+        <div class="ctext" style="margin-bottom:12px">Поиск, РСЯ, Ретаргетинг</div>
+        <div class="list">
+          <div class="li"><div class="dot y"></div>Поиск (бренд): 15–30 ₽/клик</div>
+          <div class="li"><div class="dot y"></div>Поиск (жанр): 25–50 ₽/клик</div>
+          <div class="li"><div class="dot y"></div>РСЯ: 8–15 ₽/клик</div>
+          <div class="li"><div class="dot y"></div>Ретаргетинг: 6–12 ₽/клик</div>
+          <div class="li"><div class="dot"></div>CPR регистрация: ~300–600 ₽</div>
+        </div>
+      </div>
+      <div class="card green-border">
+        <div class="ctitle">VK Ads</div>
+        <div class="ctext" style="margin-bottom:12px">Look-alike по геймерским сообществам</div>
+        <div class="list">
+          <div class="li"><div class="dot y"></div>CPC: 10–25 ₽/клик</div>
+          <div class="li"><div class="dot y"></div>CPM: 100–250 ₽/1000</div>
+          <div class="li"><div class="dot y"></div>CPR регистрация: ~200–450 ₽</div>
+          <div class="li"><div class="dot"></div>Таргет: ArcheAge, BDO, L2 сообщества</div>
+          <div class="li"><div class="dot"></div>Look-alike по базе Steam-игроков</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="ctitle">Telegram Ads</div>
+        <div class="ctext" style="margin-bottom:12px">Точечный охват через игровые каналы</div>
+        <div class="list">
+          <div class="li"><div class="dot y"></div>CPM: 150–400 ₽/1000</div>
+          <div class="li"><div class="dot"></div>goha.ru, mmo13, mmotimes</div>
+          <div class="li"><div class="dot"></div>Игровые Telegram-каналы 50k+</div>
+          <div class="li"><div class="dot"></div>Использовать для ЗБТ-анонса</div>
+        </div>
+      </div>
+    </div>
+    <div style="padding:12px 18px;background:rgba(245,255,138,.05);border-radius:8px;border:1px solid rgba(245,255,138,.2);font-size:13px;color:rgba(255,255,255,.7)">
+      <span style="color:var(--yellow);font-weight:700">Приоритет платформ:</span> VK Ads (масштаб + look-alike) → Яндекс Директ (поисковый intent) → Telegram (нишевый охват)
+    </div>
+  </div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 13 — СЕМАНТИЧЕСКИЕ КЛАСТЕРЫ
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="grad-tr"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>13</span>
+  </div>
+  <div class="inner">
+    <div class="stitle">Семантические <span>кластеры</span></div>
+    <div class="ssub">Яндекс Директ · 5 групп с разным intent и ставками</div>
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Кластер</th>
+          <th>Примеры запросов</th>
+          <th>Intent</th>
+          <th>CPC, ₽</th>
+          <th>Приоритет</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Брендовый</strong></td>
+          <td style="color:rgba(255,255,255,.5);font-size:12px">bellatores, bellatores mmorpg, bellatores скачать, bellatores збт</td>
+          <td><span class="badge bg">Высокий</span></td>
+          <td style="color:var(--yellow);font-weight:700">15–25</td>
+          <td><span class="badge by">★★★</span></td>
+        </tr>
+        <tr>
+          <td><strong>Жанровый F2P</strong></td>
+          <td style="color:rgba(255,255,255,.5);font-size:12px">mmorpg 2026, новая mmorpg пк, sandbox mmorpg, rvr mmorpg</td>
+          <td><span class="badge by">Средне-высокий</span></td>
+          <td style="color:var(--yellow);font-weight:700">20–45</td>
+          <td><span class="badge by">★★★</span></td>
+        </tr>
+        <tr class="hl">
+          <td><strong>Конкурентный</strong></td>
+          <td style="color:rgba(255,255,255,.7);font-size:12px">archeage 2026, игра как archeage, albion online аналог, lineage 2 новая игра</td>
+          <td><span class="badge bg">Высокий</span></td>
+          <td style="font-weight:700">30–60</td>
+          <td><span class="badge by">★★★ Главный</span></td>
+        </tr>
+        <tr>
+          <td><strong>Гайды / Инфо</strong></td>
+          <td style="color:rgba(255,255,255,.5);font-size:12px">bellatores гайд, bellatores обзор, bellatores фракции, bellatores дата выхода</td>
+          <td><span class="badge bw">Средний</span></td>
+          <td style="color:var(--yellow);font-weight:700">10–20</td>
+          <td><span class="badge bw">★★☆</span></td>
+        </tr>
+        <tr>
+          <td><strong>Скачать / Играть</strong></td>
+          <td style="color:rgba(255,255,255,.5);font-size:12px">bellatores скачать бесплатно, bellatores steam, bellatores vk play скачать</td>
+          <td><span class="badge bg">Высокий</span></td>
+          <td style="color:var(--yellow);font-weight:700">15–30</td>
+          <td><span class="badge by">★★★</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-top:14px;padding:10px 16px;background:rgba(239,84,44,.08);border-radius:6px;border:1px solid rgba(239,84,44,.2);font-size:12px;color:rgba(255,255,255,.6)">
+      <span style="color:#EF542C;font-weight:700">Минус-слова: </span>bellator mma · беллатор бои · мобайл · iOS · Android · торрент · кряк · читы · ps4 · ps5 · xbox
+    </div>
+  </div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 14 — МЕДИАПЛАН
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="grad-bl"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>14</span>
+  </div>
+  <div class="inner">
+    <div class="stitle">Медиаплан по <span>фазам</span></div>
+    <div class="ssub">Бюджеты, прогноз регистраций и CPR</div>
+    <div class="twocol">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--yellow);margin-bottom:14px;">ФАЗА 1 — ПРЕЛОНЧ (до ЗБТ) · 200 000 ₽/мес</div>
+        <div class="bbar">
+          <div class="bbar-top"><span class="bn">Яндекс Директ</span><span class="bv">90 000 ₽</span></div>
+          <div class="bbar-bg"><div class="bbar-fill" style="width:45%"></div></div>
+        </div>
+        <div class="bbar">
+          <div class="bbar-top"><span class="bn">VK Ads</span><span class="bv">80 000 ₽</span></div>
+          <div class="bbar-bg"><div class="bbar-fill" style="width:40%"></div></div>
+        </div>
+        <div class="bbar">
+          <div class="bbar-top"><span class="bn">Telegram Ads</span><span class="bv">30 000 ₽</span></div>
+          <div class="bbar-bg"><div class="bbar-fill" style="width:15%"></div></div>
+        </div>
+        <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div class="card" style="padding:12px 14px">
+            <div class="cbig">~550–900</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.45)">регистраций/мес (прогноз)</div>
+          </div>
+          <div class="card" style="padding:12px 14px">
+            <div class="cbig">~250–350 ₽</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.45)">средний CPR</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--yellow);margin-bottom:14px;">ФАЗА 2 — ЛОНЧ (ЗБТ + ОБТ) · 500 000 ₽/мес</div>
+        <div class="bbar">
+          <div class="bbar-top"><span class="bn">Яндекс Директ</span><span class="bv">200 000 ₽</span></div>
+          <div class="bbar-bg"><div class="bbar-fill" style="width:40%"></div></div>
+        </div>
+        <div class="bbar">
+          <div class="bbar-top"><span class="bn">VK Ads</span><span class="bv">220 000 ₽</span></div>
+          <div class="bbar-bg"><div class="bbar-fill" style="width:44%"></div></div>
+        </div>
+        <div class="bbar">
+          <div class="bbar-top"><span class="bn">Telegram Ads</span><span class="bv">80 000 ₽</span></div>
+          <div class="bbar-bg"><div class="bbar-fill" style="width:16%"></div></div>
+        </div>
+        <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div class="card green-border" style="padding:12px 14px">
+            <div class="cbig">~1 500–2 500</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.45)">регистраций/мес (прогноз)</div>
+          </div>
+          <div class="card green-border" style="padding:12px 14px">
+            <div class="cbig">~200–300 ₽</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.45)">средний CPR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <svg class="logo-icon" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SLIDE 15 — ФИНАЛ / ВЫВОДЫ
+════════════════════════════════════════════ -->
+<div class="slide sfinal">
+  <div class="grad"></div>
+  <div class="hdr">
+    <div class="hdr-left"><span>2026</span><span>Astrum Entertainment</span></div>
+    <span>15</span>
+  </div>
+  <div class="cnt">
+    <div class="ft">Bellatores —<br><span>правильный момент</span></div>
+    <div class="fd">Рынок готов. ArcheAge стареет, New World заблокирован,<br>конкурент без UE5-качества и F2P в одном продукте — не существует.</div>
+    <div style="display:flex;gap:24px;justify-content:center;margin-bottom:32px">
+      <div style="text-align:center">
+        <div style="font-size:32px;font-weight:800;color:var(--yellow)">ЗБТ Q1–Q2</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:4px">Запуск в России</div>
+      </div>
+      <div style="width:1px;background:rgba(255,255,255,.1)"></div>
+      <div style="text-align:center">
+        <div style="font-size:32px;font-weight:800;color:var(--yellow)">200k ₽</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:4px">Старт прелонч-бюджета</div>
+      </div>
+      <div style="width:1px;background:rgba(255,255,255,.1)"></div>
+      <div style="text-align:center">
+        <div style="font-size:32px;font-weight:800;color:var(--yellow)">3 платформы</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:4px">Яндекс · VK · Telegram</div>
+      </div>
+    </div>
+    <div class="btn">Начать кампанию</div>
+  </div>
+  <div style="position:absolute;bottom:36px;left:64px;display:flex;align-items:center;gap:10px;opacity:.7">
+    <svg width="30" height="30" viewBox="0 0 38 38" fill="none"><path d="M19 2L34 11.5V28.5L19 38L4 28.5V11.5L19 2Z" stroke="white" stroke-width="2" fill="none"/><path d="M19 8L13 22H16.5L19 15L21.5 22H25L19 8Z" fill="white"/><path d="M12 20H26" stroke="white" stroke-width="1.5"/></svg>
+    <span style="font-size:13px;font-weight:700;color:rgba(255,255,255,.8)">Astrum Entertainment</span>
+  </div>
+</div>
+
+</body>
+</html>

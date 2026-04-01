@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "last_updated": "2026-03-31",
+  "source": {
+    "announcements_index": "https://support.google.com/google-ads/announcements/9048695",
+    "note_ru": "Официальные формулировки правил и лимитов — в английской версии справки; анонсы — ориентир по продукту, не юридическая норма."
+  },
+  "project_alignment": {
+    "code_path": "backend/integrations/google_ads.py",
+    "current_integration": "Google Ads API: KeywordPlanIdeaService (Keyword Planner), OAuth2 refresh token + developer_token + customer_id.",
+    "env": [
+      "GOOGLE_ADS_CLIENT_ID",
+      "GOOGLE_ADS_CLIENT_SECRET",
+      "GOOGLE_ADS_DEVELOPER_TOKEN",
+      "GOOGLE_ADS_REFRESH_TOKEN",
+      "GOOGLE_ADS_CUSTOMER_ID"
+    ],
+    "extension_ideas": [
+      "Offline conversion upload / conversion adjustment API для связки с CRM и трекером.",
+      "Audience / Customer Match через API при наличии first-party данных и соблюдении политик.",
+      "Google Ads scripts через отдельный репозиторий/Schedulers — не внутри текущего FastAPI."
+    ]
+  },
+  "conversion_tracking_and_goals": {
+    "summary": "Измерение и цели — основа Smart Bidding и отчётности; Google усиливает first-party, consent и унификацию web+app.",
+    "highlights_from_announcements": [
+      {
+        "topic": "Атрибуция",
+        "points": [
+          "Data-driven attribution — дефолтная модель в экосистеме Google Ads / GA4; правила first click / linear / time decay / position-based снимали с выбора для новых конверсий (анонсы 2023).",
+          "Отчёты атрибуции расширяли поддержку YouTube и Display, engaged-view для видео."
+        ]
+      },
+      {
+        "topic": "Конверсии и цели",
+        "points": [
+          "Conversion goals — группировка и оптимизация на уровне аккаунта/кампании; выбор действий для ставок на уровне кампании (в т.ч. Video).",
+          "Enhanced conversions (в т.ч. for leads) — хэшированные пользовательские данные для точности при ограничении cookie.",
+          "Offline Conversion Import (OCI): инструменты упрощения импорта; для приложений параметр conversion_environment — дедлайн обязательности снят (обновление 2025), но внедрение рекомендуется для кросс-среды.",
+          "Google tag / consent mode — усиление измерения при соблюдении EU UCP и региональных требований."
+        ]
+      },
+      {
+        "topic": "Эксперименты и инкрементальность",
+        "points": [
+          "Улучшения incrementality experiments (анонс 11.2025) — акцент на причинно-следственный эффект медиа, не только корреляции."
+        ]
+      },
+      {
+        "topic": "Web + App",
+        "points": [
+          "Единые сценарии Search / Shopping / PMax / Demand Gen на web и app (09.2025) — согласованный customer journey и настройка связки в кабинете."
+        ]
+      }
+    ],
+    "practical_for_this_project": [
+      "В отчётах и медиаплане закладывать отдельный блок: теги, цели, импорт офлайн-конверсий, согласие — иначе ставки и прогнозы GKP не отражают реальный CPA.",
+      "При интеграции API дальше GKP: использовать версии API и resource names из официальной документации developers.google.com/google-ads/api."
+    ]
+  },
+  "audiences_and_first_party": {
+    "summary": "Customer Match и похожие аудитории завязаны на first-party данных, политике и истории аккаунта.",
+    "highlights_from_announcements": [
+      {
+        "topic": "Customer Match",
+        "points": [
+          "Расширение доступа: почти все соблюдающие политику рекламодатели (анонс 2021); match rate в интерфейсе; интеграции Zapier и Similar Audience workflows.",
+          "Политика списков email/телефонов: только собственный легитимный сбор; прозрачность в privacy policy; согласие; запрет узкого таргетинга и деликатных сочетаний — см. Ad Policy Customer Match / списки контактов."
+        ]
+      },
+      {
+        "topic": "Автоматизация аудиторий",
+        "points": [
+          "Similar audiences постепенно заменялись на более автоматизированные сигналы (анонсы 2022–2023) — проверять текущие доступные типы в интерфейсе/API для аккаунта.",
+          "Brand restrictions (Search broad match) и brand exclusions (Performance Max) — контроль брендового трафика."
+        ]
+      },
+      {
+        "topic": "Сигналы для PMax / Search",
+        "points": [
+          "Search themes в PMax — явные подсказки тематике; лимиты на количество тем расширялись (анонсы 2024–2025).",
+          "Негативные списки на уровне кампании PMax, демография, отчёты по каналам — больше прозрачности и рычагов (2024–2025)."
+        ]
+      }
+    ],
+    "practical_for_this_project": [
+      "Генерация семантики в инструменте ≠ готовые аудитории: для ретаргетинга/Customer Match клиент должен выгрузить CRM и пройти требования по расходам/возрасту аккаунта.",
+      "В рекомендациях по кампаниям явно разделять: обнаружение (PMax/Demand Gen) vs поиск (RSA + негативы + brand controls)."
+    ]
+  },
+  "google_ads_scripts": {
+    "summary": "Скрипты — JavaScript в кабинете для массовых операций и отчётов; не замена backend API.",
+    "highlights_from_announcements": [
+      "Новый experience (05.2022): скорость, поддержка стратегий на уровне кампаний, улучшенная валидация.",
+      "Рекомендации можно применять как эксперимент одним кликом — снижает риск слепого auto-apply."
+    ],
+    "practical_for_this_project": [
+      "Для PPC Master Tool: скрипты полезны клиенту для правил в аккаунте (паузы, ставки, отчёты); продукт может документировать шаблоны, но не исполняет скрипты серверно.",
+      "Тяжёлая логика (трекер, Supabase, кастомный робот) — FastAPI/Python, как уже сделано для Яндекса."
+    ]
+  },
+  "google_ads_api": {
+    "summary": "AdWords API заменён Google Ads API; расширенные сущности (PMax, рекомендации, Keyword Planner).",
+    "highlights_from_announcements": [
+      "GA API GA: поддержка recommendations, Performance Max, Keyword Planner, история изменений (анонс миграции 12.2021).",
+      "Применение рекомендаций кросс-аккаунтно через API (упоминалось в контексте масштаба агентств)."
+    ],
+    "oauth_and_access": [
+      "developer_token (в т.ч. уровень доступа developer / basic), OAuth client, refresh_token, customer_id без дефисов в вызовах.",
+      "Manager account (MCC): login-customer-id при работе с клиентами под MCC."
+    ],
+    "practical_for_this_project": [
+      "Текущий код уже использует google-ads-python и GenerateKeywordIdeas; расширение: GoogleAdsService.search для статистики, ConversionUploadService для офлайн-конверсий — отдельные сервисные классы и тесты в sandbox.",
+      "Следить за sunsetting полей в release notes API — чаще, чем в UI."
+    ]
+  },
+  "recent_product_changes_to_flag": {
+    "period": "2024–2025 (по ленте анонсов)",
+    "items": [
+      "Call-only / call ads уходят в пользу RSA + call assets — пересмотреть шаблоны объявлений в консультациях (10.2025).",
+      "PMax: инвентарь Waze для целей магазинов (US), отчёты по каналам, brand suitability на YouTube Home / Watch Next / Discover.",
+      "Измерение: Google tag gateway, улучшения incrementality; AI-инструменты (AI Max, Power Pack) — проверять доступность в регионе аккаунта.",
+      "Специфичные даты sunset всегда перепроверять в полной статье анонса, а не только в заголовке."
+    ]
+  },
+  "links_help_center": [
+    "https://support.google.com/google-ads/announcements/9048695",
+    "https://developers.google.com/google-ads/api/docs/start",
+    "https://support.google.com/google-ads/topic/3121769"
+  ]
+}

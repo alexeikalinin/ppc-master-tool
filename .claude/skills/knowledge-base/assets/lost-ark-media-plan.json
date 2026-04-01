@@ -1,0 +1,394 @@
+{
+  "meta": {
+    "created": "2026-03-05",
+    "version": "1.0",
+    "agent": "ppc-market-analyst",
+    "task_id": "20260305-lost-ark-media-plan",
+    "status": "completed"
+  },
+  "campaign_brief": {
+    "product": "Lost Ark",
+    "genre": "Action MMORPG",
+    "model": "F2P",
+    "publisher_ru": "VK Play",
+    "publisher_site": "vkplay.ru",
+    "official_site": "lostark.ru",
+    "target_action": "registration",
+    "monthly_budget_rub": 2000000,
+    "platform": "Yandex Direct",
+    "geo": "Russia",
+    "target_audience": {
+      "gender": "male",
+      "age_min": 18,
+      "age_max": 35,
+      "peak_hours": "19:00-01:00 MSK",
+      "device_adjustment_mobile": -20
+    }
+  },
+  "market_data": {
+    "global_online_march_2026": 43551,
+    "global_peak_aug_2025": 93835,
+    "source_population": "mmo-population.com",
+    "rank_among_mmos": 31,
+    "notes": "Game active and stable. VK Play is the authorized RU publisher. No geo-restrictions."
+  },
+  "campaigns": [
+    {
+      "id": "camp-01",
+      "name": "Поиск — Брендовый",
+      "type": "search",
+      "goal": "registration",
+      "budget_rub": 400000,
+      "budget_share_pct": 20,
+      "keyword_clusters": ["branded"],
+      "bidding_strategy": {
+        "phase1": "manual_cpc",
+        "phase2": "target_cpa",
+        "target_cpa_rub": 300,
+        "switch_condition": "20+ conversions per 7 days"
+      },
+      "forecast": {
+        "avg_cpc_rub": 25,
+        "clicks_monthly": 16000,
+        "ctr_pct": 10,
+        "cr_pct": 10,
+        "registrations_monthly": 1600,
+        "cpr_rub": 250
+      }
+    },
+    {
+      "id": "camp-02",
+      "name": "Поиск — Жанровый и Конкурентный",
+      "type": "search",
+      "goal": "registration",
+      "budget_rub": 500000,
+      "budget_share_pct": 25,
+      "keyword_clusters": ["genre_f2p", "competitive"],
+      "bidding_strategy": {
+        "phase1": "max_conversions_auto",
+        "phase2": "target_cpa",
+        "target_cpa_rub": 1200,
+        "switch_condition": "after 2 weeks data"
+      },
+      "forecast": {
+        "avg_cpc_rub": 40,
+        "clicks_monthly": 12500,
+        "ctr_pct": 6,
+        "cr_pct": 4,
+        "registrations_monthly": 500,
+        "cpr_rub": 1000
+      }
+    },
+    {
+      "id": "camp-03",
+      "name": "РСЯ — Поведенческий таргетинг",
+      "type": "rsa_display",
+      "goal": "registration",
+      "budget_rub": 400000,
+      "budget_share_pct": 20,
+      "targeting": {
+        "interests": ["games", "mmorpg", "action_rpg", "pc_gaming"],
+        "lookalike": true,
+        "lookalike_source": "registered_users_pixel"
+      },
+      "bidding_strategy": {
+        "phase1": "max_conversions_auto",
+        "phase2": "pay_per_conversion",
+        "target_cpa_rub": 700
+      },
+      "forecast": {
+        "avg_cpc_rub": 12,
+        "clicks_monthly": 33300,
+        "impressions_monthly": 1665000,
+        "ctr_pct": 2,
+        "cr_pct": 2,
+        "registrations_monthly": 666,
+        "cpr_rub": 601
+      }
+    },
+    {
+      "id": "camp-04",
+      "name": "Мастер кампаний",
+      "type": "master_campaign",
+      "goal": "registration",
+      "budget_rub": 250000,
+      "budget_share_pct": 12.5,
+      "bidding_strategy": {
+        "phase1": "max_conversions_auto",
+        "phase2": "max_conversions_auto",
+        "notes": "Yandex auto mode, combined search+display"
+      },
+      "forecast": {
+        "avg_cpc_rub": 20,
+        "clicks_monthly": 12500,
+        "cr_pct": 3,
+        "registrations_monthly": 375,
+        "cpr_rub": 667
+      }
+    },
+    {
+      "id": "camp-05",
+      "name": "Баннер на поиске",
+      "type": "contextual_banner_search",
+      "goal": "brand_awareness",
+      "budget_rub": 150000,
+      "budget_share_pct": 7.5,
+      "payment_model": "cpm",
+      "bidding_strategy": {
+        "phase1": "cpm_fixed",
+        "cpm_target_rub": 300,
+        "notes": "Brand awareness, CPR is secondary metric"
+      },
+      "forecast": {
+        "impressions_monthly": 500000,
+        "cpm_rub": 300,
+        "clicks_monthly": 2000,
+        "ctr_pct": 0.4,
+        "cr_pct": 2,
+        "registrations_monthly": 40,
+        "cpr_rub": 3750,
+        "primary_kpi": "impressions_and_brand_lift"
+      }
+    },
+    {
+      "id": "camp-06",
+      "name": "Ретаргетинг РСЯ",
+      "type": "retargeting_rsa",
+      "goal": "registration",
+      "budget_rub": 200000,
+      "budget_share_pct": 10,
+      "audience": {
+        "segments": [
+          "visitors_lostark_ru_30days_no_registration",
+          "visitors_vkplay_lostark_30days_no_registration"
+        ],
+        "min_cookie_pool": 1000,
+        "warmup_weeks": 2,
+        "note": "First 2 weeks budget redirected to camp-03 until audience pool reaches threshold"
+      },
+      "bidding_strategy": {
+        "phase1": "pay_per_conversion",
+        "target_cpa_rub": 200
+      },
+      "forecast": {
+        "avg_cpc_rub": 10,
+        "clicks_monthly": 20000,
+        "cr_pct": 6,
+        "registrations_monthly": 1200,
+        "cpr_rub": 167
+      }
+    },
+    {
+      "id": "camp-07",
+      "name": "Резервный бюджет",
+      "type": "reserve",
+      "goal": "testing",
+      "budget_rub": 100000,
+      "budget_share_pct": 5,
+      "use_cases": [
+        "video_ads_rsa_test",
+        "telegram_ads_via_yandex",
+        "landing_page_ab_test",
+        "scale_best_performing_campaigns"
+      ],
+      "forecast": {
+        "registrations_monthly": 100,
+        "notes": "Estimated, depends on allocation"
+      }
+    }
+  ],
+  "totals": {
+    "budget_rub": 2000000,
+    "total_clicks_monthly": 96300,
+    "total_registrations_monthly_low": 4200,
+    "total_registrations_monthly_high": 4800,
+    "total_registrations_monthly_target": 4481,
+    "blended_cpr_rub": 446,
+    "blended_cr_pct": 4.7
+  },
+  "keywords": {
+    "clusters": {
+      "branded": {
+        "name": "Брендовые запросы",
+        "intent": "high",
+        "keywords": [
+          {"kw": "lost ark", "freq_estimate": 45000, "bid_min": 35, "bid_max": 50},
+          {"kw": "лост арк", "freq_estimate": 38000, "bid_min": 35, "bid_max": 50},
+          {"kw": "lost ark скачать", "freq_estimate": 12000, "bid_min": 40, "bid_max": 55},
+          {"kw": "лост арк скачать бесплатно", "freq_estimate": 8500, "bid_min": 40, "bid_max": 55},
+          {"kw": "lost ark бесплатно", "freq_estimate": 6000, "bid_min": 35, "bid_max": 45},
+          {"kw": "lost ark россия", "freq_estimate": 5500, "bid_min": 35, "bid_max": 45},
+          {"kw": "lost ark vk play", "freq_estimate": 4000, "bid_min": 30, "bid_max": 40},
+          {"kw": "лост арк 2025", "freq_estimate": 3500, "bid_min": 25, "bid_max": 35},
+          {"kw": "лост арк 2026", "freq_estimate": 2000, "bid_min": 25, "bid_max": 35},
+          {"kw": "lost ark сервер россия", "freq_estimate": 3000, "bid_min": 30, "bid_max": 40},
+          {"kw": "lost ark новый сезон", "freq_estimate": 2500, "bid_min": 25, "bid_max": 35},
+          {"kw": "lost ark обновление", "freq_estimate": 3000, "bid_min": 25, "bid_max": 35},
+          {"kw": "lost ark download", "freq_estimate": 4000, "bid_min": 40, "bid_max": 55},
+          {"kw": "лост арк официальный сайт", "freq_estimate": 3500, "bid_min": 35, "bid_max": 50}
+        ]
+      },
+      "genre_f2p": {
+        "name": "Жанровые F2P MMORPG",
+        "intent": "medium",
+        "keywords": [
+          {"kw": "мморпг бесплатно", "freq_estimate": 15000, "bid_min": 20, "bid_max": 35},
+          {"kw": "mmorpg f2p 2025", "freq_estimate": 8000, "bid_min": 20, "bid_max": 35},
+          {"kw": "mmorpg f2p 2026", "freq_estimate": 4000, "bid_min": 20, "bid_max": 35},
+          {"kw": "лучшая бесплатная mmorpg", "freq_estimate": 12000, "bid_min": 20, "bid_max": 30},
+          {"kw": "топ mmorpg 2025", "freq_estimate": 9000, "bid_min": 20, "bid_max": 30},
+          {"kw": "action mmorpg", "freq_estimate": 6000, "bid_min": 20, "bid_max": 30},
+          {"kw": "mmorpg пк бесплатная 2025", "freq_estimate": 5000, "bid_min": 18, "bid_max": 28},
+          {"kw": "онлайн игра бесплатно", "freq_estimate": 25000, "bid_min": 15, "bid_max": 25},
+          {"kw": "скачать mmorpg бесплатно", "freq_estimate": 7000, "bid_min": 20, "bid_max": 30},
+          {"kw": "action rpg пк бесплатно", "freq_estimate": 4500, "bid_min": 18, "bid_max": 28},
+          {"kw": "hack and slash mmorpg", "freq_estimate": 3000, "bid_min": 18, "bid_max": 25}
+        ]
+      },
+      "competitive": {
+        "name": "Конкурентные запросы",
+        "intent": "high",
+        "keywords": [
+          {"kw": "throne and liberty", "freq_estimate": 18000, "bid_min": 25, "bid_max": 40},
+          {"kw": "genshin impact пк", "freq_estimate": 35000, "bid_min": 20, "bid_max": 30},
+          {"kw": "lineage 2 официальный", "freq_estimate": 10000, "bid_min": 30, "bid_max": 45},
+          {"kw": "wow альтернатива", "freq_estimate": 3500, "bid_min": 25, "bid_max": 35},
+          {"kw": "black desert online", "freq_estimate": 8000, "bid_min": 25, "bid_max": 35},
+          {"kw": "blade and soul", "freq_estimate": 5000, "bid_min": 20, "bid_max": 30}
+        ],
+        "excluded_competitors": ["skyforge", "allods online", "perfect world"],
+        "exclusion_reason": "Games are effectively dead (lesson-2026-03-05-ppc-008)"
+      },
+      "guides_content": {
+        "name": "Гайды и контент",
+        "intent": "medium",
+        "keywords": [
+          {"kw": "lost ark гайд", "freq_estimate": 5000, "bid_min": 15, "bid_max": 25},
+          {"kw": "лост арк классы", "freq_estimate": 6000, "bid_min": 15, "bid_max": 25},
+          {"kw": "lost ark рейды", "freq_estimate": 4500, "bid_min": 15, "bid_max": 25},
+          {"kw": "lost ark билд", "freq_estimate": 3500, "bid_min": 15, "bid_max": 22},
+          {"kw": "lost ark лучший класс", "freq_estimate": 3000, "bid_min": 15, "bid_max": 22}
+        ]
+      }
+    },
+    "negative_keywords": [
+      "читы", "чит", "взлом", "хак", "hack", "cheat",
+      "торрент",
+      "история", "wiki", "лор",
+      "фильм", "аниме", "сериал", "книга",
+      "стрим", "twitch",
+      "wallpaper", "обои",
+      "ла2", "lineage",
+      "private server", "приватный сервер",
+      "p2w", "pay to win",
+      "закрыли", "закрытие", "умерла"
+    ]
+  },
+  "ad_copies": {
+    "search_branded": [
+      {
+        "h1": "Lost Ark — Играй Бесплатно",
+        "h2": "Скачай на VK Play Сейчас",
+        "h3": "Action MMORPG — Новый Сезон",
+        "desc1": "Эпические рейды, 20+ классов, PvP. F2P без ограничений. Регистрация за 1 минуту!",
+        "desc2": "Тысячи игроков онлайн. Новый контент уже доступен. Начни прямо сейчас."
+      },
+      {
+        "h1": "Lost Ark — Новый Контент 2026",
+        "h2": "Играй Бесплатно на VK Play",
+        "h3": "Рейды, PvP, 20 Классов",
+        "desc1": "Вернись или начни играть — новый сезон уже здесь. Скачай и играй бесплатно.",
+        "desc2": "Официальный русский сервер. Без VPN. Регистрация бесплатно."
+      },
+      {
+        "h1": "Скачай Lost Ark Бесплатно",
+        "h2": "Официальный Сервер Россия",
+        "h3": "Регистрация за 60 Секунд",
+        "desc1": "Лучший Action MMORPG 2026. Более 20 классов, эпические боссы. Старт бесплатно.",
+        "desc2": "VK Play — официальный издатель для РФ. Русский язык. Скачай и начни сейчас."
+      }
+    ],
+    "sitelinks": [
+      {"title": "Скачать игру", "url": "/download"},
+      {"title": "Классы персонажей", "url": "/classes"},
+      {"title": "Гайд для новичков", "url": "/guide"},
+      {"title": "Новый контент", "url": "/news"},
+      {"title": "Системные требования", "url": "/requirements"}
+    ]
+  },
+  "bidding_strategy_phases": {
+    "phase1_weeks_1_2": {
+      "name": "Запуск",
+      "search": "manual_cpc",
+      "rsa": "max_clicks",
+      "time_bid_adjustments": {
+        "weekdays_19_01": "+35%",
+        "weekdays_00_09": "-40%",
+        "weekdays_09_14": "-20%",
+        "weekend_14_02": "+40%"
+      },
+      "audience_adjustments": {
+        "male_18_35": "+20%",
+        "mobile": "-20%"
+      }
+    },
+    "phase2_weeks_3_4": {
+      "name": "Оптимизация",
+      "search_branded": "target_cpa_300rub",
+      "search_genre": "target_cpa_1200rub",
+      "rsa": "target_cpa_700rub",
+      "retargeting": "pay_per_conversion_200rub",
+      "switch_condition": "20+ conversions per campaign per 7 days"
+    },
+    "phase3_month2_plus": {
+      "name": "Масштабирование",
+      "actions": [
+        "Increase budget on campaigns with CPR < target",
+        "Switch RSA to pay-per-conversion model",
+        "Launch look-alike audiences from registered users",
+        "Test video ads in RSA (15-30 sec gameplay)"
+      ]
+    }
+  },
+  "flighting": {
+    "weekly_budget": {
+      "week1": {"budget_rub": 400000, "share_pct": 20, "note": "Launch, data collection"},
+      "week2": {"budget_rub": 500000, "share_pct": 25, "note": "First optimization"},
+      "week3": {"budget_rub": 550000, "share_pct": 27.5, "note": "Peak + auto-strategies"},
+      "week4": {"budget_rub": 550000, "share_pct": 27.5, "note": "Final sprint + retargeting"}
+    },
+    "event_flighting": {
+      "pre_event_days_minus3": "budget_search_branded +20%",
+      "event_day": "budget_rsa +50%",
+      "post_event_days_3_5": "return to baseline",
+      "creative_update_lead_time": "2 business days"
+    }
+  },
+  "kpis": {
+    "weekly": [
+      {"metric": "spend_rub", "target": 500000, "alert_threshold_pct": 15},
+      {"metric": "clicks", "target": 24000, "alert_below": 18000},
+      {"metric": "ctr_search_pct", "target": 6, "alert_below": 4},
+      {"metric": "ctr_rsa_pct", "target": 1.5, "alert_below": 0.8},
+      {"metric": "cr_branded_search_pct", "target": 8, "alert_below": 5},
+      {"metric": "cr_rsa_pct", "target": 1.5, "alert_below": 0.7},
+      {"metric": "blended_cpr_rub", "target": 500, "alert_above": 750},
+      {"metric": "registrations", "target": 1000, "alert_below": 700}
+    ]
+  },
+  "benchmarks_used": {
+    "gaming_search_cpc_range_rub": "10-40",
+    "gaming_rsa_cpc_range_rub": "4-12",
+    "f2p_game_cpr_reference_rub": "30 (shooter case, Pikabu/DirectCase)",
+    "yandex_avg_cpc_market_2025_rub": 23.76,
+    "auto_strategy_min_conversions_per_week": 10,
+    "pay_per_conversion_max_cpa_limit_rub": 15000,
+    "sources": [
+      "mmo-population.com (player count)",
+      "demis.ru (avg CPC Yandex 2025)",
+      "rivox.io (auto-strategies guide)",
+      "elama.ru (campaign types, pay-per-conversion)",
+      "knowledge-base lesson-2026-03-05-ppc-012 (gaming CPC benchmarks)"
+    ]
+  }
+}

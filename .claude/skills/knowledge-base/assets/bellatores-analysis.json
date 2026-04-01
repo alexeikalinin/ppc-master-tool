@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "created": "2026-03-05",
+    "analyst": "ppc-market-analyst",
+    "version": 1,
+    "status": "pre-launch",
+    "last_updated": "2026-03-05"
+  },
+  "game": {
+    "title": "Bellatores",
+    "developer": "NYOU Inc. (South Korea, founded 2017)",
+    "publisher_ru": "Astrum Entertainment",
+    "publisher_global": "NYOU / Gamania (Asia: TW, HK, Macau)",
+    "genre": ["Action-MMORPG", "Sandbox MMO", "RvR"],
+    "setting": "Medieval fantasy, 15th century, Five Great Houses",
+    "engine": "Unreal Engine 5",
+    "platform": ["PC (Steam)", "PC (VK Play — RU/CIS)"],
+    "mobile": false,
+    "business_model": "F2P (Free-to-Play, confirmed)",
+    "monetization_notes": "Monetization details not officially announced. Community concern about P2W given NYOU's mobile background (Dragon Chronicles, Duel Summoners). Likely cosmetic + premium currency model.",
+    "investment": "$25M initial (2022), total funding estimated $50M+ with Epic Games MegaGrant",
+    "status": {
+      "global": "Post-Korean CBT (July 30 – August 3, 2025)",
+      "russia": "Pre-ЗБТ, registration open on playbellatores.ru. Russian ЗБТ scheduled Q1-Q2 2026. Full release 2026.",
+      "steam_players_current": 0,
+      "note": "Game not yet publicly playable globally"
+    },
+    "social": {
+      "official_site_global": "https://www.bellatores.com/en/",
+      "official_site_ru": "https://playbellatores.ru/",
+      "vk": "vk.com/bellatores_game",
+      "telegram": "t.me/bellatores_game",
+      "steam": "https://store.steampowered.com/app/3397040/Bellatores/",
+      "vkplay": "https://vkplay.ru/play/game/bellatores",
+      "twitter_x": "https://x.com/playbellatores"
+    },
+    "media_reception": {
+      "goha_rating": "7.25/10",
+      "igromania_preview": "Potential noted but combat sluggish, FPS drops in cities, hitbox issues. 'Bones are there'.",
+      "massivelyop": "Watched with interest; noted ambitious scope, multiple delays",
+      "noobfeed_preview": "Real potential hidden under clunkiness"
+    }
+  },
+  "gameplay": {
+    "core_mechanics": [
+      "Non-target (action) combat system — precision and reaction required",
+      "Classless progression — no fixed classes or levels",
+      "Mastery-based advancement — skills improve through use",
+      "Five Great Houses (factions) — permanent choice per account",
+      "Realm vs Realm (RvR) warfare — faction territorial battles",
+      "Castle and fortress sieges — mass PvP with attacker/defender roles",
+      "Open world without loading screens — seamless exploration",
+      "Player-driven economy — all gear crafted or traded (no drops)",
+      "12+ professions — cooking, armor smithing, livestock management",
+      "1v1 and 3v3 arenas",
+      "PvE raids against epic monsters",
+      "Advanced diplomacy system between houses"
+    ],
+    "usp": [
+      "UE5 medieval visuals — benchmark quality in MMORPG segment",
+      "True sandbox economy — nothing drops, everything crafted",
+      "Classless + levelless — full character freedom",
+      "RvR focus — 5-faction political intrigue + warfare",
+      "Korean devs with Blizzard/NCsoft/XL Games pedigree"
+    ],
+    "known_issues_cbt": [
+      "Sluggish combat — cannot move and use skills simultaneously",
+      "High mana costs reduce weapon-switching in practice",
+      "UE5 performance issues — FPS drops in cities",
+      "Hitbox problems with ranged weapons at elevation"
+    ]
+  },
+  "market": {
+    "niche": "PC MMORPG / Sandbox MMO — Russia & CIS",
+    "market_size_ru_2025": "~200 bln RUB total gaming market; PC 48% (~96 bln)",
+    "mmorpg_global_2025": "$28 bln USD, CAGR 10-11%",
+    "target_geo": ["Russia", "CIS (Kazakhstan, Belarus, Ukraine, Uzbekistan)"],
+    "launch_window": "2026 (ЗБТ Q1-Q2, ОБТ / full release H2 2026 likely)"
+  },
+  "competitors": [
+    {
+      "title": "Albion Online",
+      "developer": "Sandbox Interactive (Germany)",
+      "model": "F2P (with premium subscription)",
+      "status": "Live, active",
+      "positioning": "True sandbox economy, cross-platform PC+mobile",
+      "players_steam_avg_30d": "~7500 avg, 11-15k peak",
+      "ru_availability": "Available, RU language support",
+      "key_usp": "Player-driven economy, territorial guild battles, cross-platform",
+      "weakness": "Old graphics (isometric), steep learning curve",
+      "similarity": "Direct competitor — sandbox economy, classless, PvP territorial"
+    },
+    {
+      "title": "ArcheAge (Archerage + official)",
+      "developer": "XLGAMES / Mail.ru Group",
+      "model": "F2P (heavy P2W history)",
+      "status": "Active (official RU), active private servers",
+      "positioning": "Maritime MMORPG, housing, naval battles",
+      "ru_availability": "Native RU servers, full localization",
+      "key_usp": "Houses, farming, sea battles, largest sandbox MMORPG in RU",
+      "weakness": "Aged, controversial P2W reputation",
+      "similarity": "High — same fantasy sandbox + RvR + housing + economy"
+    },
+    {
+      "title": "Black Desert Online",
+      "developer": "Pearl Abyss (South Korea)",
+      "model": "B2P + F2P periods + cosmetic shop",
+      "status": "Live, active",
+      "ru_availability": "Available, RU client",
+      "key_usp": "Best action combat in MMORPG, life skills, stunning graphics",
+      "weakness": "Heavy P2W shop, grind-heavy",
+      "similarity": "High graphics benchmark comparison, action combat"
+    },
+    {
+      "title": "Lost Ark",
+      "developer": "Smilegate / Amazon Games",
+      "model": "F2P",
+      "status": "Live — RU through VK Play",
+      "ru_availability": "VK Play, full RU localization",
+      "key_usp": "Isometric ARPG + MMORPG hybrid, story-driven, raids",
+      "weakness": "Grind treadmill, RU market share lost after initial hype",
+      "similarity": "Medium — Korean F2P MMORPG published by Astrum competitor",
+      "cpr_benchmark_rub": 446
+    },
+    {
+      "title": "Mortal Online 2",
+      "developer": "Star Vault (Sweden)",
+      "model": "B2P + subscription",
+      "status": "Live (niche)",
+      "ru_availability": "Steam only, no RU localization",
+      "key_usp": "Hardcore sandbox, full loot PvP, realistic medieval",
+      "weakness": "Very small community, English only, paid",
+      "similarity": "Medium — hardcore medieval sandbox overlap"
+    },
+    {
+      "title": "New World: Aeternum",
+      "developer": "Amazon Games",
+      "model": "B2P",
+      "status": "Live (declining)",
+      "ru_availability": "Steam (geo issues for RU), no official support",
+      "key_usp": "AAA production, territory control, crafting",
+      "weakness": "Blocked in RU via Steam, declining playerbase",
+      "similarity": "High concept overlap — medieval, RvR, crafting"
+    }
+  ],
+  "competitive_gaps": [
+    "No major F2P medieval RvR MMORPG with AAA UE5 visuals currently available in RU",
+    "ArcheAge aging — audience ready for successor",
+    "Black Desert has best combat but poor economy/faction systems vs Bellatores",
+    "Albion Online has economy depth but dated graphics — Bellatores has visual edge",
+    "No major 5-faction political MMORPG in RU market since old Lineage 2 era"
+  ],
+  "audience": {
+    "primary": {
+      "age": "18-34",
+      "gender": "75% male, 25% female",
+      "geo": "Moscow, St.Petersburg, cities 500k+, all Russia + CIS",
+      "gaming_hours_per_week": "10-30h",
+      "income": "Middle (donat-ready: 500-3000 RUB/month)",
+      "devices": "PC (desktop/laptop) — primary, mobile minimal",
+      "platforms": ["Steam", "VK Play", "Discord", "VKontakte", "Telegram"],
+      "other_games": ["ArcheAge", "Black Desert", "Lost Ark", "Albion Online", "Lineage 2", "WoW"],
+      "behavior": "Evening play 19:00-01:00, active on weekends, community-driven (guilds)",
+      "psychographics": "Competitive, social, progression-oriented, world-building fans"
+    },
+    "segments": [
+      {
+        "name": "Hardcore PvP / Guild Leaders",
+        "size_pct": 20,
+        "age": "22-35",
+        "behavior": "Researches games in advance, watches KR/CN streams, follows MMORPG media",
+        "value": "High — organizers, bring guilds, high donat",
+        "message": "5 faction wars, castle sieges, political diplomacy"
+      },
+      {
+        "name": "Crafters / Economy Players",
+        "size_pct": 25,
+        "age": "25-40",
+        "behavior": "Enjoys ArcheAge-style professions, trading, house building",
+        "value": "Medium-high — consistent donat on cosmetics/quality-of-life",
+        "message": "12+ профессий, player-driven economy, zero auto-loot"
+      },
+      {
+        "name": "MMORPG Fans / Explorer",
+        "size_pct": 35,
+        "age": "18-30",
+        "behavior": "Plays every new MMORPG, follows game news, watches streamers",
+        "value": "Medium — high volume, moderate donat",
+        "message": "UE5 visuals, seamless open world, classless freedom"
+      },
+      {
+        "name": "Lapsed MMORPG Players",
+        "size_pct": 20,
+        "age": "28-42",
+        "behavior": "Played ArcheAge/Lineage 2 in 2010s, looking for return",
+        "value": "High — nostalgia + disposable income",
+        "message": "Новое поколение MMORPG. Помнишь ArcheAge? Bellatores — лучше."
+      }
+    ]
+  },
+  "ppc": {
+    "platforms": ["Яндекс Директ", "VK Ads", "Telegram Ads"],
+    "google_ads_note": "Google Ads недоступен в РФ — исключён из стратегии",
+    "yandex_direct": {
+      "search_cpc_branded_rub": "~15-30",
+      "search_cpc_genre_rub": "~25-50",
+      "rsa_cpc_rub": "~8-15",
+      "retargeting_cpc_rub": "~6-12",
+      "estimated_cpr_registration_rub": "~300-600",
+      "cr_search_pct": "5-10",
+      "cr_rsa_pct": "2-3",
+      "cr_retargeting_pct": "5-8"
+    },
+    "vk_ads": {
+      "cpc_rub": "~10-25",
+      "cpm_rub": "~100-250",
+      "estimated_cpr_registration_rub": "~200-450",
+      "note": "VK сильнее для look-alike по геймерским сообществам"
+    },
+    "telegram_ads": {
+      "cpm_rub": "~150-400",
+      "note": "Точечный охват через игровые каналы: goha.ru, mmo13, mmotimes"
+    },
+    "semantic_clusters": [
+      {
+        "cluster": "brand",
+        "keywords": ["bellatores", "беллаторес игра", "bellatores mmorpg", "bellatores скачать", "bellatores регистрация", "bellatores збт", "белаторес игра", "bellatores вк плей", "bellatores astrum"],
+        "intent": "high",
+        "cpc_estimate_rub": "15-25"
+      },
+      {
+        "cluster": "genre_f2p",
+        "keywords": ["мморпг бесплатная", "mmorpg 2026", "лучшая mmorpg 2026", "новая mmorpg пк", "средневековое мморпг", "mmorpg с pvp", "sandbox mmorpg", "rvr mmorpg", "мморпг бесплатная играть онлайн", "mmorpg без доната"],
+        "intent": "medium-high",
+        "cpc_estimate_rub": "20-45"
+      },
+      {
+        "cluster": "competitor_conquest",
+        "keywords": ["archeage 2026", "archeage альтернатива", "игра как archeage", "albion online аналог", "black desert альтернатива", "lineage 2 новая игра", "mmorpg лучше archeage", "new world аналог", "lost ark альтернатива"],
+        "intent": "high",
+        "cpc_estimate_rub": "30-60"
+      },
+      {
+        "cluster": "guides_info",
+        "keywords": ["bellatores гайд", "bellatores обзор", "bellatores геймплей", "bellatores классы", "bellatores фракции", "bellatores дата выхода", "bellatores системные требования", "bellatores играть", "bellatores збт дата"],
+        "intent": "medium",
+        "cpc_estimate_rub": "10-20"
+      },
+      {
+        "cluster": "download_install",
+        "keywords": ["bellatores download", "bellatores скачать бесплатно", "bellatores install", "bellatores steam", "bellatores vk play скачать", "bellatores как скачать"],
+        "intent": "high",
+        "cpc_estimate_rub": "15-30"
+      }
+    ],
+    "negative_keywords": [
+      "bellator mma", "беллатор мма", "bellator ufc", "беллатор бои", "беллаторе итальянский", "bellatores dei", "assassins creed", "bellatores mobile", "bellatores ios", "bellatores android", "бесплатно без регистрации", "торрент", "кряк", "взлом", "читы", "приватный сервер", "ps4", "ps5", "xbox", "nintendo"
+    ],
+    "vk_communities_for_targeting": [
+      "vk.com/mmorpg_club",
+      "vk.com/archeage",
+      "vk.com/black_desert_online",
+      "vk.com/lostark_ru",
+      "vk.com/albion_online_ru",
+      "vk.com/lineage2",
+      "vk.com/goha_ru",
+      "vk.com/mmo13",
+      "vk.com/igromania",
+      "vk.com/stopgame",
+      "vk.com/dtf_games"
+    ]
+  },
+  "media_plan_scenarios": {
+    "pre_launch_budget_monthly_rub": 200000,
+    "launch_budget_monthly_rub": 500000,
+    "note": "Детальный медиаплан по фазам — см. отчёт"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "last_updated": "2026-03-04",
+  "skills": [
+    {
+      "name": "meta-orchestrator",
+      "path": "meta-orchestrator/SKILL.md",
+      "description": "Central coordinator for task routing and delegation",
+      "created": "2026-03-04",
+      "last_modified": "2026-03-04",
+      "status": "active"
+    },
+    {
+      "name": "skill-factory",
+      "path": "skill-factory/SKILL.md",
+      "description": "Creates new skills from detected patterns",
+      "created": "2026-03-04",
+      "last_modified": "2026-03-04",
+      "status": "active"
+    },
+    {
+      "name": "quality-loop",
+      "path": "quality-loop/SKILL.md",
+      "description": "Feedback processing and lesson extraction",
+      "created": "2026-03-04",
+      "last_modified": "2026-03-04",
+      "status": "active"
+    },
+    {
+      "name": "knowledge-base",
+      "path": "knowledge-base/SKILL.md",
+      "description": "Persistent memory for lessons, patterns, and preferences",
+      "created": "2026-03-04",
+      "last_modified": "2026-03-04",
+      "status": "active"
+    },
+    {
+      "name": "change-logger",
+      "path": "change-logger/SKILL.md",
+      "description": "Logs code changes to DEVELOPMENT_LOG.md and updates RESUME.md",
+      "created": "2026-03-04",
+      "last_modified": "2026-03-04",
+      "status": "active"
+    }
+  ]
+}

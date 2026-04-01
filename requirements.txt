@@ -1,0 +1,22 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+httpx
+requests
+beautifulsoup4
+lxml
+sentence-transformers
+scikit-learn
+pytrends
+supabase
+psycopg2-binary
+python-jose[cryptography]
+reportlab
+anthropic
+openai
+pytest
+pytest-asyncio
+black
+# google-ads  # uncomment when Google Ads API credentials available

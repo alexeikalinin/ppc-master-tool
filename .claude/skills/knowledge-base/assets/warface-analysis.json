@@ -1,0 +1,740 @@
+{
+  "meta": {
+    "created": "2026-03-26",
+    "analyst": "ppc-market-analyst",
+    "version": 1,
+    "status": "live",
+    "last_updated": "2026-03-26",
+    "sources": [
+      "https://ru.warface.com/",
+      "https://wfdata.ru/online",
+      "https://www.igromania.ru/article/32605/kratkaya-istoriya-warface-12-let-v-stroyu-n/",
+      "https://steamcharts.com/app/291480",
+      "https://steamdb.info/app/291480/",
+      "https://escharts.com/games/warface",
+      "https://vk.company/ru/press/releases/9061/",
+      "https://vgtimes.ru/articles/124523-warface-v-2025-godu",
+      "https://3dnews.ru/1125398/warface-review",
+      "https://kanobu.ru/games/warface/reviews/"
+    ]
+  },
+  "game": {
+    "title": "Warface",
+    "short": "WF",
+    "developer": "Crytek Kyiv (разработка, 2012-2023)",
+    "operator_ru": "Astrum Entertainment (ООО Аструм Лаб) — с апреля 2023",
+    "publisher_global": "Nexon (Корея/Азия), Garena (ЮВА)",
+    "genre": [
+      "Военный шутер",
+      "Тактический шутер",
+      "F2P PC шутер",
+      "Кооперативный шутер"
+    ],
+    "setting": "Современный военный конфликт, ближний восток, постсоветские локации, sci-fi элементы",
+    "engine": "CryEngine 3",
+    "platform": [
+      "PC (собственный клиент ru.warface.com)",
+      "PC (VK Play)"
+    ],
+    "mobile": false,
+    "business_model": "Free-to-Play",
+    "monetization_notes": "Боевой пропуск (сезонный) + рандомные ящики с оружием + прямая покупка + VIP-статус. Частично P2W: Premium-оружие статистически сильнее. Кредиты зарабатываются в игре или покупаются.",
+    "status": {
+      "ru": "Активна — один из главных F2P шутеров РФ/СНГ",
+      "global": "Активна (Nexon Asia, Garena SEA)",
+      "launch_date": "2012-04-12",
+      "years_active": 13
+    },
+    "social": {
+      "official_site_ru": "https://ru.warface.com/",
+      "vkplay": "https://vkplay.ru/play/game/warface",
+      "vk": "https://vk.com/warface",
+      "youtube": "https://www.youtube.com/WarfaceMailRu",
+      "steam": "https://store.steampowered.com/app/291480/Warface_Clutch/"
+    },
+    "media_reception": {
+      "igromania": "Зрелая игра с устоявшейся аудиторией; хорошая реиграбельность; вопросы к балансу доната",
+      "3dnews_review": "Рейтинговый режим — просто освоиться, сложно оторваться",
+      "vgtimes_2025": "Пример правильного развития онлайновой игры на протяжении 13 лет",
+      "kanobu_players": "Смешанные — лояльные ветераны vs. жалобы на читеров и донат"
+    }
+  },
+  "gameplay": {
+    "classes": [
+      {
+        "name": "Штурмовик",
+        "role": "Основная боевая единица, атака в ближнем-среднем бою",
+        "primary_weapon": "Штурмовые винтовки",
+        "unique_ability": "Делиться боеприпасами с союзниками"
+      },
+      {
+        "name": "Снайпер",
+        "role": "Дальний бой, контроль ключевых точек",
+        "primary_weapon": "Снайперские винтовки",
+        "unique_ability": "Устанавливать мины"
+      },
+      {
+        "name": "Медик",
+        "role": "Поддержка, воскрешение союзников",
+        "primary_weapon": "Пистолеты-пулемёты, дробовики",
+        "unique_ability": "Лечить и воскрешать союзников"
+      },
+      {
+        "name": "Инженер",
+        "role": "Инженерная поддержка, подрыв и минирование",
+        "primary_weapon": "Дробовики, штурмовые винтовки",
+        "unique_ability": "Разминирование, ремонт техники, установка взрывчатки"
+      }
+    ],
+    "pvp_modes": [
+      "Подрыв (бомба)",
+      "Захват флага",
+      "Командный бой",
+      "Блиц (раунды по 90 сек)",
+      "Рейтинговый (ранговый)",
+      "Штурм",
+      "Свободная зона (FFA)",
+      "Завоевание",
+      "Испытание",
+      "Хардкор"
+    ],
+    "pvp_modes_count": "10+",
+    "pvp_maps_count": "50+",
+    "pve_missions_count": 13,
+    "weapons_count": "300+",
+    "pve_features": {
+      "description": "Кооператив до 5 игроков против ботов и боссов",
+      "difficulty_levels": [
+        "Тренировка",
+        "Норма",
+        "Хардкор",
+        "Профи"
+      ],
+      "unique_bosses": true,
+      "story_missions": "13 кампаний с нарративом"
+    },
+    "customization": {
+      "weapon_mod_slots": 9,
+      "gadget_slots": 3,
+      "cosmetic_system": "Агенты (персонажи), скины оружия, чармы"
+    },
+    "usp": [
+      "Самый долгоживущий F2P шутер в РФ (13+ лет, 2026)",
+      "Гибридный формат: тактика (PvP) + кооператив (PvE) в одной игре",
+      "Локализован и оперируется в РФ — нет западных санкционных рисков",
+      "Низкие системные требования — аудитория с бюджетными ПК",
+      "Развитая киберспортивная экосистема в РФ (2000+ турниров за 12 лет)",
+      "VK Play интеграция — органический трафик из экосистемы VK",
+      "Astrum Liga — ежегодный турнир с телетрансляциями",
+      "Guinness World Record 2013 — 145 000+ одновременных игроков"
+    ],
+    "weaknesses": [
+      "Устаревшая графика относительно CS2 и современных шутеров",
+      "Репутация игры с агрессивным донатом (наследие Mail.ru)",
+      "Читеры и нечестная игра — хроническая проблема",
+      "Баги после каждого обновления (жалобы игроков)",
+      "Токсичное сообщество",
+      "Значительное снижение онлайна относительно пика 2013-2016",
+      "Нет мобильной версии (в отличие от Standoff 2)",
+      "Steam версия Warface: Clutch — почти мёртвая (< 300 concurrent)"
+    ]
+  },
+  "market": {
+    "niche": "F2P PC шутер — Россия и СНГ",
+    "market_size_ru_shooters": "Шутер — жанр №1 по доходности ПК-игр в РФ (17% рынка)",
+    "ru_gaming_market_2024_bln_rub": 173,
+    "ru_gaming_market_2025_forecast_bln_rub": 187,
+    "target_geo": [
+      "Россия (74% аудитории)",
+      "Украина (~10%)",
+      "Казахстан (~7%)",
+      "Беларусь (~3%)",
+      "Другие СНГ (~6%)"
+    ],
+    "context_2024_2025": [
+      "Уход Activision-Blizzard, EA, Riot, Bungie создал вакуум в жанре шутеров в РФ",
+      "CrossFire закрыт в РФ в феврале 2023 — аудитория ищет замену",
+      "Valorant, Warzone, Overwatch 2 — заблокированы/ограничены для РФ",
+      "Warface — прямой бенефициар ухода конкурентов"
+    ]
+  },
+  "stats": {
+    "registered_accounts_global_mln": 60,
+    "daily_active_players_peak_k": 720,
+    "monthly_active_players_peak_mln": 2.6,
+    "guinness_record_year": 2013,
+    "guinness_record_simultaneous": 145000,
+    "current_online_2025": {
+      "total_estimate": "~15000-20000 одновременно (пик сезона)",
+      "wfdata_snapshot": "18 246 игроков (данные WFData 2025)",
+      "wfdata_in_lobby": "~8 200",
+      "wfdata_in_rooms": "~10 046",
+      "steam_clutch_concurrent": "< 300 (Steam версия почти не играется)",
+      "note": "Основная аудитория — нативный клиент ru.warface.com, не Steam"
+    },
+    "ru_audience_breakdown": {
+      "russia_pct": 74,
+      "ukraine_pct": 10,
+      "kazakhstan_pct": 7,
+      "belarus_pct": 3,
+      "other_cis_pct": 6
+    },
+    "esports": {
+      "ru_tournaments_total": "2000+",
+      "ru_prize_pools_total_rub_mln": 134,
+      "prize_pool_2024_usd": 55795,
+      "astrum_liga": "Ежегодный флагманский турнир с 2023"
+    }
+  },
+  "history": {
+    "milestones": [
+      {
+        "year": 2012,
+        "event": "Открытое бета-тестирование 12 апреля 2012. Награда Best Online Game на Gamescom. За первую неделю зарегистрировалось 1 300 000 игроков."
+      },
+      {
+        "year": "2012-2014",
+        "event": "Расширение серверной инфраструктуры с 1 до 3 серверов из-за спроса. Игра лицензирована в Азии (Nexon, Garena)."
+      },
+      {
+        "year": 2013,
+        "event": "Рекорд Гиннесса: 145 000+ одновременных игроков на одном шутер-сервере."
+      },
+      {
+        "year": 2016,
+        "event": "Режим Blitz — раунды по 90 секунд, отражающий философию быстрого боя."
+      },
+      {
+        "year": 2017,
+        "event": "Battle Royale механики добавлены. Чернобыльский ивент с виртуальной Припятью."
+      },
+      {
+        "year": 2022,
+        "event": "Обновление «Ледяной шторм» — оптимизация текстур для старого железа."
+      },
+      {
+        "year": "2023 март",
+        "event": "Переход к Astrum Entertainment после ухода Mail.ru Group из РФ. ООО Аструм Лаб становится оператором."
+      },
+      {
+        "year": "2023-2025",
+        "event": "Запуск Astrum Liga. Развитие киберспортивной экосистемы. Улучшение кастомизации оружия до 9 слотов модификаций."
+      },
+      {
+        "year": 2025,
+        "event": "Сезонные обновления с новым оружием (Viking DE rifle, Browning Safari снайперка). Astrum Liga 2025. 13+ лет активности."
+      }
+    ],
+    "working_titles": [
+      "Blackjack",
+      "Warface TV"
+    ],
+    "concept_origin": "Tencent предложил изменить концепцию гладиаторского шоу на обычный военный боевой шутер"
+  },
+  "competitors": [
+    {
+      "title": "Counter-Strike 2",
+      "developer": "Valve",
+      "model": "F2P",
+      "status_ru": "Доступна (Steam)",
+      "similarity": "Прямой конкурент в тактическом PvP шутере",
+      "warface_advantage": "Кооператив PvE, ниже порог входа, ниже системные требования",
+      "warface_disadvantage": "Графика хуже, меньше киберспорт-престижа"
+    },
+    {
+      "title": "CrossFire",
+      "developer": "Smilegate / Mail.ru (ранее)",
+      "model": "F2P (был)",
+      "status_ru": "Закрыт в РФ с февраля 2023",
+      "similarity": "Прямой конкурент исторически — аудитория перешла к Warface",
+      "warface_advantage": "Работает в РФ, аудитория CrossFire — прямая ЦА для Warface",
+      "warface_disadvantage": "N/A — CrossFire закрыт, Warface выигрывает"
+    },
+    {
+      "title": "Standoff 2",
+      "developer": "Axlebolt",
+      "model": "F2P",
+      "status_ru": "Активна (мобильная)",
+      "similarity": "Средняя — мобайл vs PC, разные платформы",
+      "warface_advantage": "Глубже PvE контент, PC-платформа",
+      "warface_disadvantage": "Нет мобильной версии; Standoff 2 растёт очень быстро"
+    },
+    {
+      "title": "Escape from Tarkov",
+      "developer": "Battlestate Games",
+      "model": "B2P",
+      "status_ru": "Активна (российский разработчик)",
+      "similarity": "Низкая — хардкор extraction vs casual",
+      "warface_advantage": "Бесплатно, легче войти, кооператив без PvP-риска",
+      "warface_disadvantage": "Tarkov более погружающий для хардкорной аудитории"
+    },
+    {
+      "title": "Enlisted",
+      "developer": "Gaijin Entertainment",
+      "model": "F2P",
+      "status_ru": "Активна (российский разработчик)",
+      "similarity": "Средняя — оба военные F2P шутеры",
+      "warface_advantage": "Больше аудитория, устоявшееся комьюнити",
+      "warface_disadvantage": "Enlisted реалистичнее исторически, есть техника (танки, самолёты)"
+    },
+    {
+      "title": "Valorant",
+      "developer": "Riot Games",
+      "model": "F2P",
+      "status_ru": "Заблокирован (официально недоступен для РФ)",
+      "similarity": "Прямой конкурент в тактическом шутере — аудитория ищет аналоги",
+      "warface_advantage": "Работает в РФ без VPN",
+      "warface_disadvantage": "Valorant имеет более высокий мировой киберспорт-престиж"
+    },
+    {
+      "title": "PUBG: Battlegrounds",
+      "developer": "PUBG Studios / Krafton",
+      "model": "F2P",
+      "status_ru": "Доступна (Steam)",
+      "similarity": "Средняя — шутер аудитория пересекается",
+      "warface_advantage": "Тактика + PvE, не только Battle Royale",
+      "warface_disadvantage": "PUBG — лидер Battle Royale жанра"
+    }
+  ],
+  "competitive_gaps": [
+    "CrossFire закрыт в РФ (февраль 2023) — ~1 млн активных игроков ищут замену",
+    "Valorant, Warzone, OW2 заблокированы — Warface единственный крупный F2P тактический шутер без ограничений в РФ",
+    "Standoff 2 растёт на мобайле — Warface доминирует PC сегмент без конкуренции сопоставимого масштаба",
+    "Нет аналога Warface PvE кооператива среди доступных F2P шутеров в РФ"
+  ],
+  "audience": {
+    "primary": {
+      "age": "16-28 (ядро), 28-40 (ветераны)",
+      "gender": "мужчины ~92%, женщины ~8%",
+      "geo": "Россия 74%, СНГ 26%; крупные города и малые города",
+      "gaming_hours_per_week": "5-20h",
+      "income": "низкий-средний (F2P модель рассчитана на широкий охват)",
+      "devices": "PC (desktop/laptop) — primary; нет мобайла",
+      "platforms": [
+        "ru.warface.com",
+        "VK Play",
+        "VKontakte",
+        "YouTube",
+        "Twitch"
+      ],
+      "behavior": "Вечерняя игра 19:00-01:00, пик в выходные, активное комьюнити в VK-группах",
+      "psychographics": "Casual-competitive, ориентированы на прогресс и коллекционирование оружия, ценят отечественный продукт"
+    },
+    "segments": [
+      {
+        "name": "Ветераны Warface (2012-2018)",
+        "size_pct": 30,
+        "age": "25-40",
+        "behavior": "Знают игру, возвращаются к новым сезонам, высокий LTV",
+        "value": "Высокая — высокий донат, гайдеры, организаторы кланов",
+        "message": "Новый сезон. Снова в строй."
+      },
+      {
+        "name": "Переходная аудитория (ex-CrossFire, ex-Valorant)",
+        "size_pct": 20,
+        "age": "18-30",
+        "behavior": "Искали замену после закрытия CrossFire или блокировки Valorant",
+        "value": "Высокая — уже готовы к F2P шутерам, знают жанр",
+        "message": "Шутер лучше CrossFire. Warface — бесплатно, прямо сейчас."
+      },
+      {
+        "name": "Casual-геймеры PvP",
+        "size_pct": 35,
+        "age": "16-26",
+        "behavior": "Играют 1-2 часа после учёбы/работы, ценят быстрый матч",
+        "value": "Средняя — объём, низкий средний чек",
+        "message": "Быстрые матчи. Реальный бой. Без оплаты."
+      },
+      {
+        "name": "PvE / Кооператив фанаты",
+        "size_pct": 15,
+        "age": "18-35",
+        "behavior": "Предпочитают PvE кампании, избегают токсичного PvP",
+        "value": "Средняя — стабильные игроки, умеренный донат",
+        "message": "13 кооперативных кампаний. Сыграй с друзьями против ИИ."
+      }
+    ],
+    "platform_profiles": {
+      "yandex_direct": {
+        "age": "16-45",
+        "gender": "мужчины 90%",
+        "interests": [
+          "онлайн-игры",
+          "компьютерные игры",
+          "шутеры",
+          "киберспорт"
+        ],
+        "behavioral_segments": [
+          "геймеры",
+          "активные покупатели игрового контента",
+          "пользователи VK Play"
+        ],
+        "geo": "Россия + Казахстан, Беларусь",
+        "device": "desktop 85%, mobile 15%",
+        "campaign_types": [
+          "Поиск",
+          "РСЯ",
+          "Медийная реклама"
+        ]
+      },
+      "vk_ads": {
+        "age": "16-35 основная",
+        "gender": "мужчины 90%",
+        "interests": [
+          "игры",
+          "шутеры",
+          "киберспорт",
+          "стримеры"
+        ],
+        "communities_to_target": [
+          "vk.com/warface",
+          "vk.com/cs2ru",
+          "vk.com/counterstrike",
+          "vk.com/vkplay",
+          "vk.com/standoff2official",
+          "vk.com/goha_ru",
+          "vk.com/igromania",
+          "vk.com/cybersport",
+          "vk.com/dtf_games",
+          "vk.com/stopgame"
+        ],
+        "targeting_tools": [
+          "Таргетинг на подписчиков игровых сообществ",
+          "Интересы: Онлайн-игры / Шутеры",
+          "Look-alike по базе зарегистрировавшихся",
+          "Ретаргетинг пикселем с сайта"
+        ]
+      },
+      "telegram_ads": {
+        "relevant_channels": [
+          "goha.ru Telegram",
+          "mmo13",
+          "dtf_games",
+          "cybersport.ru",
+          "warface_official",
+          "игровые Telegram-каналы с аудиторией 50k+"
+        ],
+        "cpm_rub": "150-400",
+        "note": "Точечный охват геймерских аудиторий через тематические каналы"
+      }
+    }
+  },
+  "ppc": {
+    "platforms": [
+      "Яндекс Директ",
+      "VK Ads",
+      "Telegram Ads"
+    ],
+    "google_ads_note": "Google Ads недоступен для РФ в 2025-2026 — исключён из стратегии",
+    "yandex_direct": {
+      "search_cpc_branded_rub": "12-25",
+      "search_cpc_genre_rub": "20-45",
+      "rsa_cpc_rub": "8-18",
+      "retargeting_cpc_rub": "6-12",
+      "estimated_cpr_registration_rub": "80-200",
+      "cr_search_branded_pct": "15-25",
+      "cr_search_genre_pct": "5-10",
+      "cr_rsa_pct": "2-5",
+      "cr_retargeting_pct": "8-15",
+      "notes": "Warface — узнаваемый бренд, брендовые запросы конвертируют отлично. Жанровые — 'шутер бесплатно', 'онлайн шутер пк' — средняя конверсия."
+    },
+    "vk_ads": {
+      "cpc_rub": "10-25",
+      "cpm_rub": "100-250",
+      "estimated_cpr_registration_rub": "150-350",
+      "note": "VK сильнее для look-alike по геймерским сообществам и ретаргетинга"
+    },
+    "telegram_ads": {
+      "cpm_rub": "150-400",
+      "note": "Точечный охват через игровые каналы"
+    },
+    "semantic_clusters": [
+      {
+        "cluster": "brand_warface",
+        "name": "Брендовые — Warface",
+        "keywords": [
+          "warface",
+          "варфейс",
+          "warface скачать",
+          "warface регистрация",
+          "warface официальный сайт",
+          "варфейс играть",
+          "warface вк плей",
+          "warface новый сезон 2025",
+          "warface классы",
+          "warface турнир astrum liga",
+          "warface обзор",
+          "warface системные требования",
+          "warface гайд",
+          "варфейс геймплей",
+          "варфейс скачать бесплатно"
+        ],
+        "intent": "Высокий — брендовый",
+        "cpc_estimate_rub": "12-25",
+        "volume_top_keywords": "warface ~80k/мес, варфейс ~40k/мес, warface скачать ~35k/мес"
+      },
+      {
+        "cluster": "genre_f2p_shooters",
+        "name": "Жанровые — бесплатный шутер на ПК",
+        "keywords": [
+          "онлайн шутер бесплатно",
+          "бесплатный шутер на пк",
+          "f2p шутер",
+          "тактический шутер онлайн",
+          "лучший онлайн шутер 2025",
+          "шутер для слабого пк",
+          "военный шутер онлайн",
+          "онлайн шутер без доната",
+          "шутер с кооперативом",
+          "шутер с бонусами для новичков",
+          "онлайн шутер на русском"
+        ],
+        "intent": "Высокий транзакционный",
+        "cpc_estimate_rub": "20-45"
+      },
+      {
+        "cluster": "competitor_conquest",
+        "name": "Конкурентные — замена CrossFire, CS2, Valorant",
+        "keywords": [
+          "crossfire альтернатива",
+          "шутер вместо crossfire",
+          "шутер как cs",
+          "аналог кс го",
+          "valorant альтернатива россия",
+          "warzone альтернатива россия",
+          "f2p шутер лучше кс",
+          "шутер вместо valorant",
+          "замена кроссфайер"
+        ],
+        "intent": "Высокий — ищут замену заблокированным/закрытым играм",
+        "cpc_estimate_rub": "18-35"
+      },
+      {
+        "cluster": "pve_coop",
+        "name": "PvE и кооператив",
+        "keywords": [
+          "шутер с кооперативом пк",
+          "co-op шутер онлайн",
+          "warface pve",
+          "warface кооператив",
+          "онлайн шутер с кампанией",
+          "шутер пвп пвэ",
+          "шутер с режимом кооп"
+        ],
+        "intent": "Средний информационный",
+        "cpc_estimate_rub": "15-28"
+      },
+      {
+        "cluster": "esports",
+        "name": "Киберспорт и турниры Warface",
+        "keywords": [
+          "astrum liga warface",
+          "warface tournament",
+          "warface киберспорт",
+          "warface соревнования",
+          "варфейс турнир 2025",
+          "warface pro игрок"
+        ],
+        "intent": "Информационный + лояльная аудитория",
+        "cpc_estimate_rub": "8-15"
+      },
+      {
+        "cluster": "download_install",
+        "name": "Скачивание и регистрация",
+        "keywords": [
+          "warface download",
+          "warface скачать бесплатно",
+          "warface install",
+          "warface vk play скачать",
+          "warface как скачать",
+          "варфейс зарегистрироваться"
+        ],
+        "intent": "Высокий транзакционный",
+        "cpc_estimate_rub": "15-28"
+      }
+    ],
+    "negative_keywords": [
+      "warface mobile",
+      "warface ios",
+      "warface android",
+      "warface приватный сервер",
+      "взлом",
+      "читы warface",
+      "aimbot",
+      "wallhack",
+      "скины бесплатно без доната",
+      "скачать чит",
+      "warface crack",
+      "торрент",
+      "warface ps4",
+      "warface xbox",
+      "warface nintendo",
+      "warface offline",
+      "без интернета",
+      "warface 2 игра",
+      "warface фильм",
+      "warface книга"
+    ],
+    "vk_communities_for_targeting": [
+      "vk.com/warface",
+      "vk.com/cs2ru",
+      "vk.com/counterstrike",
+      "vk.com/vkplay",
+      "vk.com/standoff2official",
+      "vk.com/goha_ru",
+      "vk.com/igromania",
+      "vk.com/cybersport",
+      "vk.com/dtf_games",
+      "vk.com/stopgame",
+      "vk.com/enlisted_game",
+      "vk.com/escapeformtarkov"
+    ]
+  },
+  "media_plan_scenarios": {
+    "budget_small_monthly_rub": 50000,
+    "budget_medium_monthly_rub": 150000,
+    "budget_large_monthly_rub": 400000,
+    "scenarios": [
+      {
+        "name": "Малый бюджет (50 000 руб/мес)",
+        "focus": "Только брендовые и жанровые поиск",
+        "platform_split": [
+          {
+            "platform": "Яндекс Директ — Поиск (бренд)",
+            "budget_rub": 25000,
+            "est_cpc_rub": 18,
+            "est_clicks": 1389,
+            "cr_pct": 20,
+            "cpr_rub": 90,
+            "conversions_mo": 278
+          },
+          {
+            "platform": "Яндекс Директ — Поиск (жанровый)",
+            "budget_rub": 15000,
+            "est_cpc_rub": 30,
+            "est_clicks": 500,
+            "cr_pct": 7,
+            "cpr_rub": 429,
+            "conversions_mo": 35
+          },
+          {
+            "platform": "VK Ads — Таргетинг на геймеров",
+            "budget_rub": 10000,
+            "est_cpc_rub": 15,
+            "est_clicks": 667,
+            "cr_pct": 5,
+            "cpr_rub": 300,
+            "conversions_mo": 33
+          }
+        ],
+        "total_est_conversions_mo": 346,
+        "blended_cpr_rub": 145
+      },
+      {
+        "name": "Средний бюджет (150 000 руб/мес)",
+        "focus": "Поиск + РСЯ + VK + Telegram",
+        "platform_split": [
+          {
+            "platform": "Яндекс Директ — Поиск (бренд)",
+            "budget_rub": 50000,
+            "est_cpc_rub": 18,
+            "est_clicks": 2778,
+            "cr_pct": 20,
+            "cpr_rub": 90,
+            "conversions_mo": 556
+          },
+          {
+            "platform": "Яндекс Директ — Поиск (жанровый + конкурентный)",
+            "budget_rub": 40000,
+            "est_cpc_rub": 28,
+            "est_clicks": 1429,
+            "cr_pct": 7,
+            "cpr_rub": 400,
+            "conversions_mo": 100
+          },
+          {
+            "platform": "Яндекс Директ — РСЯ (ретаргетинг)",
+            "budget_rub": 20000,
+            "est_cpc_rub": 12,
+            "est_clicks": 1667,
+            "cr_pct": 10,
+            "cpr_rub": 120,
+            "conversions_mo": 167
+          },
+          {
+            "platform": "VK Ads — Look-alike + сообщества",
+            "budget_rub": 30000,
+            "est_cpc_rub": 15,
+            "est_clicks": 2000,
+            "cr_pct": 5,
+            "cpr_rub": 300,
+            "conversions_mo": 100
+          },
+          {
+            "platform": "Telegram Ads — игровые каналы",
+            "budget_rub": 10000,
+            "est_cpm_rub": 250,
+            "est_impressions": 40000,
+            "cr_pct": 2,
+            "cpr_rub": 625,
+            "conversions_mo": 16
+          }
+        ],
+        "total_est_conversions_mo": 939,
+        "blended_cpr_rub": 160
+      },
+      {
+        "name": "Большой бюджет (400 000 руб/мес)",
+        "focus": "Полный микс: поиск + медийка + ретаргетинг + VK + Telegram + охватные кампании",
+        "note": "Добавляется медийная реклама (баннеры), масштабирование VK look-alike, Telegram охватные кампании на широкую геймерскую аудиторию"
+      }
+    ]
+  },
+  "ad_copy_examples": {
+    "search_ads": [
+      {
+        "context": "Брендовый запрос: warface скачать",
+        "headline_1": "Warface — Скачать Бесплатно",
+        "headline_2": "F2P шутер — 13 лет онлайн",
+        "headline_3": "Новый сезон 2025 — Играй сейчас",
+        "description_1": "Бесплатный военный шутер. 300+ оружий, 10 режимов PvP, 13 кооп-кампаний. Регистрация за 2 минуты.",
+        "description_2": "Присоединяйся к миллионам игроков. Рекорд Гиннесса. Astrum Liga 2025. Играй на ПК бесплатно."
+      },
+      {
+        "context": "Жанровый запрос: бесплатный шутер на пк",
+        "headline_1": "Лучший F2P Шутер на ПК",
+        "headline_2": "Без оплаты — сразу в бой",
+        "headline_3": "PvP + кооператив в одной игре",
+        "description_1": "Warface — тактика и кооп. 50+ карт, 300+ оружий. Играй с друзьями против ИИ или в PvP матчах.",
+        "description_2": "Бесплатно, на русском, без VPN. 18 000+ игроков онлайн прямо сейчас. Скачай и начни играть."
+      },
+      {
+        "context": "Конкурентный запрос: альтернатива crossfire / замена valorant",
+        "headline_1": "Замена CrossFire в РФ",
+        "headline_2": "Warface — Бесплатный Шутер",
+        "headline_3": "Работает в России без VPN",
+        "description_1": "CrossFire закрылся? Warface работает в России 13 лет. Похожие механики, PvE миссии и рейтинговый PvP.",
+        "description_2": "Скачай бесплатно. 10+ режимов PvP, кооп с друзьями. Astrum Entertainment — оператор в РФ."
+      }
+    ]
+  },
+  "seasonality": {
+    "peak_months": [
+      "январь",
+      "март",
+      "сентябрь",
+      "ноябрь"
+    ],
+    "secondary_peaks": [
+      "июнь",
+      "июль"
+    ],
+    "notes": [
+      "Новогодние каникулы (1-14 января) — рост трафика +20-35%",
+      "Старт нового сезона — всплеск активности и поисковых запросов",
+      "Летние каникулы (июнь-август) — аудитория 16-22 растёт",
+      "Astrum Liga анонсы — временный рост брендовых запросов",
+      "Выходы крупных обновлений — пики в даты релизов"
+    ]
+  }
+}

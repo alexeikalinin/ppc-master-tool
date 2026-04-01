@@ -1,0 +1,978 @@
+{
+  "meta": {
+    "created": "2026-03-26",
+    "analyst": "ppc-market-analyst",
+    "niche": "Online Shooters",
+    "region": "RU+CIS",
+    "version": 1,
+    "last_updated": "2026-03-26",
+    "sources_summary": "WFData, SteamCharts, SteamDB, EsCharts, Statista, VK Company, Igromania, VGTimes, CNews, DTF, Cybersport.ru, активный поиск 2024-2026"
+  },
+
+  "market_overview": {
+    "russian_gaming_market_2024_bln_rub": 173,
+    "russian_gaming_market_2025_forecast_bln_rub": 187,
+    "shooter_genre_share_pc_pct": 17,
+    "shooter_genre_share_console_pct": 16,
+    "gamers_russia_share_adult_population_pct": 60,
+    "russia_global_rank": "Top-5 по числу геймеров в мире",
+    "notes": "В 2024 году шутер — самый популярный жанр на ПК и консолях по доходности. Расходы геймеров на видеоигры в РФ выросли на 7,5% г/г. 67% российских геймеров совершили покупки в играх в 2024.",
+    "key_trends_2024_2025": [
+      "Уход западных издателей (Activision-Blizzard, EA, Riot, Bungie) создал вакуум в жанре",
+      "Рост F2P и мобильных шутеров на освободившихся позициях",
+      "Standoff 2 и Warface — главные бенефициары среди отечественных F2P",
+      "Escape from Tarkov вышел из раннего доступа (ноябрь 2025) и показал рекордный рост",
+      "CS2 — абсолютный лидер жанра в РФ по суммарной аудитории",
+      "Battle Royale продолжает доминировать как формат у молодой аудитории",
+      "VK Play закрепляет позиции как главная игровая платформа для РФ-изданий"
+    ],
+    "sources": [
+      "https://www.cnews.ru/news/top/2025-01-22_v_2024_godu_rossijskie_gejmery",
+      "https://trends.rbc.ru/trends/industry/66f278579a79473fcf76b842",
+      "https://4pda.to/2024/12/23/436757/igrovaya_industriya_2024_goda_v_tsifrakh"
+    ]
+  },
+
+  "titles": [
+    {
+      "name": "Counter-Strike 2",
+      "short": "CS2",
+      "genre": "Тактический шутер",
+      "subgenre": "5v5 командный",
+      "developer": "Valve Corporation",
+      "publisher_ru": "Valve (Steam — доступен)",
+      "platform": ["PC (Steam)"],
+      "model": "Free-to-Play + скин-маркетплейс",
+      "status_ru": "Активна — полный доступ",
+      "ru_status_note": "Доступна без ограничений. Россия — крупнейший рынок CS2: ~16% глобальной аудитории",
+      "global_audience": {
+        "registered_accounts_mln": 210,
+        "monthly_active_players_mln": 20,
+        "peak_concurrent_steam_apr2025": 1862531,
+        "avg_concurrent_30d_2025": 1077718,
+        "russia_share_pct": 16,
+        "russia_note": "Россия — №1 страна по доле игроков CS2 в мире"
+      },
+      "usp": [
+        "Абсолютный лидер тактических шутеров 25+ лет",
+        "Развитая экосистема скинов (маркетплейс Steam)",
+        "Сильнейшая киберспортивная сцена в мире",
+        "Низкие системные требования — доступно на большинстве ПК",
+        "F2P с 2018 года — нулевой барьер входа"
+      ],
+      "weaknesses": [
+        "Читеры и смурф-аккаунты — хроническая проблема",
+        "Разрыв в скиллинге между новичками и опытными",
+        "Нет сюжетного PvE режима",
+        "Проблемы с серверами в РФ (Valve не поддерживает официально)"
+      ],
+      "similarity_to_warface": "Прямой конкурент в тактическом шутере — ключевой аудиторный пересечение",
+      "ppc_relevance": "Высокая — самый частотный брендовый кластер в нише",
+      "cpc_branded_estimate_rub": "20-45"
+    },
+
+    {
+      "name": "Warface",
+      "short": "WF",
+      "genre": "Военный шутер (тактический + кооператив)",
+      "subgenre": "F2P PC шутер, многорежимный",
+      "developer": "Crytek Kyiv (разработка), Astrum Lab / Astrum Entertainment (оперирование РФ/СНГ с апреля 2023)",
+      "publisher_ru": "Astrum Entertainment (ООО Аструм Лаб)",
+      "publisher_global": "Nexon (Корея/Азия), Garena (ЮВА)",
+      "platform": ["PC (собственный клиент)", "PC (VK Play)"],
+      "model": "Free-to-Play + боевой пропуск + маркетплейс оружия/скинов",
+      "status_ru": "Активна — один из главных F2P шутеров РФ",
+      "global_audience": {
+        "registered_accounts_global_mln": 60,
+        "daily_active_players_peak_k": 720,
+        "monthly_active_players_peak_mln": 2.6,
+        "current_online_estimate": "~15000-20000 одновременно (пик сезона)",
+        "current_online_note": "WFData: ~18 246 игроков (данные 2025); Steam версия Clutch — менее 300 concurrent, основная аудитория в нативном клиенте",
+        "guinness_record_2013": "145,000+ одновременных игроков на одном шутер-сервере",
+        "russia_share_pct": 74,
+        "ukraine_share_pct": 10,
+        "kazakhstan_share_pct": 7,
+        "belarus_share_pct": 3,
+        "cis_total_pct": 26
+      },
+      "history": {
+        "launch_date": "2012-04-12",
+        "engine": "CryEngine 3",
+        "milestones": [
+          "2012 — Открытое бета-тестирование; Best Online Game на Gamescom",
+          "2012-2014 — Расширение с 1 до 3 серверов из-за спроса",
+          "2013 — Рекорд Гиннесса: 145 000+ одновременных игроков",
+          "2016 — Режим Blitz (раунды по 90 сек)",
+          "2017 — Battle Royale механики; Чернобыльский ивент с Припятью",
+          "2022 — Оптимизация текстур для старого железа (Ледяной шторм)",
+          "2023 (март) — Переход к Astrum Entertainment после ухода Mail.ru",
+          "2023-2025 — Astrum Liga турниры; развитие киберспортивной экосистемы",
+          "2025 — Улучшение кастомизации оружия (до 9 слотов модификаций)"
+        ],
+        "ru_tournaments_total": "2000+",
+        "ru_prize_pools_total_rub_mln": 134,
+        "esports_prize_2024_usd": 55795
+      },
+      "gameplay": {
+        "classes": ["Штурмовик", "Снайпер", "Медик", "Инженер"],
+        "pvp_modes_count": "10+",
+        "pvp_maps_count": "50+",
+        "pve_missions_count": 13,
+        "weapons_count": "300+",
+        "key_pvp_modes": ["Подрыв", "Захват флага", "Командный бой", "Блиц (90 сек)", "Рейтинговый"],
+        "pve_features": "Кооператив до 5 игроков против ботов, уровни сложности от Тренировки до Профи, уникальные боссы",
+        "customization": "9 слотов модификаций оружия (2025+), 3 слота гаджетов"
+      },
+      "usp": [
+        "Самый долгоживущий F2P шутер в РФ (13+ лет, 2026)",
+        "Гибридный формат: и тактика (PvP), и кооператив (PvE)",
+        "Локализован и оперируется в РФ (Astrum) — нет западных санкционных рисков",
+        "Низкие системные требования — аудитория с бюджетными ПК",
+        "Развитая киберспортивная экосистема в РФ (2000+ турниров)",
+        "VK Play интеграция — органический трафик из экосистемы VK",
+        "Astrum Liga — ежегодный турнир с телетрансляциями"
+      ],
+      "weaknesses": [
+        "Устаревшая графика относительно CS2 и современных шутеров",
+        "Репутация игры с агрессивным донатом (история Mail.ru)",
+        "Читеры и нечестная игра — хроническая проблема",
+        "Баги после каждого обновления (отмечают игроки)",
+        "Токсичное сообщество",
+        "Снижение онлайна относительно пика 2013-2016",
+        "Нет мобильной версии (в отличие от Standoff 2)"
+      ],
+      "business_model_detail": {
+        "monetization_sources": ["Боевой пропуск (сезонный)", "Рандомные ящики с оружием", "Прямая покупка оружия/скинов", "VIP-статус с бонусами", "Кредиты (внутриигровая валюта)"],
+        "f2p_fairness": "Частично P2W: Premium-оружие статистически сильнее, хотя разработчики утверждают иное. Косметика и оружие продаются в ящиках",
+        "revenue_model_note": "Warface ориентировался на CrossFire как образец монетизации F2P шутера"
+      },
+      "competitive_position": {
+        "vs_cs2": "Более casual-friendly, кооператив есть — у CS2 нет; CS2 выигрывает по скиллинг-планке и ивент-сцене",
+        "vs_standoff2": "PC vs Mobile — разные платформы и аудитория; Warface старше и глубже в PvE",
+        "vs_tarkov": "Warface — casual/mid, Tarkov — hardcore extraction; не прямые конкуренты по геймплею"
+      }
+    },
+
+    {
+      "name": "Valorant",
+      "short": "Valorant",
+      "genre": "Герой-шутер (тактический)",
+      "subgenre": "5v5 тактический, abilities-based",
+      "developer": "Riot Games",
+      "publisher_ru": "Riot Games (официально недоступен в РФ)",
+      "platform": ["PC"],
+      "model": "Free-to-Play + боевой пропуск + скин-магазин",
+      "status_ru": "Ограниченный доступ — игра технически доступна через VPN, официально не поддерживается",
+      "ru_status_note": "Riot Games приостановил CIS-лиги в марте 2022 (конфликт Украина-Россия). РКН частично блокировал CloudFlare CDN, затрагивая Valorant. Турниры в РФ отменены, в т.ч. из-за ЛГБТ-персонажей (2024). Часть игроков продолжает играть через VPN",
+      "global_audience": {
+        "monthly_active_players_mln": "~20-22 (оценка)",
+        "note": "Riot не публикует официальную статистику. Активная зрительская аудитория на Twitch/YouTube"
+      },
+      "usp": [
+        "Уникальный герой-шутер с тактическими умениями",
+        "Высокий скиллинг-потолок, конкурентная сцена",
+        "Отличный античит (Vanguard)",
+        "Яркие герои и лор"
+      ],
+      "weaknesses": [
+        "Фактически недоступен официально в РФ",
+        "Vanguard античит — ring-0 kernel, спорный среди части аудитории",
+        "Крутая кривая обучения"
+      ],
+      "similarity_to_warface": "Конкурент за тактическую PvP аудиторию, но фактически вне рынка РФ",
+      "ppc_relevance": "Низкая для прямой рекламы; высокая как look-alike (игроки Valorant ищут альтернативы в РФ)",
+      "cpc_branded_estimate_rub": "~10-20 (низкочастотный в РФ)"
+    },
+
+    {
+      "name": "Call of Duty: Warzone",
+      "short": "Warzone",
+      "genre": "Батл-рояль + тактический шутер",
+      "subgenre": "Battle Royale, 150 игроков",
+      "developer": "Infinity Ward / Raven Software (Activision)",
+      "publisher_ru": "Activision Blizzard (ушли из РФ)",
+      "platform": ["PC (Battle.net / Steam)", "PS4/PS5", "Xbox"],
+      "model": "Free-to-Play + Battle Pass + магазин скинов",
+      "status_ru": "Заблокирован официально — доступен через VPN",
+      "ru_status_note": "Activision Blizzard приостановил продажи и продвижение в РФ в 2022. Регистрация с российских аккаунтов заблокирована. Warzone Mobile снята из магазинов в РФ с 19 мая 2025. Часть игроков использует VPN для доступа",
+      "global_audience": {
+        "note": "Activision не публикует отдельную статистику по Warzone; данные по всей франшизе"
+      },
+      "usp": [
+        "Самый известный BR от AAA-студии",
+        "Высокое качество продакшна",
+        "Интеграция с Modern Warfare вселенной"
+      ],
+      "weaknesses": [
+        "Официально недоступен в РФ",
+        "Проблемы с читерами (системный античит Ricochet слабый)",
+        "Большой размер клиента",
+        "Неоднозначная оптимизация"
+      ],
+      "similarity_to_warface": "Конкурент в военно-тематическом шутере; вне рынка РФ",
+      "ppc_relevance": "Низкая — нет смысла таргетировать на существующую аудиторию; возможно как look-alike аудитория"
+    },
+
+    {
+      "name": "Escape from Tarkov",
+      "short": "EFT / Tarkov",
+      "genre": "Хардкор экшн-RPG / Extraction Shooter",
+      "subgenre": "Hardcore PvPvE, Extraction",
+      "developer": "Battlestate Games (Санкт-Петербург, Россия)",
+      "publisher_ru": "Battlestate Games (российская разработка)",
+      "platform": ["PC (собственный лаунчер + Steam с ноябрь 2025)"],
+      "model": "Buy-to-Play (несколько изданий) + DLC",
+      "status_ru": "Активна — российская разработка, полный доступ",
+      "ru_status_note": "Отечественный разработчик (СПб). Версия 1.0 вышла ноябрь 2025 — официальный выход из раннего доступа. Добавлена на Steam. Рекорд: самая популярная новая ПК-игра 2025 по данным NewZoo (~1.7% игрового времени на ПК)",
+      "global_audience": {
+        "peak_concurrent_online_k": 150,
+        "steam_peak_concurrent_nov2025": 47800,
+        "pvp_vs_pve_split": "56.5% PvE, 43.5% PvP (данные 2024)",
+        "newzoo_share_pc_gaming_time_pct": 1.7
+      },
+      "usp": [
+        "Единственный AAA Extraction Shooter с российскими серверами",
+        "Реалистичная баллистика и механика ранений",
+        "Уникальный лут-гейминг и экономика",
+        "Полное отсутствие HUD — максимальный иммерсив",
+        "Отечественная разработка — нет санкционных рисков"
+      ],
+      "weaknesses": [
+        "Очень высокий порог вхождения",
+        "Разрыв между новичками и ветеранами (хаккеры)",
+        "Дорогой вход (B2P)",
+        "Скандалы с монетизацией (PvE за доп. плату в 2024)",
+        "Долгое время в Early Access создало негатив"
+      ],
+      "similarity_to_warface": "Низкое — разные жанры; Tarkov для хардкора, Warface для casual/mid-core",
+      "ppc_relevance": "Средняя — аудитория Tarkov частично пересекается с Warface по возрасту (20-35), но разная платёжная готовность"
+    },
+
+    {
+      "name": "Standoff 2",
+      "short": "Standoff2 / SO2",
+      "genre": "Мобильный тактический шутер",
+      "subgenre": "Mobile FPS, 5v5",
+      "developer": "Axlebolt (Россия)",
+      "publisher_ru": "Axlebolt",
+      "platform": ["iOS", "Android"],
+      "model": "Free-to-Play + скины + ящики",
+      "status_ru": "Активна — отечественная мобильная разработка",
+      "ru_status_note": "Главный мобильный шутер РФ/СНГ. Axlebolt — российская студия. Активная киберспортивная сцена (Virtus.pro, MadBulls, AMKAL ESPORTS)",
+      "global_audience": {
+        "esports_views_h1_2024_mln": 10.7,
+        "esports_prize_2024_usd": 136399,
+        "note": "Axlebolt не раскрывает MAU/DAU. По оценкам — одна из топ-3 F2P мобильных игр РФ"
+      },
+      "usp": [
+        "Главный мобильный CS-клон для СНГ-аудитории",
+        "Бесплатный, работает на любом смартфоне",
+        "Развитая киберспортивная экосистема (Игры Будущего 2024)",
+        "Русскоязычный интерфейс и поддержка"
+      ],
+      "weaknesses": [
+        "Мобильный P2W — скины влияют на восприятие",
+        "Геймплей ограничен мобильными возможностями",
+        "Читеры на мобильных платформах"
+      ],
+      "similarity_to_warface": "Косвенная — Warface PC vs Standoff 2 Mobile; разные платформы, разная аудитория по возрасту (SO2 моложе)",
+      "ppc_relevance": "Средняя — аудитория SO2 моложе (14-22), пересечение с Warface ограничено"
+    },
+
+    {
+      "name": "Enlisted",
+      "short": "Enlisted",
+      "genre": "Военный шутер WWII",
+      "subgenre": "Squad-based WWII Shooter",
+      "developer": "Darkflow Software",
+      "publisher_ru": "Gaijin Entertainment (Россия/Кипр)",
+      "platform": ["PC (Gaijin.net + Steam)", "PS4/PS5", "Xbox"],
+      "model": "Free-to-Play + боевой пропуск + магазин",
+      "status_ru": "Активна — российский издатель",
+      "ru_status_note": "Gaijin Entertainment — де-факто российская студия (офисы в Москве и Будапеште). Без санкционных рисков. В Steam с июля 2024 после скандала с выходом из Steam",
+      "global_audience": {
+        "registered_players_mln": 2.2,
+        "steam_avg_concurrent_30d_2025": 3088,
+        "steam_peak_concurrent_jan2025": 7492,
+        "revenue_peak_month_usd": 59000,
+        "revenue_peak_month": "март 2024"
+      },
+      "usp": [
+        "WWII атмосфера — нишевый, но лояльный сегмент",
+        "Отрядная механика — управление пехотой + техникой",
+        "Реалистичный военный геймплей",
+        "Доступен на консолях"
+      ],
+      "weaknesses": [
+        "Нишевая тематика (WWII)",
+        "Скандал с выходом из Steam в 2023 — потеря части аудитории",
+        "Средний онлайн значительно ниже лидеров"
+      ],
+      "similarity_to_warface": "Среднее — военная тематика пересекается, но Warface — современная война, Enlisted — WWII",
+      "ppc_relevance": "Низкая прямая конкуренция; полезна как look-alike аудитория любителей военных F2P шутеров"
+    },
+
+    {
+      "name": "Hunt: Showdown 1896",
+      "short": "Hunt: Showdown",
+      "genre": "PvPvE Extraction Shooter",
+      "subgenre": "Исторический хоррор-шутер, extraction",
+      "developer": "Crytek (Германия)",
+      "publisher_ru": "Crytek (Steam)",
+      "platform": ["PC (Steam)", "PS4/PS5", "Xbox"],
+      "model": "Buy-to-Play (~700 руб.) + DLC + косметика",
+      "status_ru": "Активна — доступна через Steam",
+      "ru_status_note": "Crytek — немецкая студия, не уходила с рынка РФ. Доступна в Steam. Скандальный апдейт Hunt: Showdown 1896 (2024) значительно снизил онлайн",
+      "global_audience": {
+        "total_players_ever_mln": 10,
+        "steam_concurrent_dec2025": 14275,
+        "peak_period_concurrent_k": 100,
+        "note": "Апдейт 1896 в 2024 вызвал 100к пик, затем резкий спад и 6к+ негативных отзывов"
+      },
+      "usp": [
+        "Уникальный сеттинг (дикий запад + хоррор)",
+        "Атмосферный PvPvE геймплей",
+        "Нет аналогов в нише"
+      ],
+      "weaknesses": [
+        "B2P барьер входа",
+        "Скандал с апдейтом 1896 — потеря аудитории",
+        "Нишевый сеттинг ограничивает охват",
+        "Почти 50% игроков никогда не убивали других (по данным Crytek)"
+      ],
+      "similarity_to_warface": "Низкое — разные жанры и сеттинг",
+      "ppc_relevance": "Низкая"
+    },
+
+    {
+      "name": "CrossFire",
+      "short": "CF",
+      "genre": "Тактический шутер",
+      "subgenre": "F2P PC шутер, 5v5",
+      "developer": "SmileGate (Южная Корея)",
+      "publisher_ru": "Mail.ru Group (до февраля 2023)",
+      "platform": ["PC"],
+      "model": "Free-to-Play",
+      "status_ru": "ЗАКРЫТ в России — серверы остановлены 20 февраля 2023",
+      "ru_status_note": "Контракт Mail.ru с SmileGate завершился. Регистрация отключена 10 янв 2023, торговля 17 янв 2023, серверы 20 фев 2023. 12 лет работы на РФ-рынке. Аудитория перешла частично в Warface и CS2",
+      "global_audience": {
+        "total_registered_global_bln": 1,
+        "countries": 80,
+        "global_revenue_lifetime_bln_usd": 10,
+        "ru_status": "ЗАКРЫТ"
+      },
+      "usp": [
+        "Исторически — один из крупнейших F2P шутеров в мире",
+        "В РФ — закрыт, не релевантен"
+      ],
+      "weaknesses": [
+        "Закрыт в России",
+        "Устаревший геймплей и графика"
+      ],
+      "similarity_to_warface": "Прямой конкурент (был) — закрытие CrossFire в РФ отдало аудиторию Warface",
+      "ppc_relevance": "Историческая — аудитория бывших игроков CF может искать альтернативы; запрос 'CrossFire замена' актуален",
+      "audience_migration_note": "Закрытие CrossFire в РФ (фев 2023) — потенциально крупный источник аудитории для Warface"
+    },
+
+    {
+      "name": "Tom Clancy's Rainbow Six Siege",
+      "short": "R6 Siege",
+      "genre": "Тактический шутер",
+      "subgenre": "5v5 операторный, разрушаемость",
+      "developer": "Ubisoft Montreal",
+      "publisher_ru": "Ubisoft (ушли из РФ, технический доступ ограничен)",
+      "platform": ["PC (Steam / Ubisoft Connect)", "PS4/PS5", "Xbox"],
+      "model": "Buy-to-Play (~стандартная версия) + Battle Pass + операторы",
+      "status_ru": "Ограниченный доступ — Ubisoft приостановил продажи в РФ, технически играбельна",
+      "ru_status_note": "Ubisoft не ушел так жёстко как Activision, но прямые продажи в РФ затруднены. Игроки покупают через сторонние сервисы (FunPay, GGSel, Plati.ru). Siege X — крупнейший апдейт (июнь 2025)",
+      "global_audience": {
+        "monthly_active_players_all_platforms_mln": 30,
+        "steam_peak_concurrent_mar2024": 201933,
+        "steam_concurrent_current_k": 108,
+        "siege_x_launch_steam_peak": 141309,
+        "cumulative_revenue_eur_bln": 3.5
+      },
+      "usp": [
+        "Уникальная механика разрушаемости стен и поверхностей",
+        "Операторы с уникальными способностями (более 60)",
+        "Высочайший скиллинг-потолок",
+        "Siege X — крупнейший ребрендинг 2025"
+      ],
+      "weaknesses": [
+        "Официально недоступен для покупки в РФ (обходные пути)",
+        "Крутая кривая обучения",
+        "Токсичное сообщество",
+        "Высокая цена входа"
+      ],
+      "similarity_to_warface": "Среднее — тактический военный шутер; Warface более casual-friendly",
+      "ppc_relevance": "Средняя — аудитория R6 в РФ ищет аналоги с нормальным доступом"
+    },
+
+    {
+      "name": "Apex Legends",
+      "short": "Apex",
+      "genre": "Герой-батл-рояль",
+      "subgenre": "Hero Battle Royale, 3v3 squad",
+      "developer": "Respawn Entertainment (EA)",
+      "publisher_ru": "EA (нет официальных продаж в РФ, игра технически доступна)",
+      "platform": ["PC (Steam / EA App)", "PS4/PS5", "Xbox", "Nintendo Switch", "Mobile (закрыт)"],
+      "model": "Free-to-Play + Legend Tokens + Apex Coins + Battle Pass",
+      "status_ru": "Доступна технически, официальной поддержки нет",
+      "ru_status_note": "EA приостановила прямые продажи в РФ, но Apex Legends доступна. Официальные турниры в РФ не проводятся",
+      "global_audience": {
+        "monthly_active_players_mln": "~20-22",
+        "steam_avg_concurrent_may2025": 135052,
+        "steam_peak_may2025": 264117,
+        "global_peak_concurrent_2025_k": "570-600",
+        "note": "EA не раскрывает официальную статистику по регионам"
+      },
+      "usp": [
+        "Лучшее движение в Battle Royale (Titanfall механики)",
+        "Уникальные герои с умениями",
+        "Пинг-система без голоса — удобство для казуалов",
+        "Высокое качество продакшна от Respawn/EA"
+      ],
+      "weaknesses": [
+        "Скандал с монетизацией 2024 — обвал оценок на Steam",
+        "Официально нет поддержки РФ-рынка",
+        "Mobile версия закрыта",
+        "Declining playerbase trend 2024"
+      ],
+      "similarity_to_warface": "Низкое — разные жанры; аудиторные пересечения минимальны",
+      "ppc_relevance": "Низкая"
+    },
+
+    {
+      "name": "Fortnite",
+      "short": "Fortnite",
+      "genre": "Батл-рояль + строительство",
+      "subgenre": "Battle Royale, Creative, LEGO Mode",
+      "developer": "Epic Games",
+      "publisher_ru": "Epic Games (технически доступен, официальной поддержки нет)",
+      "platform": ["PC (Epic Games Store)", "PS4/PS5", "Xbox", "Nintendo Switch", "iOS", "Android"],
+      "model": "Free-to-Play + Battle Pass + V-Bucks",
+      "status_ru": "Ограниченный доступ — Epic Games Store недоступен в РФ напрямую, игра доступна через VPN и альтернативные методы",
+      "ru_status_note": "Epic Games ушли с российского рынка. EGS недоступен. Россия — #2 страна по доле игроков Fortnite (7.54%), что говорит о большом числе обходящих блокировку игроков",
+      "global_audience": {
+        "monthly_active_players_mln": "250-300",
+        "russia_share_pct": 7.54,
+        "usa_share_pct": 21.1,
+        "note": "Россия — №2 страна по игрокам, несмотря на официальные ограничения"
+      },
+      "usp": [
+        "Крупнейшая аудитория в Battle Royale",
+        "Постоянные коллаборации (Marvel, Star Wars и т.д.)",
+        "Разнообразие режимов (Battle Royale, Zero Build, LEGO, Festival)"
+      ],
+      "weaknesses": [
+        "Официально недоступен в РФ",
+        "Строительная механика отпугивает часть аудитории",
+        "Позиционирование как «игра для детей» в СНГ"
+      ],
+      "similarity_to_warface": "Низкое",
+      "ppc_relevance": "Низкая — аудитория Fortnite (моложе, мобильная) не целевая для Warface"
+    },
+
+    {
+      "name": "PUBG: Battlegrounds",
+      "short": "PUBG",
+      "genre": "Батл-рояль",
+      "subgenre": "Реалистичный Battle Royale",
+      "developer": "Krafton (Южная Корея)",
+      "publisher_ru": "Krafton / Steam (доступен)",
+      "platform": ["PC (Steam)", "PS4/PS5", "Xbox"],
+      "model": "Free-to-Play (с января 2022) + Battle Pass + магазин",
+      "status_ru": "Активна — полный доступ через Steam",
+      "ru_status_note": "Krafton не уходил из РФ. PUBG перешел на F2P в 2022 — без барьера входа",
+      "global_audience": {
+        "steam_peak_concurrent_jan2025_k": 786,
+        "steam_peak_concurrent_jul2025_k": 944,
+        "steam_avg_concurrent_jun2025_k": 310,
+        "franchise_revenue_growth_2025_pct": 12
+      },
+      "usp": [
+        "Родоначальник Battle Royale жанра",
+        "Реалистичный баллистика и геймплей",
+        "Большие открытые карты (8x8 км)",
+        "F2P с 2022 — нет барьера входа"
+      ],
+      "weaknesses": [
+        "Устаревает на фоне Warzone и Apex",
+        "Проблемы с читерами (особенно на азиатских серверах)",
+        "Оптимизация ниже чем у конкурентов"
+      ],
+      "similarity_to_warface": "Низкое — BR vs тактический шутер",
+      "ppc_relevance": "Средняя — PUBG-игроки пересекаются по возрасту и интересу к военным шутерам"
+    },
+
+    {
+      "name": "Overwatch 2",
+      "short": "OW2",
+      "genre": "Герой-шутер",
+      "subgenre": "5v5 Hero Shooter",
+      "developer": "Blizzard Entertainment",
+      "publisher_ru": "Blizzard (заблокирован в РФ)",
+      "platform": ["PC (Battle.net / Steam)", "PS4/PS5", "Xbox", "Nintendo Switch"],
+      "model": "Free-to-Play + Battle Pass + косметика",
+      "status_ru": "ЗАБЛОКИРОВАН — IP-ограничения для РФ и Беларуси",
+      "ru_status_note": "Activision-Blizzard ввели IP-ограничения для РФ. Существующие игроки могут играть, но покупки заблокированы. Vanguard античит недоступен — без него игра не работает",
+      "global_audience": {
+        "note": "Blizzard не публикует текущую статистику. Оценка MAU 2023: ~25 млн (пик после запуска OW2)"
+      },
+      "usp": [
+        "Уникальные персонажи-герои с умениями",
+        "Развитый конкурентный режим"
+      ],
+      "weaknesses": [
+        "Фактически недоступен в РФ",
+        "Античит требует доступности сервисов Blizzard"
+      ],
+      "similarity_to_warface": "Низкое",
+      "ppc_relevance": "Минимальная — аудитория в РФ заблокирована"
+    },
+
+    {
+      "name": "Destiny 2",
+      "short": "Destiny 2",
+      "genre": "Шутер + RPG (Looter Shooter)",
+      "subgenre": "Sci-fi MMO Shooter",
+      "developer": "Bungie",
+      "publisher_ru": "Bungie (продажи приостановлены в РФ)",
+      "platform": ["PC (Steam)", "PS4/PS5", "Xbox"],
+      "model": "Free-to-Play (базовый) + DLC + сезонные пропуска",
+      "status_ru": "Ограниченный доступ — существующие игроки могут играть, покупки заблокированы",
+      "ru_status_note": "Bungie приостановил продажи в РФ с марта 2022. Скачать и играть бесплатную версию можно. Покупка DLC и Silver (валюты) — заблокирована",
+      "global_audience": {
+        "note": "Bungie не раскрывает текущий MAU. Игра стабильна, но снизилась после отмены Lightfall DLC"
+      },
+      "usp": [
+        "Уникальный Looter Shooter жанр",
+        "Глубокий лор и сюжет",
+        "Рейды на 6 игроков — уникальные в жанре"
+      ],
+      "weaknesses": [
+        "Покупки заблокированы в РФ — нельзя поддержать игру финансово",
+        "Сложный для новичков из-за объема лора"
+      ],
+      "similarity_to_warface": "Очень низкое — разные жанры",
+      "ppc_relevance": "Минимальная"
+    },
+
+    {
+      "name": "Battlefield серия (2042, V, 1)",
+      "short": "Battlefield",
+      "genre": "Военный шутер, массовые сражения",
+      "subgenre": "Large-scale Military FPS",
+      "developer": "DICE / EA",
+      "publisher_ru": "EA (ушли из РФ)",
+      "platform": ["PC (Steam / EA App)", "PS4/PS5", "Xbox"],
+      "model": "Buy-to-Play + DLC",
+      "status_ru": "Заблокирован для покупки — EA приостановила продажи в РФ",
+      "ru_status_note": "EA приостановила продажи в РФ. Battlefield 2042: Season 7 (апрель 2024) — последний сезон. Игра продолжает работать для уже купивших",
+      "global_audience": {
+        "note": "EA не раскрывает статистику по BF отдельно. Серия на спаде после провала BF2042 (2021)"
+      },
+      "usp": [
+        "Масштабные 64-128 игроков сражения",
+        "Реалистичная физика и разрушения",
+        "Техника (танки, вертолёты, джеты)"
+      ],
+      "weaknesses": [
+        "Заблокирован для покупки в РФ",
+        "BF2042 провалился — репутационный ущерб серии",
+        "EA прекратила поддержку новыми сезонами"
+      ],
+      "similarity_to_warface": "Среднее — военная тематика, но разный масштаб и формат",
+      "ppc_relevance": "Низкая — аудитория недоступна для рекламы напрямую"
+    },
+
+    {
+      "name": "World of Tanks",
+      "short": "WoT",
+      "genre": "Танковый экшн (смежный с шутерами)",
+      "subgenre": "Team-based Tank Shooter",
+      "developer": "Wargaming (Беларусь — штаб-квартира перенесена на Кипр)",
+      "publisher_ru": "Lesta Studio (с 2022 — оперирует РФ/СНГ версию)",
+      "platform": ["PC"],
+      "model": "Free-to-Play + premium аккаунт + премиум техника",
+      "status_ru": "Активна — Lesta Studio (Санкт-Петербург) оперирует RU-серверы независимо с 2022",
+      "ru_status_note": "С марта 2022 Wargaming передала российские серверы Lesta Studio. По сути — отдельная игра с обновлениями, независимая от мировой. Стабильная зрелая аудитория",
+      "global_audience": {
+        "ru_cis_registered_mln": "~50 (оценка на всей истории)",
+        "note": "Lesta не публикует текущий онлайн. Исторически один из крупнейших российских игровых продуктов"
+      },
+      "usp": [
+        "Единственный крупный танковый экшн",
+        "Полностью российский оператор (Lesta)",
+        "Нет санкционных рисков",
+        "Огромная зрелая аудитория (25-45)"
+      ],
+      "weaknesses": [
+        "Нишевый жанр (танки, не пехота)",
+        "Репутация P2W и агрессивной монетизации",
+        "Устаревающая аудитория"
+      ],
+      "similarity_to_warface": "Низкое — танки vs пехотный шутер; аудиторное пересечение по возрасту (25-40) и F2P-модели",
+      "ppc_relevance": "Средняя — аудитория WoT (25-40, мужчины, PC, F2P) пересекается с Warface; конкурент за бюджет геймера"
+    }
+  ],
+
+  "market_status_summary": {
+    "available_without_restrictions": ["CS2", "Warface", "Standoff 2", "Enlisted", "PUBG", "Escape from Tarkov", "World of Tanks (Lesta)", "Hunt: Showdown"],
+    "limited_access_vpn_workaround": ["Valorant", "Apex Legends", "Rainbow Six Siege", "Destiny 2", "Fortnite"],
+    "officially_blocked_unavailable": ["Call of Duty: Warzone", "Overwatch 2", "Battlefield 2042 (покупка)", "CrossFire (закрыт)"],
+    "key_insight": "Уход западных издателей создал вакуум. Warface, EFT, Enlisted, CS2 — главные бенефициары. Доля отечественных F2P в РФ выросла после 2022"
+  },
+
+  "audience": {
+    "general_portrait": {
+      "age_primary": "16-34",
+      "age_secondary": "35-45 (WoT, Tarkov, Warface — более зрелая аудитория тактических/хардкорных шутеров)",
+      "gender": "мужчины ~75-80%, женщины ~20-25% (героик-шутеры: Valorant, Apex — выше доля женщин)",
+      "geography": {
+        "ru_share_pct": "~70",
+        "cis_share_pct": "~25",
+        "other_pct": "~5",
+        "top_cities_ru": ["Москва", "Санкт-Петербург", "Новосибирск", "Екатеринбург", "Казань", "Краснодар", "Нижний Новгород"]
+      },
+      "socio_economic": {
+        "income": "средний и ниже среднего (F2P-аудитория), средний и выше (EFT, R6S, платные игры)",
+        "education": "среднее и высшее",
+        "employment": "студенты 16-22, работающие 22-35",
+        "device_pc_pct": 75,
+        "device_mobile_pct": 25,
+        "note": "PC доминирует в шутерах, мобайл растёт (Standoff 2)"
+      },
+      "behavioral": {
+        "session_length": "1.5-4 часа в день",
+        "purchase_patterns": "готовы платить за скины, ящики, боевые пропуска. F2P-аудитория тратит 200-1500 руб/мес на донат",
+        "community": "активны в Discord, VK, Twitch/VK Видео, YouTube, Telegram",
+        "peak_hours": "19:00-01:00 МСК в будни, 12:00-03:00 в выходные"
+      }
+    },
+    "segments": [
+      {
+        "name": "Hardcore PvP / Про-игроки и стримеры",
+        "age": "18-28",
+        "gender": "90% мужчины",
+        "platforms": ["CS2", "Valorant", "R6 Siege"],
+        "behavior": "Ежедневная игра 3-6ч, смотрят стримы, участвуют в турнирах, покупают скины",
+        "value": "Высокая — influencer-эффект, привлекают других",
+        "ppc_target": "Look-alike по аудитории Twitch/VK Видео стримеров"
+      },
+      {
+        "name": "Casual / Регулярный геймер",
+        "age": "20-35",
+        "gender": "75% мужчины",
+        "platforms": ["Warface", "PUBG", "Apex", "Fortnite"],
+        "behavior": "2-3 часа ежедневно, любит F2P, покупает боевые пропуска и скины",
+        "value": "Средняя — основной объём аудитории",
+        "ppc_target": "Основной таргет для F2P шутеров"
+      },
+      {
+        "name": "Кооператив-фокус / PvE-игроки",
+        "age": "22-38",
+        "gender": "65% мужчины",
+        "platforms": ["Warface PvE", "Destiny 2", "Enlisted"],
+        "behavior": "Играют с друзьями, ценят PvE и сюжет, избегают токсичного PvP",
+        "value": "Средняя — лояльнее к продукту, меньше чёрн",
+        "ppc_target": "Ключевой сегмент Warface — кооператив как USP"
+      },
+      {
+        "name": "Мобильная аудитория",
+        "age": "14-24",
+        "gender": "60% мужчины",
+        "platforms": ["Standoff 2", "Fortnite Mobile (был)", "PUBG Mobile"],
+        "behavior": "20-60 мин в день, F2P, нет PC/консоли, активны в мобайл-сообществах",
+        "value": "Низкая для PC-шутеров; высокая для мобильных",
+        "ppc_target": "Не целевой для Warface PC"
+      },
+      {
+        "name": "Харкдор / Extraction Shooter аудитория",
+        "age": "22-35",
+        "gender": "95% мужчины",
+        "platforms": ["Escape from Tarkov", "Hunt: Showdown"],
+        "behavior": "Исследуют, стримят, платят за B2P, высокий ARPU",
+        "value": "Высокая — готовы платить, лояльны",
+        "ppc_target": "Менее целевой для Warface"
+      }
+    ],
+
+    "platform_profiles": {
+      "yandex_direct": {
+        "age_range": "18-40",
+        "gender": "70% мужчины, 30% женщины",
+        "key_interests": ["онлайн игры", "шутеры", "компьютерные игры", "киберспорт", "PC-игры"],
+        "device_preference": "Desktop/Laptop 80%, Mobile 20%",
+        "geo_targeting": "Москва, СПб — приоритет 1; Екатеринбург, Новосибирск, Казань — приоритет 2; вся РФ",
+        "income_level": "средний и ниже среднего",
+        "behavioral_signals": "ищут 'скачать шутер', 'F2P шутер', брендовые запросы конкурентов",
+        "best_campaign_types": ["Поиск (брендовые + жанровые)", "РСЯ (ретаргетинг)", "Смарт-баннеры"],
+        "estimated_cpc_search_rub": "15-40",
+        "estimated_cpc_rsya_rub": "8-18"
+      },
+      "vk_ads": {
+        "age_range": "16-35",
+        "gender": "75% мужчины",
+        "key_interests": ["Игры", "Геймеры", "Киберспорт", "Стримы"],
+        "device_preference": "50% Desktop, 50% Mobile",
+        "geo_targeting": "Все регионы РФ + СНГ",
+        "key_communities_for_targeting": [
+          "vk.com/cs2news — CS:GO / CS2 новости (~250k+)",
+          "vk.com/warface — официальное (~400k)",
+          "vk.com/standoff2game",
+          "vk.com/vkplay — VK Play (~120k)",
+          "vk.com/cybersport.ru",
+          "vk.com/igm — IGM геймеры (~4 млн)",
+          "vk.com/gamelive"
+        ],
+        "targeting_options": ["По интересам: Онлайн-игры, Киберспорт", "По подписчикам конкретных игровых сообществ", "Look-alike по базе существующих игроков", "По ключевым словам (сбор по запросам)"],
+        "estimated_cpc_rub": "12-30",
+        "estimated_cpm_rub": "100-250",
+        "estimated_cpr_registration_rub": "150-400"
+      },
+      "telegram_ads": {
+        "age_range": "18-35",
+        "gender": "75% мужчины",
+        "key_channels": [
+          "@newcsgo — CS2NEWS (~50k+ подписчиков)",
+          "@warface_official — официальный канал Warface",
+          "@csgo_russ — Новости КС2",
+          "@cs2valve2 — Закулисье CS2",
+          "@zloywf — Злой Warface (неофициальный)",
+          "@goharugames — Goha.ru новости",
+          "@cybersport_ru",
+          "@gamediscount — скидки на игры"
+        ],
+        "format": "Текст + изображение/видео (с 2024)",
+        "estimated_cpm_rub": "200-600",
+        "note": "Telegram — точечный охват по тематическим каналам. Цены выросли на 38% за 2024 год"
+      }
+    }
+  },
+
+  "keyword_clusters": [
+    {
+      "cluster_id": 1,
+      "cluster_name": "Жанровые — шутер онлайн",
+      "intent": "информационный + транзакционный",
+      "description": "Пользователи ищут новый шутер или подходящий жанр",
+      "keywords": [
+        {"keyword": "онлайн шутер", "volume_estimate": "~50000/мес", "cpc_estimate_rub": "~20-35"},
+        {"keyword": "бесплатный шутер на ПК", "volume_estimate": "~30000/мес", "cpc_estimate_rub": "~25-45"},
+        {"keyword": "f2p шутер", "volume_estimate": "~15000/мес", "cpc_estimate_rub": "~20-38"},
+        {"keyword": "тактический шутер онлайн", "volume_estimate": "~12000/мес", "cpc_estimate_rub": "~22-40"},
+        {"keyword": "лучший онлайн шутер 2025", "volume_estimate": "~10000/мес", "cpc_estimate_rub": "~18-30"},
+        {"keyword": "шутер на пк бесплатно", "volume_estimate": "~25000/мес", "cpc_estimate_rub": "~22-40"},
+        {"keyword": "шутер с кооперативом", "volume_estimate": "~8000/мес", "cpc_estimate_rub": "~18-32"},
+        {"keyword": "батл рояль пк", "volume_estimate": "~20000/мес", "cpc_estimate_rub": "~15-28"},
+        {"keyword": "шутер скачать бесплатно", "volume_estimate": "~18000/мес", "cpc_estimate_rub": "~20-35"},
+        {"keyword": "командный шутер онлайн", "volume_estimate": "~7000/мес", "cpc_estimate_rub": "~20-38"}
+      ],
+      "minus_words": ["торрент", "без регистрации", "оффлайн", "скачать без интернета", "консоль", "ps4", "xbox", "телефон", "андроид", "ios", "мобильный"]
+    },
+    {
+      "cluster_id": 2,
+      "cluster_name": "Брендовые — Warface",
+      "intent": "высокий — брендовый",
+      "description": "Поиск конкретно Warface",
+      "keywords": [
+        {"keyword": "warface", "volume_estimate": "~80000/мес", "cpc_estimate_rub": "~15-25"},
+        {"keyword": "варфейс", "volume_estimate": "~40000/мес", "cpc_estimate_rub": "~12-22"},
+        {"keyword": "warface скачать", "volume_estimate": "~35000/мес", "cpc_estimate_rub": "~18-30"},
+        {"keyword": "warface регистрация", "volume_estimate": "~15000/мес", "cpc_estimate_rub": "~15-28"},
+        {"keyword": "warface официальный сайт", "volume_estimate": "~20000/мес", "cpc_estimate_rub": "~12-20"},
+        {"keyword": "варфейс играть", "volume_estimate": "~25000/мес", "cpc_estimate_rub": "~12-22"},
+        {"keyword": "warface вк плей", "volume_estimate": "~8000/мес", "cpc_estimate_rub": "~10-18"},
+        {"keyword": "warface новый сезон 2025", "volume_estimate": "~5000/мес", "cpc_estimate_rub": "~12-20"},
+        {"keyword": "warface классы", "volume_estimate": "~10000/мес", "cpc_estimate_rub": "~10-18"},
+        {"keyword": "warface турнир astrum liga", "volume_estimate": "~3000/мес", "cpc_estimate_rub": "~8-15"}
+      ],
+      "minus_words": ["приватный сервер", "взлом", "читы", "чит", "aimbot", "wallhack", "скины бесплатно", "читы скачать"]
+    },
+    {
+      "cluster_id": 3,
+      "cluster_name": "Конкурентные — аудитория CS2 / CrossFire",
+      "intent": "транзакционный — аудитория ищет альтернативы или сравнивает",
+      "description": "Игроки CS2, бывшие игроки CrossFire, аудитория заблокированных игр",
+      "keywords": [
+        {"keyword": "cs2 скачать", "volume_estimate": "~60000/мес", "cpc_estimate_rub": "~25-45"},
+        {"keyword": "counter strike 2 бесплатно", "volume_estimate": "~30000/мес", "cpc_estimate_rub": "~22-40"},
+        {"keyword": "кс2", "volume_estimate": "~45000/мес", "cpc_estimate_rub": "~20-35"},
+        {"keyword": "crossfire альтернатива", "volume_estimate": "~5000/мес", "cpc_estimate_rub": "~20-35"},
+        {"keyword": "шутер как cs", "volume_estimate": "~8000/мес", "cpc_estimate_rub": "~22-38"},
+        {"keyword": "аналог кс го", "volume_estimate": "~10000/мес", "cpc_estimate_rub": "~20-35"},
+        {"keyword": "warzone альтернатива россия", "volume_estimate": "~4000/мес", "cpc_estimate_rub": "~18-30"},
+        {"keyword": "шутер вместо crossfire", "volume_estimate": "~3000/мес", "cpc_estimate_rub": "~18-32"},
+        {"keyword": "f2p шутер лучше кс", "volume_estimate": "~5000/мес", "cpc_estimate_rub": "~20-35"},
+        {"keyword": "шутер для слабого пк", "volume_estimate": "~12000/мес", "cpc_estimate_rub": "~18-30"}
+      ],
+      "minus_words": ["valorant", "rainbow six", "battlefield", "apex legends", "pubg купить", "ключ активации", "торрент"]
+    },
+    {
+      "cluster_id": 4,
+      "cluster_name": "Жанровые — батл рояль и хардкор",
+      "intent": "информационный + транзакционный",
+      "description": "Аудитория ищет BR и хардкор-шутеры",
+      "keywords": [
+        {"keyword": "escape from tarkov", "volume_estimate": "~50000/мес", "cpc_estimate_rub": "~30-55"},
+        {"keyword": "тарков скачать", "volume_estimate": "~25000/мес", "cpc_estimate_rub": "~28-50"},
+        {"keyword": "pubg скачать", "volume_estimate": "~30000/мес", "cpc_estimate_rub": "~18-30"},
+        {"keyword": "батл рояль бесплатно пк", "volume_estimate": "~15000/мес", "cpc_estimate_rub": "~18-32"},
+        {"keyword": "хардкор шутер пк", "volume_estimate": "~5000/мес", "cpc_estimate_rub": "~20-35"},
+        {"keyword": "realistic shooter pc", "volume_estimate": "~3000/мес (EN-запросы)", "cpc_estimate_rub": "~15-25"},
+        {"keyword": "standoff 2 на пк", "volume_estimate": "~8000/мес", "cpc_estimate_rub": "~15-25"},
+        {"keyword": "военный шутер онлайн", "volume_estimate": "~10000/мес", "cpc_estimate_rub": "~20-38"},
+        {"keyword": "apex legends скачать", "volume_estimate": "~20000/мес", "cpc_estimate_rub": "~18-32"}
+      ],
+      "minus_words": ["мобильный", "андроид", "ios", "телефон", "консоль", "ps5", "nintendo", "лего", "мультфильм"]
+    },
+    {
+      "cluster_id": 5,
+      "cluster_name": "Проблемные / информационные",
+      "intent": "информационный (верхняя воронка)",
+      "description": "Пользователи на стадии изучения жанра или решения проблем",
+      "keywords": [
+        {"keyword": "лучшие онлайн шутеры 2025", "volume_estimate": "~15000/мес", "cpc_estimate_rub": "~15-28"},
+        {"keyword": "топ шутеры на пк", "volume_estimate": "~12000/мес", "cpc_estimate_rub": "~15-25"},
+        {"keyword": "во что поиграть шутер", "volume_estimate": "~8000/мес", "cpc_estimate_rub": "~12-22"},
+        {"keyword": "шутер с кооперативом пк 2025", "volume_estimate": "~5000/мес", "cpc_estimate_rub": "~15-28"},
+        {"keyword": "бесплатные шутеры список", "volume_estimate": "~7000/мес", "cpc_estimate_rub": "~12-20"},
+        {"keyword": "шутер обзор 2025", "volume_estimate": "~4000/мес", "cpc_estimate_rub": "~10-18"},
+        {"keyword": "warface или cs2", "volume_estimate": "~3000/мес", "cpc_estimate_rub": "~12-20"},
+        {"keyword": "читы в warface", "volume_estimate": "~8000/мес — МИНУС-СЛОВО", "cpc_estimate_rub": "N/A — исключить"}
+      ],
+      "minus_words": ["скачать торрент", "без регистрации", "взломать", "чит", "aimbot", "wallhack", "hack", "glitch", "баги бесплатные скины"]
+    },
+    {
+      "cluster_id": 6,
+      "cluster_name": "Сезонные / событийные",
+      "intent": "транзакционный (событийный)",
+      "description": "Запросы вокруг обновлений, событий, турниров",
+      "keywords": [
+        {"keyword": "warface новый сезон", "volume_estimate": "~8000/мес", "cpc_estimate_rub": "~12-20"},
+        {"keyword": "warface обновление 2025", "volume_estimate": "~5000/мес", "cpc_estimate_rub": "~12-18"},
+        {"keyword": "astrum liga warface", "volume_estimate": "~3000/мес", "cpc_estimate_rub": "~10-15"},
+        {"keyword": "warface боевой пропуск", "volume_estimate": "~6000/мес", "cpc_estimate_rub": "~10-18"},
+        {"keyword": "cs2 турнир", "volume_estimate": "~12000/мес", "cpc_estimate_rub": "~20-35"},
+        {"keyword": "онлайн шутер турнир", "volume_estimate": "~5000/мес", "cpc_estimate_rub": "~15-28"},
+        {"keyword": "warface промокод", "volume_estimate": "~10000/мес", "cpc_estimate_rub": "~10-18"},
+        {"keyword": "warface бесплатный ящик", "volume_estimate": "~7000/мес", "cpc_estimate_rub": "~8-15"}
+      ],
+      "minus_words": ["просроченный промокод", "взломать промокод", "генератор промокодов", "бот"]
+    }
+  ],
+
+  "global_minus_words": [
+    "торрент", "crack", "взлом", "чит", "aimbot", "wallhack", "hack", "мобильный", "андроид", "ios",
+    "телефон", "смартфон", "консоль", "ps4", "ps5", "xbox", "nintendo", "switch", "скачать без вируса",
+    "бесплатные скины взлом", "приватный сервер читы", "без регистрации оффлайн", "single player",
+    "соло игра", "flash игра", "браузерная игра", "minecraft", "roblox", "gta"
+  ],
+
+  "ppc_strategy": {
+    "recommended_platforms": [
+      {
+        "platform": "Яндекс Директ",
+        "priority": "Высокий",
+        "rationale": "Основной поисковый трафик РФ. Самая горячая аудитория — поиск по брендовым и жанровым запросам",
+        "campaign_types": [
+          {
+            "type": "Поисковые кампании",
+            "goal": "Регистрации и скачивания",
+            "budget_share_pct": 40,
+            "estimated_cpc_rub": "15-40",
+            "estimated_cpr_rub": "100-300",
+            "cr_pct": "8-15",
+            "notes": "Брендовые запросы конвертируют лучше (CR 15-25%). Жанровые — 5-10%"
+          },
+          {
+            "type": "РСЯ (ретаргетинг)",
+            "goal": "Возврат посетителей сайта",
+            "budget_share_pct": 20,
+            "estimated_cpc_rub": "8-18",
+            "estimated_cpr_rub": "200-500",
+            "cr_pct": "3-6",
+            "notes": "Ретаргетинг по посетителям сайта + look-alike по зарегистрировавшимся"
+          },
+          {
+            "type": "РСЯ (охват — новая аудитория)",
+            "goal": "Осведомленность, трафик",
+            "budget_share_pct": 15,
+            "estimated_cpc_rub": "10-20",
+            "estimated_cpr_rub": "300-700",
+            "cr_pct": "2-4"
+          }
+        ]
+      },
+      {
+        "platform": "VK Ads",
+        "priority": "Высокий",
+        "rationale": "Крупнейшая социальная сеть РФ. Геймерские сообщества — точечный таргетинг. Look-alike по базе игроков",
+        "campaign_types": [
+          {
+            "type": "Таргетинг по сообществам (геймеры)",
+            "goal": "Регистрации",
+            "budget_share_pct": 25,
+            "estimated_cpc_rub": "12-25",
+            "estimated_cpr_rub": "150-400",
+            "cr_pct": "5-10",
+            "notes": "Таргет на подписчиков CS2, Warface, CrossFire, киберспортивных сообществ"
+          },
+          {
+            "type": "Look-alike",
+            "goal": "Масштабирование",
+            "budget_share_pct": 15,
+            "estimated_cpc_rub": "15-30",
+            "estimated_cpr_rub": "200-500",
+            "cr_pct": "4-8"
+          }
+        ]
+      },
+      {
+        "platform": "Telegram Ads",
+        "priority": "Средний",
+        "rationale": "Точечный охват через тематические каналы. Аудитория старше и более платёжеспособная",
+        "campaign_types": [
+          {
+            "type": "Реклама в геймерских каналах",
+            "goal": "Осведомленность + регистрации",
+            "budget_share_pct": 15,
+            "estimated_cpm_rub": "200-600",
+            "estimated_cpr_rub": "300-800",
+            "notes": "Размещение в @newcsgo, @csgo_russ, @warface_official, @goharugames"
+          }
+        ]
+      }
+    ],
+    "estimated_cpr_benchmarks": {
+      "yandex_search_branded_rub": "80-200",
+      "yandex_search_generic_rub": "200-450",
+      "yandex_rsya_rub": "250-600",
+      "vk_ads_community_targeting_rub": "150-400",
+      "vk_ads_look_alike_rub": "200-500",
+      "telegram_ads_rub": "300-800",
+      "note": "CPR = стоимость одной регистрации. Основан на бенчмарках MMORPG ниши (аналогичная аудитория) и данных по продвижению F2P игр в РФ (30 руб/рег в отдельных кейсах — агрессивный оптимум, реалистичный диапазон выше)"
+    },
+    "ad_copy_examples": [
+      {
+        "title_1": "Warface — Играй Бесплатно",
+        "title_2": "13 лет в строю. 300+ видов оружия",
+        "description": "Скачай лучший российский шутер. 4 класса, 10+ режимов, кооператив. Старт за 5 минут!",
+        "cta": "Играть бесплатно"
+      },
+      {
+        "title_1": "Забудь о CrossFire",
+        "title_2": "Warface — достойная замена",
+        "description": "F2P шутер с 60 млн игроков. PvP + кооператив. Работает на любом ПК.",
+        "cta": "Скачать Warface"
+      },
+      {
+        "title_1": "Шутер без доната — миф?",
+        "title_2": "Warface: честная игра с 2012",
+        "description": "Кооператив до 5 игроков, 13 уникальных операций, рейтинг и турниры. Старт бесплатно.",
+        "cta": "Попробовать"
+      }
+    ]
+  }
+}

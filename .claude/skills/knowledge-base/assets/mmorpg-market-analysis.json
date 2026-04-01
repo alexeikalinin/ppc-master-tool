@@ -1,0 +1,733 @@
+{
+  "meta": {
+    "created": "2026-03-05",
+    "analyst": "ppc-market-analyst",
+    "niche": "MMORPG",
+    "region": "RU+CIS",
+    "version": 1
+  },
+
+  "market_overview": {
+    "russian_gaming_market_2024_bln_rub": 187,
+    "russian_gaming_market_2025_forecast_bln_rub": 200,
+    "pc_games_share_pct": 48,
+    "mobile_games_share_pct": 44,
+    "global_mmorpg_market_2025_usd_bln": 28.06,
+    "global_mmorpg_market_2026_usd_bln": 31.02,
+    "sources": [
+      "https://trends.rbc.ru/trends/industry/66f278579a79473fcf76b842",
+      "https://app2top.ru/news/issledovanie-v-2025-godu-ob-em-igrovogo-ry-nka-rossii-sostavit-200-mlrd-rublej",
+      "https://www.mordorintelligence.com/industry-reports/mmorpg-gaming-market"
+    ]
+  },
+
+  "titles": [
+    {
+      "name": "World of Warcraft",
+      "short": "WoW",
+      "genre": "MMORPG / Theme Park",
+      "subgenre": "fantasy",
+      "developer": "Blizzard Entertainment",
+      "publisher_ru": "Blizzard Entertainment (прямые продажи через сторонние сервисы)",
+      "platform": ["PC"],
+      "model": "subscription + expansion buy",
+      "status": "активна — нарастающий тренд (Worldsoul Saga 2025-2026)",
+      "notes": "Blizzard приостановил прямые продажи в РФ; подписки покупаются через МТС, тайм-карты (FunPay, GGSel). Сильный ностальгический и hardcore-сегмент.",
+      "ru_audience_note": "крупнейшая аудитория среди западных MMORPG в РФ"
+    },
+    {
+      "name": "Lost Ark",
+      "short": "Lost Ark",
+      "genre": "MMORPG / Action RPG",
+      "subgenre": "fantasy isometric",
+      "developer": "Smilegate RPG",
+      "publisher_ru": "VK Play (ранее Mail.ru)",
+      "platform": ["PC"],
+      "model": "free-to-play + battle pass + cash shop",
+      "status": "активна — стабильная база, умеренный спад после пика 2022",
+      "notes": "Русские серверы есть, 2-3 активных сервера. RU-версия имеет отдельные сезоны. Активное сообщество на VK Play.",
+      "ru_audience_note": "одна из крупнейших F2P MMORPG в РФ; сильный кор-сегмент рейдеров"
+    },
+    {
+      "name": "Black Desert Online",
+      "short": "BDO",
+      "genre": "MMORPG / Sandbox",
+      "subgenre": "fantasy action",
+      "developer": "Pearl Abyss",
+      "publisher_ru": "ru.playblackdesert.com (прямые серверы для RU)",
+      "platform": ["PC", "Xbox", "PS4/PS5"],
+      "model": "buy-to-play + cash shop (RU: F2P)",
+      "status": "активна — нарастающий тренд",
+      "notes": "Один из самых активно рекламируемых MMORPG в РФ. 20+ млн зарегистрированных аккаунтов глобально. Сильный визуал привлекает новых игроков.",
+      "ru_audience_note": "сильная аудитория 18-34, акцент на PvP и кастомизацию персонажа"
+    },
+    {
+      "name": "Lineage 2",
+      "short": "L2 / Ла2",
+      "genre": "MMORPG / PvP",
+      "subgenre": "fantasy hardcore PvP",
+      "developer": "NCSoft",
+      "publisher_ru": "4Game (Innova)",
+      "platform": ["PC"],
+      "model": "free-to-play + premium",
+      "status": "активна — устойчивая ниша",
+      "notes": "~40 000 игроков онлайн на официальных RU-серверах (данные кон. 2023). Огромная экосистема приватных серверов (L2Rehab, ElmoreLab, L2MAD). Культовая игра для СНГ.",
+      "versions": ["Lineage 2 Classic", "Lineage 2 Essence", "Lineage 2 Main", "приватные серверы"],
+      "ru_audience_note": "старейшая активная база, возраст игроков 25-40, высокая лояльность"
+    },
+    {
+      "name": "Final Fantasy XIV",
+      "short": "FFXIV / FF14",
+      "genre": "MMORPG / Theme Park",
+      "subgenre": "fantasy narrative",
+      "developer": "Square Enix",
+      "publisher_ru": "Square Enix (global)",
+      "platform": ["PC", "PS4/PS5"],
+      "model": "subscription + base game (free trial до уровня 60)",
+      "status": "активна — нарастающий тренд",
+      "notes": "Бесплатный триал до 60 lvl привлекает новых игроков. Русскоязычное сообщество активно, официальной русской локализации нет.",
+      "ru_audience_note": "более женская аудитория чем в среднем по жанру; возраст 20-35"
+    },
+    {
+      "name": "Elder Scrolls Online",
+      "short": "ESO",
+      "genre": "MMORPG / Theme Park",
+      "subgenre": "fantasy open world",
+      "developer": "ZeniMax Online Studios",
+      "publisher_ru": "Bethesda / ZeniMax (global)",
+      "platform": ["PC", "Xbox", "PS4/PS5"],
+      "model": "buy-to-play + subscription (ESO+) + expansions",
+      "status": "активна — стабильная",
+      "notes": "Популярна среди фанатов серии TES. Русской локализации нет, но активное RU-сообщество.",
+      "ru_audience_note": "аудитория старше (25-40), пересечение с фанатами Skyrim/Oblivion"
+    },
+    {
+      "name": "Guild Wars 2",
+      "short": "GW2",
+      "genre": "MMORPG",
+      "subgenre": "fantasy no-subscription",
+      "developer": "ArenaNet",
+      "publisher_ru": "NCSoft (global)",
+      "platform": ["PC"],
+      "model": "buy-to-play (базовая игра бесплатно) + expansions",
+      "status": "активна — стабильная",
+      "notes": "Отсутствие обязательной подписки привлекает casual-игроков. Активное RU-сообщество.",
+      "ru_audience_note": "казуальная аудитория 20-35, акцент на отсутствие гринда"
+    },
+    {
+      "name": "Throne and Liberty",
+      "short": "TL",
+      "genre": "MMORPG",
+      "subgenre": "fantasy PvP/PvE",
+      "developer": "NCSoft",
+      "publisher_ru": "Amazon Games (global) / доступ через Steam ограничен для РФ",
+      "platform": ["PC", "PS5", "Xbox Series"],
+      "model": "free-to-play + battle pass + cash shop",
+      "status": "нарастающий тренд — ограниченный доступ для РФ",
+      "notes": "Российские и СНГ игроки имеют доступ через корейскую версию (Purple app) и с сен. 2025 через глобальный Steam. Прямой доступ из РФ сложен.",
+      "ru_audience_note": "молодая аудитория 18-28, интерес к следующему поколению MMORPG"
+    },
+    {
+      "name": "Аллоды Онлайн",
+      "short": "Allods",
+      "genre": "MMORPG",
+      "subgenre": "fantasy отечественный",
+      "developer": "Allods Team (ex-My.Games)",
+      "publisher_ru": "VK Play",
+      "platform": ["PC"],
+      "model": "free-to-play",
+      "status": "на спаде — стабильная ниша",
+      "notes": "Российская разработка, локализована для СНГ. После продажи My.Games аудитория значительно сократилась (~154 игрока на mmo-population.com в 2026). Ностальгический сегмент.",
+      "ru_audience_note": "старшая аудитория 28-45, ностальгический сегмент"
+    },
+    {
+      "name": "ArcheAge / ArcheAge Unchained",
+      "short": "ArcheAge / AA",
+      "genre": "MMORPG / Sandbox",
+      "subgenre": "fantasy sandbox",
+      "developer": "XL Games",
+      "publisher_ru": "Mail.ru (ранее), сейчас ограниченный доступ",
+      "platform": ["PC"],
+      "model": "free-to-play / buy-to-play",
+      "status": "на спаде",
+      "notes": "Аудитория значительно снизилась. Активны приватные серверы. Популярна была в 2014-2019 в РФ.",
+      "ru_audience_note": "ядро — игроки 25-38, ностальгический сегмент"
+    }
+  ],
+
+  "audience": {
+    "general_portrait": {
+      "age_primary": "18-35",
+      "age_secondary": "35-45 (Lineage 2, WoW, Allods — ностальгическая аудитория)",
+      "gender": "мужчины ~85%, женщины ~15% (FF14 и ESO имеют более высокий % женской аудитории, до 30%)",
+      "geography": {
+        "ru_share_pct": "~70-75",
+        "cis_share_pct": "~20-25",
+        "other_pct": "~5",
+        "top_cities_ru": ["Москва", "Санкт-Петербург", "Екатеринбург", "Новосибирск", "Казань", "Краснодар"]
+      },
+      "socio_economic": {
+        "income": "средний и выше среднего",
+        "education": "среднее специальное и высшее",
+        "employment": "работающие 25-35, студенты 18-24",
+        "device": "PC доминирует (80%+), мобайл растёт"
+      },
+      "behavioral": {
+        "session_length": "2-6 часов в день",
+        "purchase_patterns": "готовы платить за внутриигровой контент, боевые пропуска, косметику",
+        "community": "активны на форумах, Discord, VK, Twitch/YouTube",
+        "peak_hours": "19:00-01:00 МСК в будни, 12:00-02:00 в выходные",
+        "seasonal_peaks": ["летние каникулы (июнь-август)", "новогодние праздники (декабрь-январь)", "запуски новых игр и дополнений"]
+      }
+    },
+
+    "platform_profiles": {
+      "yandex_direct": {
+        "age": "18-45",
+        "gender": "мужчины 85%",
+        "interests": ["онлайн-игры", "компьютерные игры", "RPG", "фэнтези", "аниме (для Lost Ark / FF14)"],
+        "behavioral_segments": ["геймеры", "активные покупатели игрового контента", "пользователи игровых платформ (Steam, VK Play)"],
+        "geo": "вся Россия + Казахстан, Беларусь, Украина (ограничено)",
+        "device": "desktop 80%, mobile 20%",
+        "campaign_types": ["Поиск", "РСЯ", "Баннеры"]
+      },
+      "vk_ads": {
+        "age": "18-35 основная, 35-45 вторичная",
+        "gender": "мужчины 80%",
+        "interests": ["игры", "онлайн-игры", "RPG", "фэнтези", "аниме", "стриминг", "киберспорт"],
+        "communities_to_target": [
+          "Сообщества конкретных игр (World of Warcraft RU, Lineage 2 RU, Black Desert RU)",
+          "VK Play",
+          "Игровые новости (DTF Games, StopGame, GoHa.ru)",
+          "Злой Геймер",
+          "MMORPG-тематические паблики",
+          "Twitch/YouTube стримеры MMORPG"
+        ],
+        "behavioral": ["игроки мини-игр VK", "пользователи VK Play", "подписчики стримеров"],
+        "targeting_tools": [
+          "Таргетинг на подписчиков сообществ",
+          "Интересы: Онлайн-игры / RPG",
+          "Таргетинг на пользователей VK Mini Apps и игр",
+          "Look-alike по базе зарегистрировавшихся"
+        ]
+      },
+      "google_ads": {
+        "age": "18-44",
+        "gender": "мужчины 82%",
+        "in_market_audiences": ["Online Games", "Massively Multiplayer Online (MMO) Games", "RPG Games", "PC Games"],
+        "affinity_audiences": ["Gamers", "Technophiles", "Anime & Manga Fans", "Science Fiction & Fantasy Fans"],
+        "custom_intent_keywords": ["скачать mmorpg бесплатно", "лучшие mmorpg 2025", "world of warcraft купить", "lost ark скачать"],
+        "placements": ["YouTube каналы по MMORPG", "игровые сайты (goha.ru, mmorpg-blog.ru)", "Twitch embeds"]
+      }
+    }
+  },
+
+  "keywords": {
+    "brand_keywords": {
+      "world_of_warcraft": {
+        "queries": [
+          "world of warcraft",
+          "wow игра",
+          "вов игра",
+          "world of warcraft скачать",
+          "wow скачать бесплатно",
+          "wow купить подписку",
+          "world of warcraft подписка россия",
+          "wow тайм карта купить",
+          "wow classic скачать",
+          "world of warcraft система",
+          "вов гайд для новичков",
+          "wow дополнение купить",
+          "warcraft онлайн играть"
+        ],
+        "est_monthly_volume": "~высокая (десятки тысяч запросов/мес по ядру)",
+        "avg_cpc_rub_estimate": "15-40"
+      },
+      "lineage_2": {
+        "queries": [
+          "lineage 2",
+          "la2",
+          "ла2",
+          "lineage 2 скачать",
+          "скачать ла2",
+          "la2 сервера",
+          "ла2 топ сервер",
+          "lineage 2 приватный сервер",
+          "lineage 2 essence скачать",
+          "lineage 2 classic",
+          "ла2 бесплатно",
+          "la2 interlude сервер",
+          "lineage 2 онлайн играть",
+          "4game lineage 2"
+        ],
+        "est_monthly_volume": "~высокая (особенно запросы про приватные серверы)",
+        "avg_cpc_rub_estimate": "10-25",
+        "note": "огромный объём запросов про приватные серверы — целевая аудитория для игровых сервисов"
+      },
+      "black_desert": {
+        "queries": [
+          "black desert online",
+          "bdo игра",
+          "black desert скачать",
+          "black desert бесплатно",
+          "black desert онлайн",
+          "bdo скачать бесплатно",
+          "black desert russia",
+          "black desert персонаж",
+          "bdo гайд для новичков",
+          "black desert классы",
+          "black desert купить",
+          "bdo онлайн 2025"
+        ],
+        "est_monthly_volume": "~средняя-высокая",
+        "avg_cpc_rub_estimate": "12-30"
+      },
+      "lost_ark": {
+        "queries": [
+          "lost ark",
+          "лост арк",
+          "lost ark скачать",
+          "lost ark бесплатно",
+          "лост арк скачать бесплатно",
+          "lost ark россия",
+          "lost ark vk play",
+          "lost ark гайд",
+          "лост арк классы",
+          "lost ark рейды",
+          "lost ark сервер россия",
+          "лост арк 2025",
+          "lost ark новый контент"
+        ],
+        "est_monthly_volume": "~средняя-высокая",
+        "avg_cpc_rub_estimate": "10-25"
+      },
+      "final_fantasy_14": {
+        "queries": [
+          "final fantasy 14",
+          "ff14",
+          "ffxiv",
+          "final fantasy xiv скачать",
+          "ff14 бесплатный триал",
+          "ffxiv бесплатно до 60 уровня",
+          "ff14 подписка",
+          "final fantasy 14 россия",
+          "ffxiv гайд новичок",
+          "ff14 расы классы",
+          "final fantasy 14 endwalker",
+          "ffxiv dawntrail"
+        ],
+        "est_monthly_volume": "~средняя",
+        "avg_cpc_rub_estimate": "12-28"
+      },
+      "elder_scrolls_online": {
+        "queries": [
+          "elder scrolls online",
+          "eso игра",
+          "elder scrolls online скачать",
+          "eso скачать бесплатно",
+          "elder scrolls online россия",
+          "eso подписка",
+          "elder scrolls online гайд",
+          "eso классы",
+          "elder scrolls online 2025"
+        ],
+        "est_monthly_volume": "~средняя",
+        "avg_cpc_rub_estimate": "15-35"
+      },
+      "guild_wars_2": {
+        "queries": [
+          "guild wars 2",
+          "gw2 игра",
+          "guild wars 2 скачать бесплатно",
+          "guild wars 2 без подписки",
+          "gw2 россия",
+          "guild wars 2 классы",
+          "gw2 гайд",
+          "guild wars 2 2025"
+        ],
+        "est_monthly_volume": "~средняя",
+        "avg_cpc_rub_estimate": "12-25"
+      },
+      "throne_and_liberty": {
+        "queries": [
+          "throne and liberty",
+          "throne and liberty скачать",
+          "throne and liberty россия",
+          "throne and liberty steam",
+          "throne and liberty как играть в россия",
+          "throne and liberty 2025",
+          "throne and liberty гайд"
+        ],
+        "est_monthly_volume": "~средняя (нарастает)",
+        "avg_cpc_rub_estimate": "8-20"
+      },
+      "allods_online": {
+        "queries": [
+          "аллоды онлайн",
+          "allods online скачать",
+          "аллоды онлайн скачать бесплатно",
+          "аллоды онлайн 2025",
+          "allods online россия",
+          "аллоды онлайн классы"
+        ],
+        "est_monthly_volume": "~низкая-средняя",
+        "avg_cpc_rub_estimate": "5-15"
+      }
+    },
+
+    "genre_keywords": {
+      "cluster_1_search_game": {
+        "name": "Поиск игры / выбор MMORPG",
+        "intent": "informational + consideration",
+        "keywords": [
+          "лучшие mmorpg 2025",
+          "топ mmorpg 2025",
+          "лучшие mmorpg россия",
+          "топ онлайн игры рпг",
+          "какую mmorpg выбрать",
+          "mmorpg для новичков",
+          "лучшие онлайн рпг игры пк",
+          "mmorpg 2026 новинки",
+          "новые mmorpg 2025",
+          "mmorpg с открытым миром",
+          "мморпг игры список",
+          "онлайн ролевые игры пк",
+          "топ ммо игр",
+          "мморпг рейтинг",
+          "лучшие ммо игры 2025",
+          "мморпг для пк бесплатно"
+        ],
+        "avg_cpc_rub_estimate": "8-20"
+      },
+      "cluster_2_f2p": {
+        "name": "Бесплатные / F2P MMORPG",
+        "intent": "transactional — установка",
+        "keywords": [
+          "mmorpg бесплатно",
+          "бесплатные mmorpg 2025",
+          "mmorpg играть бесплатно онлайн",
+          "f2p mmorpg",
+          "мморпг без доната",
+          "mmorpg free to play лучшие",
+          "бесплатные онлайн рпг без доната",
+          "mmorpg без регистрации",
+          "мморпг бесплатно на русском",
+          "онлайн рпг бесплатно скачать",
+          "f2p ммо 2025"
+        ],
+        "avg_cpc_rub_estimate": "6-15"
+      },
+      "cluster_3_download": {
+        "name": "Скачивание / установка",
+        "intent": "transactional — загрузка",
+        "keywords": [
+          "mmorpg скачать",
+          "скачать mmorpg на пк бесплатно",
+          "скачать мморпг бесплатно",
+          "mmorpg скачать на русском",
+          "скачать онлайн рпг игру бесплатно",
+          "mmorpg скачать торрент",
+          "мморпг скачать 2025",
+          "скачать онлайн rpg бесплатно"
+        ],
+        "avg_cpc_rub_estimate": "5-12"
+      },
+      "cluster_4_pvp": {
+        "name": "PvP / Castle Siege / Guild Wars",
+        "intent": "informational + consideration",
+        "keywords": [
+          "mmorpg с pvp",
+          "лучшие pvp mmorpg",
+          "мморпг с осадами замков",
+          "mmorpg гильдейские войны",
+          "pvp mmorpg 2025",
+          "онлайн рпг с pvp бесплатно",
+          "mmorpg с клановыми войнами",
+          "мморпг хардкор pvp"
+        ],
+        "avg_cpc_rub_estimate": "8-18"
+      },
+      "cluster_5_open_world": {
+        "name": "Открытый мир / Sandbox",
+        "intent": "informational",
+        "keywords": [
+          "mmorpg с открытым миром",
+          "мморпг песочница",
+          "sandbox mmorpg",
+          "mmorpg с крафтом и строительством",
+          "мморпг свобода действий",
+          "открытый мир онлайн рпг"
+        ],
+        "avg_cpc_rub_estimate": "7-16"
+      },
+      "cluster_6_rating_reviews": {
+        "name": "Рейтинги / обзоры",
+        "intent": "informational",
+        "keywords": [
+          "рейтинг mmorpg",
+          "обзор mmorpg 2025",
+          "mmorpg отзывы",
+          "топ мморпг по онлайну",
+          "самые популярные mmorpg в мире",
+          "лучшие mmorpg игры отзывы",
+          "mmorpg сравнение"
+        ],
+        "avg_cpc_rub_estimate": "5-12"
+      }
+    }
+  },
+
+  "negative_keywords": {
+    "category_wrong_topic": {
+      "name": "Не та тема (не онлайн / не PC)",
+      "keywords": [
+        "minecraft",
+        "fortnite",
+        "gta",
+        "cyberpunk",
+        "одиночная игра",
+        "оффлайн игра",
+        "без интернета",
+        "ролевая настольная игра",
+        "dungeons and dragons",
+        "d&d",
+        "карточная игра",
+        "пасьянс",
+        "браузерная игра",
+        "флэш игра",
+        "java игра",
+        "мобильная игра только",
+        "android игра",
+        "ios игра",
+        "xbox игра",
+        "playstation игра",
+        "nintendo"
+      ]
+    },
+    "category_wrong_intent": {
+      "name": "Нецелевые намерения",
+      "keywords": [
+        "взлом",
+        "чит",
+        "читы",
+        "hack",
+        "bot",
+        "бот",
+        "автокликер",
+        "автофарм читерство",
+        "дюп",
+        "дюпить",
+        "бесплатные читы",
+        "скачать чит",
+        "аккаунт купить дёшево взломанный",
+        "бесплатный аккаунт украсть",
+        "crack",
+        "кряк",
+        "пиратка",
+        "пиратская версия",
+        "торрент ключ",
+        "генератор ключей"
+      ]
+    },
+    "category_not_target_audience": {
+      "name": "Нецелевая аудитория / не те намерения",
+      "keywords": [
+        "дети",
+        "для детей",
+        "детская игра",
+        "8 лет",
+        "7 лет",
+        "6 лет",
+        "школьникам",
+        "рекомендации психолога",
+        "вред от игр",
+        "игровая зависимость лечение",
+        "как избавиться от игровой зависимости",
+        "заблокировать игру",
+        "родительский контроль"
+      ]
+    },
+    "category_other_genres": {
+      "name": "Другие жанры игр",
+      "keywords": [
+        "шутер",
+        "cs go",
+        "counter strike",
+        "valorant",
+        "стратегия",
+        "rts игра",
+        "мoba",
+        "dota",
+        "league of legends",
+        "спортивный симулятор",
+        "fifa",
+        "гонки",
+        "need for speed",
+        "симулятор фермы",
+        "stardew valley",
+        "хоррор игра",
+        "survival игра",
+        "battle royale",
+        "pubg"
+      ]
+    },
+    "category_wrong_platform": {
+      "name": "Не та платформа распространения",
+      "keywords": [
+        "вконтакте игра",
+        "браузерная",
+        "одноклассники игра",
+        "vk мини игра",
+        "roblox",
+        "steam бесплатно скачать без регистрации",
+        "эпик геймс бесплатно",
+        "origin"
+      ]
+    },
+    "category_irrelevant_purchase": {
+      "name": "Нерелевантные транзакции",
+      "keywords": [
+        "продать аккаунт",
+        "аккаунт за реал",
+        "продаю персонажа",
+        "купить голду",
+        "продам золото",
+        "рмт",
+        "реальные деньги за игровые",
+        "буст аккаунта",
+        "раскачка персонажа на заказ",
+        "продам вещи из игры",
+        "скупка игровой валюты"
+      ]
+    }
+  },
+
+  "campaign_recommendations": {
+    "default_monthly_budget_rub": 50000,
+    "platform_split": [
+      {
+        "platform": "Yandex Direct",
+        "campaign_type": "Поиск — Брендовые запросы по тайтлам",
+        "goal": "Установки / регистрации",
+        "budget_pct": 35,
+        "budget_rub": 17500,
+        "est_cpc_rub": 18,
+        "est_clicks": 972,
+        "cr_pct": 4,
+        "cpa_rub": 450,
+        "conversions_mo": 39,
+        "priority": "High"
+      },
+      {
+        "platform": "Yandex Direct",
+        "campaign_type": "Поиск — Жанровые запросы (MMORPG бесплатно, топ ммо)",
+        "goal": "Установки / трафик",
+        "budget_pct": 20,
+        "budget_rub": 10000,
+        "est_cpc_rub": 12,
+        "est_clicks": 833,
+        "cr_pct": 2,
+        "cpa_rub": 600,
+        "conversions_mo": 17,
+        "priority": "High"
+      },
+      {
+        "platform": "Yandex Direct",
+        "campaign_type": "РСЯ — Баннеры (ретаргетинг + look-alike)",
+        "goal": "Возврат пользователей",
+        "budget_pct": 10,
+        "budget_rub": 5000,
+        "est_cpc_rub": 6,
+        "est_clicks": 833,
+        "cr_pct": 1.5,
+        "cpa_rub": 400,
+        "conversions_mo": 13,
+        "priority": "Medium"
+      },
+      {
+        "platform": "VK Ads",
+        "campaign_type": "Таргетинг на подписчиков игровых сообществ",
+        "goal": "Установки / регистрации",
+        "budget_pct": 20,
+        "budget_rub": 10000,
+        "est_cpc_rub": 10,
+        "est_clicks": 1000,
+        "cr_pct": 2,
+        "cpa_rub": 500,
+        "conversions_mo": 20,
+        "priority": "High"
+      },
+      {
+        "platform": "VK Ads",
+        "campaign_type": "Ретаргетинг по базе пользователей",
+        "goal": "Возврат / монетизация",
+        "budget_pct": 10,
+        "budget_rub": 5000,
+        "est_cpc_rub": 7,
+        "est_clicks": 714,
+        "cr_pct": 3,
+        "cpa_rub": 233,
+        "conversions_mo": 21,
+        "priority": "Medium"
+      },
+      {
+        "platform": "Google Ads",
+        "campaign_type": "Поиск — брендовые + жанровые запросы",
+        "goal": "Установки",
+        "budget_pct": 5,
+        "budget_rub": 2500,
+        "est_cpc_rub": 20,
+        "est_clicks": 125,
+        "cr_pct": 3,
+        "cpa_rub": 667,
+        "conversions_mo": 4,
+        "priority": "Low",
+        "note": "Ограниченный приоритет — Google менее эффективен для РФ в 2025-2026"
+      }
+    ],
+    "total_budget_rub": 50000,
+    "total_est_clicks": 4477,
+    "total_est_conversions_mo": 114,
+    "blended_cpa_rub": 439
+  },
+
+  "ad_copy_examples": {
+    "search_ads": [
+      {
+        "context": "Жанровый запрос: лучшие mmorpg 2025",
+        "headline_1": "Лучшие MMORPG 2025",
+        "headline_2": "Играй бесплатно прямо сейчас",
+        "headline_3": "Тысячи игроков онлайн",
+        "description_1": "Выбери лучшую MMORPG — PvP, открытый мир, без доната. Регистрация бесплатна.",
+        "description_2": "Эпические рейды, осады замков, прокачка персонажа. Начни сегодня!"
+      },
+      {
+        "context": "Брендовый запрос: lost ark скачать",
+        "headline_1": "Lost Ark — Скачать бесплатно",
+        "headline_2": "Action MMORPG без подписки",
+        "headline_3": "Играй на русских серверах",
+        "description_1": "Исследуй континенты, побеждай боссов в рейдах. F2P MMORPG с тысячами игроков.",
+        "description_2": "6 классов, эпический лор, PvP и PvE. Установи и играй бесплатно прямо сейчас."
+      },
+      {
+        "context": "Брендовый запрос: lineage 2 сервера",
+        "headline_1": "Lineage 2 — Лучший Сервер",
+        "headline_2": "Бесплатный PvP / x5 / x10",
+        "headline_3": "Активное RU-сообщество",
+        "description_1": "Классический Interlude или Essence. Стабильный сервер, без вайпов, честный геймплей.",
+        "description_2": "Осады замков, клановые войны, хардкорный PvP. Зарегистрируйся и начни играть."
+      }
+    ]
+  },
+
+  "seasonality": {
+    "peak_months": ["январь", "июнь", "июль", "август"],
+    "secondary_peaks": ["февраль", "декабрь"],
+    "notes": [
+      "Новогодние праздники (1-14 января) — рост трафика и установок на 20-40%",
+      "Летние каникулы (июнь-август) — аудитория 18-24 растёт",
+      "Запуски крупных дополнений (WoW, FF14, ESO) — пики в даты релизов",
+      "Скидочные акции Steam (летние/зимние распродажи) — косвенный рост интереса к MMORPG"
+    ]
+  }
+}

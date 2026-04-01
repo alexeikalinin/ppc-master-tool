@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "last_updated": "2026-03-31",
+  "patterns": [
+    {
+      "id": "pattern-ppc-001",
+      "detected": "2026-03-04",
+      "task_type": "ppc-full-analysis",
+      "description": "User provides a URL/niche and requests full PPC analysis: competitors + keywords + audience + campaigns + media plan. This is the primary use case of the PPC Master Tool.",
+      "frequency": 1,
+      "recommended_agent": "ppc-market-analyst",
+      "routing_note": "meta-orchestrator should always route this to ppc-market-analyst agent",
+      "status": "active"
+    },
+    {
+      "id": "pattern-ppc-002",
+      "detected": "2026-03-05",
+      "task_type": "cpc-calibration",
+      "description": "User requests CPC benchmarks to calibrate the PPC Master Tool budget calculation system. Default CPC values (21-55 RUB) are systematically underestimated for Moscow competitive niches. Building materials/roofing in Moscow: real search CPC is 35-120 RUB depending on query intent and season.",
+      "frequency": 1,
+      "recommended_agent": "ppc-market-analyst",
+      "routing_note": "When user asks to verify/calibrate CPC or budget defaults, treat as high-priority calibration task. Always cross-reference with niche + region + season.",
+      "status": "active"
+    },
+    {
+      "id": "pattern-ppc-003",
+      "detected": "2026-03-05",
+      "task_type": "niche-market-research",
+      "description": "User requests deep niche market research for a specific game genre (MMORPG) to build a knowledge base for PPC campaigns. Pattern: niche + region + structured output (titles, audience, targeting, keywords, negatives). Result saved to knowledge-base as JSON for reuse in automated campaign generation.",
+      "frequency": 2,
+      "recommended_agent": "ppc-market-analyst",
+      "routing_note": "When user requests niche-level research (not per-site), output should be saved to knowledge-base/assets/ as a structured JSON file for future automated campaign use. Always check if the niche file already exists before running fresh research.",
+      "niche_files_created": ["mmorpg-market-analysis.json", "bellatores-analysis.json"],
+      "status": "active"
+    },
+    {
+      "id": "pattern-ppc-004",
+      "detected": "2026-03-05",
+      "task_type": "geo-restriction-handling",
+      "description": "In RU market analysis, many games and services have geo-restrictions or alternative access methods. Always flag geo-blocked titles and provide alternative access notes in the analysis. Affects: WoW (no direct payment), Throne and Liberty (Steam blocked), some Steam titles.",
+      "frequency": 1,
+      "recommended_agent": "ppc-market-analyst",
+      "routing_note": "For any gaming niche in RU market: add a geo-restriction check step. Document workarounds (VPN, third-party resellers, local publishers) as these directly affect ad copy and landing page strategy.",
+      "status": "active"
+    },
+    {
+      "id": "pattern-ppc-005",
+      "detected": "2026-03-05",
+      "task_type": "media-plan-gaming-f2p",
+      "description": "User requests a detailed media plan for a specific F2P game title on Yandex Direct with large budget (1M+ RUB/month). Pattern involves: multi-campaign structure (branded search + genre search + RSA + retargeting + master + display), phased bidding strategy (manual -> auto CPA), flighting with peak-hour adjustments (19:00-01:00 gaming audience), and weekly KPI monitoring thresholds.",
+      "frequency": 1,
+      "recommended_agent": "ppc-market-analyst",
+      "routing_note": "For game title media plans: always check mmo-population.com for current player count, verify geo-restrictions, use 5-cluster semantic structure (branded + genre_f2p + competitive + guides + download). Retargeting warmup takes 2-4 weeks. Blended CPR benchmark for F2P MMORPG: 400-600 RUB.",
+      "niche_files_created": ["lost-ark-media-plan.json"],
+      "key_benchmarks": {
+        "blended_cpr_rub": 446,
+        "branded_search_cr_pct": 10,
+        "rsa_cr_pct": 2,
+        "retargeting_cr_pct": 6,
+        "search_cpc_branded_rub": 25,
+        "search_cpc_genre_rub": 40,
+        "rsa_cpc_rub": 12
+      },
+      "status": "active"
+    },
+    {
+      "id": "pattern-ppc-006",
+      "detected": "2026-03-05",
+      "task_type": "pre-launch-game-ppc",
+      "description": "User requests PPC strategy for a game that is not yet released (pre-launch / CBT stage). Target action is registration (CPR), not install (CPI). Key challenges: (1) brand name confusion with non-gaming entities (Bellatores vs Bellator MMA), (2) no existing player base for lookalike/retargeting, (3) landing page must be registration-focused. Strategy: awareness + registration collection phase before ЗБТ, then install/play phase at launch.",
+      "frequency": 1,
+      "recommended_agent": "ppc-market-analyst",
+      "routing_note": "For pre-launch games in RU market: CPR target 300-600 RUB; primary platform Yandex Direct (search + RSA); VK Ads for community-based targeting (competitor game groups); Telegram Ads for gaming media channels. Always add non-gaming homophones to negative keywords list. Phased budget: Awareness phase 30-40% of launch budget.",
+      "niche_files_created": ["bellatores-analysis.json"],
+      "key_benchmarks": {
+        "pre_launch_cpr_target_rub": "300-600",
+        "registration_to_player_conversion_pct": "20-35",
+        "primary_platform": "Yandex Direct",
+        "secondary_platform": "VK Ads",
+        "gaming_prime_time": "19:00-01:00"
+      },
+      "status": "active"
+    }
+  ]
+}

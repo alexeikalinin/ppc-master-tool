@@ -1,0 +1,72 @@
+PPC Master Tool — Google Ads API Design Document
+
+1. TOOL OVERVIEW
+
+PPC Master Tool is an internal agency tool designed to automate and streamline PPC campaign management for advertising agency clients. The tool is used exclusively by agency employees to manage Google Ads accounts on behalf of clients.
+
+2. BUSINESS PURPOSE
+
+The agency manages Google Ads campaigns for multiple clients across various industries. Managing campaigns manually through the Google Ads interface is time-consuming and error-prone. PPC Master Tool automates repetitive tasks such as campaign creation, keyword management, bid adjustments, and performance reporting, allowing agency specialists to focus on strategy and optimization.
+
+3. TOOL FUNCTIONALITY
+
+The tool uses the Google Ads API for the following operations:
+
+a) Campaign Management
+   - Create and update Search and Display campaigns
+   - Set campaign budgets, bidding strategies, and targeting settings
+   - Enable, pause, or remove campaigns based on performance
+
+b) Keyword Management
+   - Add and update keywords with match types and bids
+   - Add negative keywords to campaigns and ad groups
+   - Retrieve keyword performance data for optimization
+
+c) Ad Management
+   - Create and update text ads and responsive search ads
+   - Manage ad extensions (sitelinks, callouts)
+   - Review ad approval status
+
+d) Reporting and Analytics
+   - Retrieve campaign, ad group, keyword, and ad performance metrics
+   - Generate automated performance reports for clients
+   - Track conversions, clicks, impressions, and costs
+
+e) Account Management
+   - Access multiple client accounts using manager account credentials
+   - Retrieve account structure and settings
+
+4. TECHNICAL ARCHITECTURE
+
+- Backend: Python (FastAPI)
+- API Communication: Google Ads API v17+ via REST/protobuf
+- Authentication: OAuth 2.0 with offline access (refresh token)
+- Access Model: Manager account (MCC) Developer Token used to access client sub-accounts
+- Deployment: Internal server, not publicly accessible
+
+5. DATA HANDLING
+
+- All API credentials are stored securely in environment variables
+- No Google Ads data is sold or shared with third parties
+- Data is used solely for campaign management and reporting purposes
+- Access is limited to agency employees only
+
+6. USER ACCESS
+
+- Internal use only: agency employees and contractors
+- No public access or external user interface
+- Authentication required for all operations
+
+7. COMPLIANCE
+
+The tool complies with Google Ads API Terms of Service. It does not:
+- Scrape or cache data beyond operational needs
+- Automate actions that violate Google Ads policies
+- Share API access credentials with unauthorized parties
+- Use the API for any purpose other than described above
+
+8. CONTACT
+
+Company: Digital-агентство Mables
+Website: https://mables.by
+Email: agency.starmedia@gmail.com
