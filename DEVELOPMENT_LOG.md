@@ -4,6 +4,78 @@
 
 ---
 
+## 2026-05-01 — Workspace: 3-панельный интерфейс с агентами
+
+**Задача:** Создать главный workspace — 3-панельный интерфейс (левая панель + чат + правый контекст) для работы со всеми агентами PPC Master Tool.
+
+**Что сделано:**
+- `frontend/lib/agents.ts` (новый) — конфигурация 5 агентов (Анализатор, Медиапланировщик, Трекер, КП-генератор, PPC-консультант) и список клиентов (Astrum, Starmedia)
+- `frontend/components/workspace/LeftPanel.tsx` (новый) — левая панель: лого, навигация, список агентов с активным индикатором, клиенты, настройки
+- `frontend/components/workspace/ChatPanel.tsx` (новый) — центральный чат: хедер агента, история сообщений с анимацией, typing-индикатор, быстрые действия, auto-resize input (Enter=отправить, Shift+Enter=новая строка); маршрутизация по API на основе выбранного агента
+- `frontend/components/workspace/RightPanel.tsx` (новый) — правая панель: контекст текущего отчёта (ниша/ключи/конкуренты/регион) с кнопкой очистки, быстрые ссылки, статистика сессии, история запросов
+- `frontend/app/workspace/page.tsx` (новый) — страница `/workspace`: state-машина (activeAgent, activeClient, agentMessages per-agent, currentReport), компоновка 3 панелей в h-screen
+
+**Логика агентов в ChatPanel:**
+- Анализатор → `POST /analyze` (парсит URL + регион из сообщения, сохраняет отчёт в state)
+- Медиапланировщик + PPC-консультант → `POST /assistant/chat` (требует активного отчёта)
+- КП-генератор → `api.downloadKp(report, variant)` (скачивает PDF по variant 1 или 3)
+- Трекер → заглушка с навигацией на `/tracker`
+
+**Файлы изменены:** `frontend/lib/agents.ts` (новый), `frontend/components/workspace/LeftPanel.tsx` (новый), `frontend/components/workspace/ChatPanel.tsx` (новый), `frontend/components/workspace/RightPanel.tsx` (новый), `frontend/app/workspace/page.tsx` (новый)
+
+**Статус:** ✅ Завершено — TypeScript clean, `/workspace` возвращает 200
+
+---
+
+## 2026-04-12 — Warface: семантическое ядро для Яндекс Директ
+
+**Задача:** Собрать полное семантическое ядро запросов по шутерам для рекламы Warface (Astrum Entertainment); создать структуру папок с ключевыми фразами и минус-словами; обновить базу знаний.
+
+**Что сделано:**
+- `Astrum/Warface/README.md` (новый) — обзор, структура кампаний, UTM-метки, следующие шаги
+- `Astrum/Warface/keywords/01_brand_main.txt` (новый) — брендовые варианты написания (9 фраз)
+- `Astrum/Warface/keywords/02_brand_download.txt` (новый) — бренд + скачать/установить (14 фраз)
+- `Astrum/Warface/keywords/03_brand_site_reg.txt` (новый) — бренд + сайт/регистрация/вход (13 фраз)
+- `Astrum/Warface/keywords/04_brand_ingame.txt` (новый) — варбаксы, промокод, классы (27 фраз)
+- `Astrum/Warface/keywords/05_category_f2p_shooter.txt` (новый) — бесплатный шутер (15 фраз)
+- `Astrum/Warface/keywords/06_category_online_fps.txt` (новый) — онлайн шутер/fps (19 фраз)
+- `Astrum/Warface/keywords/07_category_download_shooter.txt` (новый) — скачать шутер (8 фраз)
+- `Astrum/Warface/keywords/08_category_military.txt` (новый) — военные игры (9 фраз)
+- `Astrum/Warface/keywords/09_competitor_cs2.txt` (новый) — CS:GO/CS2 конкурентные (13 фраз)
+- `Astrum/Warface/keywords/10_competitor_crossfire_pb.txt` (новый) — Crossfire + Point Blank (13 фраз)
+- `Astrum/Warface/keywords/11_competitor_cod_battlefield.txt` (новый) — CoD + Battlefield (10 фраз)
+- `Astrum/Warface/keywords/12_competitor_tarkov_survarium.txt` (новый) — Тарков/Survarium/CRSED (8 фраз)
+- `Astrum/Warface/keywords/13_multiplayer_coop.txt` (новый) — мультиплеер/командные (11 фраз)
+- `Astrum/Warface/keywords/14_battle_royale.txt` (новый) — Battle Royale (9 фраз)
+- `Astrum/Warface/keywords/15_arena_pvp_shooters.txt` (новый) — арена/PvP (8 фраз)
+- `Astrum/Warface/keywords/16_transact_donate.txt` (новый) — донат/варбаксы (12 фраз)
+- `Astrum/Warface/minus_words/global_minus.txt` (новый) — ~70 минус-слов по 10 блокам
+- `Astrum/Warface/minus_words/notes.md` (новый) — приоритет, пересечения кампаний
+- `.claude/skills/knowledge-base/assets/warface-analysis.json` — добавлен блок `semantic_core` с метаданными всех групп, бенчмарками, следующими шагами
+
+**Итого ключевых фраз:** ~145 (16 групп), ~70 минус-слов
+
+**Файлы изменены:** `Astrum/Warface/` (19 новых файлов), `warface-analysis.json`
+
+**Статус:** ✅ Завершено
+
+---
+
+## 2026-04-02 — Безопасность: убраны секреты из `.claude/settings.local.json`
+
+**Задача:** Устранить утечку токенов и OAuth-данных из локального конфига Claude Code; зафиксировать, что секреты только в `.env`.
+
+**Что сделано:**
+- `.claude/settings.local.json` — перезаписан без встроенных Bash-команд с `y0__*`, refresh_token, OpenAI `sk-*`, client_secret и одноразовых OAuth `code`; оставлены только безопасные allow-правила (pytest, black, npm build, uvicorn).
+- `.gitignore` — добавлено игнорирование `.claude/settings.local.json`, чтобы файл с историей разрешений не попадал в репозиторий.
+- `.claude/settings.local.json.example` (новый) — шаблон без секретов с комментарием использовать `.env`.
+
+**Файлы изменены:** `.claude/settings.local.json`, `.gitignore`, `.claude/settings.local.json.example` (новый)
+
+**Статус:** ✅ Завершено (если старый JSON с секретами уже пушили на GitHub — нужна ротация ключей и при необходимости очистка истории git)
+
+---
+
 ## 2026-03-31 — База знаний: сводка Google Ads (анонсы Help Center)
 
 **Задача:** Зафиксировать в knowledge-base практичные выжимки по Google Ads (цели и конверсии, аудитории, скрипты, API) с привязкой к PPC Master Tool.
