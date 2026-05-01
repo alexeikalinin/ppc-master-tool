@@ -2,8 +2,9 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Clock, FileText, BarChart3, X, Search, TrendingUp } from 'lucide-react'
+import { Clock, FileText, BarChart3, X, Search } from 'lucide-react'
 import { type Message } from './ChatPanel'
+import UsageWidget from './UsageWidget'
 
 interface RightPanelProps {
   messages: Message[]
@@ -126,6 +127,14 @@ export default function RightPanel({ messages, currentReport, onClearReport }: R
           </div>
         </div>
       )}
+
+      {/* Token usage */}
+      <div className="p-4 border-b border-white/10">
+        <div className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest mb-3">
+          API / Токены
+        </div>
+        <UsageWidget />
+      </div>
 
       {/* Recent requests */}
       <div className="p-4 flex-1">

@@ -129,15 +129,18 @@ async def _claude_summary(
 ) -> AiSummary:
     import anthropic
     from backend.config import settings
+    from backend.services.token_counter import counter
 
     client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
     prompt = _build_summary_prompt(site, competitors, campaigns, audience, media_plan, region, city, budget)
+    model = "claude-sonnet-4-20250514"
 
     message = await client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model=model,
         max_tokens=600,
         messages=[{"role": "user", "content": prompt}],
     )
+    counter.record(model, message.usage.input_tokens, message.usage.output_tokens)
     recommendation_text = message.content[0].text
     platforms_used = list({c.platform for c in campaigns})
     geo = city or region
@@ -162,14 +165,18 @@ async def _openai_summary(
 ) -> AiSummary:
     from openai import AsyncOpenAI
     from backend.config import settings
+    from backend.services.token_counter import counter
 
     client = AsyncOpenAI(api_key=settings.openai_api_key)
     prompt = _build_summary_prompt(site, competitors, campaigns, audience, media_plan, region, city, budget)
+    model = "gpt-4o-mini"
     r = await client.chat.completions.create(
-        model="gpt-4o-mini",
+        model=model,
         max_tokens=600,
         messages=[{"role": "user", "content": prompt}],
     )
+    if r.usage:
+        counter.record(model, r.usage.prompt_tokens, r.usage.completion_tokens)
     recommendation_text = (r.choices[0].message.content or "").strip()
     platforms_used = list({c.platform for c in campaigns})
     geo = city or region
@@ -194,14 +201,18 @@ async def _xai_summary(
 ) -> AiSummary:
     from openai import AsyncOpenAI
     from backend.config import settings
+    from backend.services.token_counter import counter
 
     client = AsyncOpenAI(api_key=settings.xai_api_key, base_url="https://api.x.ai/v1")
     prompt = _build_summary_prompt(site, competitors, campaigns, audience, media_plan, region, city, budget)
+    model = "grok-3-mini"
     r = await client.chat.completions.create(
-        model="grok-3-mini",
+        model=model,
         max_tokens=600,
         messages=[{"role": "user", "content": prompt}],
     )
+    if r.usage:
+        counter.record(model, r.usage.prompt_tokens, r.usage.completion_tokens)
     recommendation_text = (r.choices[0].message.content or "").strip()
     platforms_used = list({c.platform for c in campaigns})
     geo = city or region

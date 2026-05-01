@@ -163,13 +163,16 @@ def _build_niche_prompt(
 async def _call_claude(prompt: str) -> dict:
     import anthropic
     from backend.config import settings
+    from backend.services.token_counter import counter
 
     client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
+    model = "claude-haiku-4-5-20251001"
     msg = await client.messages.create(
-        model="claude-haiku-4-5-20251001",
+        model=model,
         max_tokens=1500,
         messages=[{"role": "user", "content": prompt}],
     )
+    counter.record(model, msg.usage.input_tokens, msg.usage.output_tokens)
     text = msg.content[0].text.strip()
     # Strip markdown code fences if present
     if text.startswith("```"):
@@ -182,14 +185,18 @@ async def _call_claude(prompt: str) -> dict:
 async def _call_openai(prompt: str) -> dict:
     from openai import AsyncOpenAI
     from backend.config import settings
+    from backend.services.token_counter import counter
 
     client = AsyncOpenAI(api_key=settings.openai_api_key)
+    model = "gpt-4o-mini"
     r = await client.chat.completions.create(
-        model="gpt-4o-mini",
+        model=model,
         max_tokens=1500,
         response_format={"type": "json_object"},
         messages=[{"role": "user", "content": prompt}],
     )
+    if r.usage:
+        counter.record(model, r.usage.prompt_tokens, r.usage.completion_tokens)
     return json.loads(r.choices[0].message.content or "{}")
 
 

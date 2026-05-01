@@ -1,13 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.routers import analyze, reports, assistant, pdf, export, tracker
+from backend.routers import analyze, reports, assistant, pdf, export, tracker, usage
 
 app = FastAPI(title="PPC Master Tool API", version="0.1.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://*.vercel.app"],
+    allow_origins=["http://localhost:3000", "http://localhost:3001", "https://*.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -19,6 +19,7 @@ app.include_router(assistant.router, prefix="/assistant", tags=["assistant"])
 app.include_router(pdf.router, prefix="/pdf", tags=["pdf"])
 app.include_router(export.router, prefix="/export", tags=["export"])
 app.include_router(tracker.router)
+app.include_router(usage.router)
 
 
 @app.get("/health")

@@ -64,4 +64,24 @@ export const api = {
       method: "POST",
       body: JSON.stringify({ report, question }),
     }),
+
+  /** Статистика токенов и доступные API ключи */
+  getUsage: () =>
+    request<{
+      keys: { anthropic: boolean; openai: boolean; xai: boolean; active_provider: string | null }
+      providers: Record<string, {
+        input_tokens: number
+        output_tokens: number
+        total_tokens: number
+        requests: number
+        errors: number
+        cost_usd: number
+        models: Record<string, { input_tokens: number; output_tokens: number; requests: number; cost_usd: number }>
+      }>
+      total_cost_usd: number
+      session_started: string
+    }>("/usage"),
+
+  /** Сбросить счётчики токенов */
+  resetUsage: () => request("/usage/reset", { method: "POST" }),
 };
