@@ -4,6 +4,30 @@
 
 ---
 
+## 2026-05-02 — Счётчик токенов AI API + Direct per-account токены
+
+**Задача:** Добавить мониторинг расхода токенов по API-ключам (чтобы видеть что близко к лимиту); поддержать прямой токен Warface в трекере.
+
+**Что сделано:**
+- `backend/services/token_counter.py` (новый) — in-memory singleton: записывает input/output токены и считает стоимость в USD по ценам каждой модели; метод `snapshot()` для API; `reset()` для сброса
+- `backend/routers/usage.py` (новый) — `GET /usage` возвращает статус ключей + per-provider/model breakdown + общую стоимость; `POST /usage/reset` сбрасывает счётчик
+- `backend/services/ai_summary.py` — `counter.record()` после каждого вызова Claude/OpenAI/Grok
+- `backend/services/niche_analysis_ai.py` — то же для `_call_claude` и `_call_openai`
+- `backend/services/assistant_chat.py` — то же для всех трёх провайдеров
+- `backend/app.py` — подключён `usage.router`; добавлен `localhost:3001` в CORS
+- `frontend/lib/api.ts` — добавлены `api.getUsage()` и `api.resetUsage()`
+- `frontend/components/workspace/UsageWidget.tsx` (новый) — виджет: статус ключей (✓/✗), токены + стоимость по провайдерам, раскрываемая разбивка по моделям, авто-обновление 30с, кнопка сброса
+- `frontend/components/workspace/RightPanel.tsx` — добавлена секция "API / Токены" с UsageWidget
+- `backend/config.py` — добавлены `yandex_direct_token_warface`, `yandex_refresh_token_warface`
+- `backend/services/tracker.py` — `_get_token(login)` теперь резолвит прямой токен для warface-astrum-lab; `Client-Login` не передаётся для прямых аккаунтов
+- `backend/routers/tracker.py` — новый `GET /tracker/accounts/{id}/campaigns` — живой список кампаний из Direct API без снапшота
+
+**Файлы изменены:** 11 файлов (3 новых)
+
+**Статус:** ✅ Завершено — запушено 2 коммита
+
+---
+
 ## 2026-05-01 — Workspace: 3-панельный интерфейс с агентами
 
 **Задача:** Создать главный workspace — 3-панельный интерфейс (левая панель + чат + правый контекст) для работы со всеми агентами PPC Master Tool.
