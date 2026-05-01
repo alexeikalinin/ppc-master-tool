@@ -29,17 +29,31 @@ _CAMPAIGNS_URL = f"{_DIRECT_BASE}/campaigns"
 _BIDS_URL = f"{_DIRECT_BASE}/bids"
 
 
-def _get_token() -> str:
+# Прямые токены для конкретных аккаунтов (не агентских)
+_DIRECT_TOKENS: dict[str, str] = {
+    "warface-astrum-lab": "yandex_direct_token_warface",
+}
+
+
+def _get_token(login: str | None = None) -> str:
+    """Возвращает токен: прямой для конкретного логина или агентский по умолчанию."""
+    if login and login in _DIRECT_TOKENS:
+        attr = _DIRECT_TOKENS[login]
+        token = getattr(settings, attr, "")
+        if token:
+            return token
     return settings.yandex_direct_token or settings.yandex_wordstat_token or ""
 
 
 def _headers(login: str | None = None) -> dict:
+    token = _get_token(login)
     h = {
-        "Authorization": f"Bearer {_get_token()}",
+        "Authorization": f"Bearer {token}",
         "Accept-Language": "ru",
         "Content-Type": "application/json; charset=utf-8",
     }
-    if login:
+    # Client-Login нужен только для агентских токенов
+    if login and login not in _DIRECT_TOKENS:
         h["Client-Login"] = login
     return h
 
@@ -53,8 +67,8 @@ async def fetch_campaigns(login: str | None = None) -> list[dict]:
     payload = {
         "method": "get",
         "params": {
-            "SelectionCriteria": {"Statuses": ["ON", "OFF", "SUSPENDED"]},
-            "FieldNames": ["Id", "Name", "Status", "Type"],
+            "SelectionCriteria": {},
+            "FieldNames": ["Id", "Name", "Status", "State", "Type"],
             "Page": {"Limit": 1000},
         },
     }

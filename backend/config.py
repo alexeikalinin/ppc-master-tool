@@ -15,12 +15,14 @@ class Settings(BaseSettings):
     google_ads_customer_id: str = ""
 
     # Yandex Direct / Wordstat: либо готовый токен, либо OAuth для автообновления
-    yandex_wordstat_token: str = ""      # OAuth access_token (Bearer) — для Wordstat API
-    yandex_direct_token: str = ""        # OAuth token с scope direct:api — для Forecast/CPC API
-                                         # Если пусто — пробуем yandex_wordstat_token
-    yandex_client_id: str = ""          # для обновления токена по refresh_token
+    yandex_wordstat_token: str = ""           # OAuth access_token (Bearer) — для Wordstat API
+    yandex_direct_token: str = ""             # OAuth token с scope direct:api — starmedia-agency
+                                              # Если пусто — пробуем yandex_wordstat_token
+    yandex_direct_token_warface: str = ""     # Прямой токен warface-astrum-lab
+    yandex_client_id: str = ""               # для обновления токена по refresh_token
     yandex_client_secret: str = ""
     yandex_refresh_token: str = ""
+    yandex_refresh_token_warface: str = ""
 
     # SerpAPI — enables real competitor search
     serpapi_key: str = ""

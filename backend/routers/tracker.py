@@ -24,7 +24,7 @@ from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel
 
 from backend.db import get_client
-from backend.services.tracker import run_daily_snapshot
+from backend.services.tracker import run_daily_snapshot, fetch_campaigns
 from backend.services.bid_robot import run_bot
 
 router = APIRouter(prefix="/tracker", tags=["tracker"])
@@ -117,6 +117,38 @@ async def run_snapshot(body: SnapshotIn):
 
     result = await run_daily_snapshot(body.account_id, login, target)
     return result
+
+
+# ─────────────────────────────────────────────
+# Список кампаний из Директа (без снапшота)
+# ─────────────────────────────────────────────
+
+@router.get("/accounts/{account_id}/campaigns")
+async def list_campaigns_live(account_id: str, debug: bool = False):
+    """Список кампаний напрямую из Яндекс Директ API (не из БД)."""
+    import httpx as _httpx
+    from backend.services.tracker import _headers, _CAMPAIGNS_URL
+    db = get_client()
+    acc = db.table("direct_accounts").select("id,login").eq("id", account_id).execute()
+    if not acc.data:
+        raise HTTPException(status_code=404, detail="Аккаунт не найден")
+    login = acc.data[0]["login"]
+    payload = {
+        "method": "get",
+        "params": {
+            "SelectionCriteria": {},
+            "FieldNames": ["Id", "Name", "Status", "State", "Type"],
+            "Page": {"Limit": 1000},
+        },
+    }
+    async with _httpx.AsyncClient(timeout=30) as client:
+        resp = await client.post(_CAMPAIGNS_URL, json=payload, headers=_headers(login))
+    data = resp.json()
+    if debug:
+        return {"status_code": resp.status_code, "raw": data}
+    if "error" in data:
+        raise HTTPException(status_code=502, detail=data["error"])
+    return data.get("result", {}).get("Campaigns", [])
 
 
 # ─────────────────────────────────────────────
